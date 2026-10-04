@@ -4,22 +4,16 @@ body {
   
 
    /*====Barra de Navegacao====*/
-.navbar{
-    background-color: var(--cor-01);
+nav {
+    background-color: var(--cor-13);
     font-weight: bold;
 }
 
 .backup {
-    border: 1.5px solid var(--cor-01);
+    border: 1.5px solid var(--cor-13);
     border-radius: var(--radius);
-    background-color: var(--cor-02);
+    background-color: var(--cor-02) !important;
     transition-duration: .3s;
-
-    &:hover {
-        border-radius: var(--radius);
-        background-color: var(--cor-02); 
-        transition-duration: .3s;
-    }
 }
 
 .dropdown {border-right: 2px solid var(--cor-04);}
@@ -30,18 +24,11 @@ body {
 }
 
 .btn-fechar-sistema {
-    border: 1.5px solid var(--cor-01);
+    border: 1.5px solid var(--cor-13);
     border-radius: var(--radius);
     padding: 0 0.7rem;
-    background-color: var(--cor-02);
+    background-color: var(--cor-02) !important;
     transition-duration: .3s;
-
-    &:hover {
-        border-radius: var(--radius);
-        padding: 0 0.7rem;
-        background-color: var(--cor-02);
-        transition-duration: .3s;
-    }
 }
 
     

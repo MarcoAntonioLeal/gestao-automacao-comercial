@@ -18,6 +18,8 @@
     --cor-09: #0d6dfd97;
     --cor-10: #E6DBB9;
     --cor-11: #000000;
+    --cor-12: #071A3D;
+    --cor-13: #0A2F70;
     --cor-shadow: #191c1d34;
     --cor-shadow-hover: #191c1d88;
     --radius: 5px
@@ -35,7 +37,7 @@ body {
 }
 
 .text-logo {
-    color: var(--cor-04);
+    color: var(--cor-04) !important;
 }
 
 .style-padrao {
@@ -93,5 +95,5 @@ footer {
     font-size: large;
     font-weight: bold;
     color: var(--cor-02);
-    background-color: var(--cor-01);
+    background-color: var(--cor-13);
 }
