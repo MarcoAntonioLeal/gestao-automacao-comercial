@@ -9,8 +9,16 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(135deg, var(--cor-09), var(--cor-04), var(--cor-00));
     font-weight: bold;
+
+        background: linear-gradient(
+        120deg,
+        var(--cor-12) 0%,
+        var(--cor-13) 40%,
+        var(--cor-01) 72%,
+        var(--cor-04) 92%,
+        var(--cor-00) 100%
+    );
 }
 
 .style-padrao-login {
@@ -19,7 +27,7 @@ body {
     align-items: center;
     flex-direction: column;
 
-    width: 30rem;
+    width: 23rem;
     height: 20rem;
     border-radius: 10px;
     border: 1px solid var(--cor-03);
@@ -33,7 +41,16 @@ body {
     }
 }
 
-input{outline: none;}
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+input{
+    outline: none;
+    width: 10rem;
+}
 
 button {
     width: 8rem;

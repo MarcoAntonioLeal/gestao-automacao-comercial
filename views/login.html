@@ -13,19 +13,30 @@
 
 </head>
 <body>
-    
     <section class="style-padrao-login">
         <h1>Say-System</h1>
 
-        <div>
-            <label for="senha">Senha:</label>
-            <input type="password" name="senha" id="senha" autofocus>
-        </div>
+        <form action="../views/index.html">
+            <div>
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha" id="senha" autofocus required>
+            </div>
 
-        <a href="../views/index.html">
-            <button type="button">Entrar</button>
-        </a>
+            <br>
+            
+            <button type="submit" id="btnEntrar">Entrar</button>
+        </form>
     </section>
-    
+
+    <script>
+        const inputSenhaLogin = document.querySelector('#senha')
+        const btnEntrar = document.querySelector('#btnEntrar')
+
+        document.addEventListener('keydown', ev => {
+            if(ev.key === 'Enter') {
+                btnEntrar.click()
+            }
+        })
+    </script>
 </body>
 </html>
