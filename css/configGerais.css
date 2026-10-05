@@ -50,7 +50,7 @@ a {
     text-decoration: none;
 }
 
-.borda {border: 1px solid var(--cor-04);}
+.borda {border: 1px solid var(--cor-12);}
 
 .icon-xs {width: 1.4rem;}
 .icon-ms {width: 1.6rem;}
