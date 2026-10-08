@@ -15,21 +15,38 @@ btnPeriodoDeVendas.forEach(element => {
     })
 })
 
-/*
-Colocar o btn de backup dentro do dropdown e verificar como irá ficar o layout. Fazer com o apend para colocar e tirar, verificar se volta automátco ou se realmente temos de voltá-lo na mão
-*/
 
 /* Media Querie */
+const btnBackup = document.querySelector('.backup')
+const imgBackup = document.querySelector('#imgBackup')
+
+const listBackupNavbar = document.querySelector('#listBackupNavbar')
+const listBackupDropdown = document.querySelector('#listBackupDropdown')
+
 function responsividade() {
     const queryHtml = matchMedia("(max-width: 990px)")
 
     if (queryHtml.matches) {
-        //document.body.style.backgroundColor = 'red'
+
+        btnBackup.classList.remove('nav-link', 'me-5', 'btn', 'backup')
+        imgBackup.classList.remove('icon-s')
+
+        btnBackup.classList.add('dropdown-item')
+        imgBackup.classList.add('icon-ms')
+
+        listBackupDropdown.append(btnBackup)
+
     } else {
-        //document.body.style.backgroundColor = 'black'
+
+        btnBackup.classList.remove('dropdown-item')
+        imgBackup.classList.remove('icon-ms')
+
+        btnBackup.classList.add('nav-link', 'me-5', 'btn', 'backup')
+        imgBackup.classList.add('icon-s')
+
+        listBackupNavbar.append(btnBackup)
     }
 }
-
 responsividade()
 
 // Executa a função sempre que a tela mudar de tamanho

@@ -31,11 +31,12 @@
 
                 <ul class="navbar-nav ms-auto">
                     
-                    <li class="nav-item">
-                        <button class="nav-link me-5 btn backup">
-                            <img src="../img/salvar.svg" alt="" class="icon-s">
+                    <!--btn backup responsivo-->
+                    <li class="nav-item" id="listBackupNavbar">
+                        <a href="#" class="nav-link me-5 btn backup">
                             Backup
-                        </button>
+                            <img src="../img/salvar.svg" alt="" class="icon-s" id="imgBackup">
+                        </a>
                     </li>
 
                     <li class="nav-item dropdown px-3">
@@ -60,6 +61,9 @@
                             </li>
 
                             <li><hr class="dropdown-divider"></li>
+                            
+                            <!--btn backup responsivo-->
+                            <li id="listBackupDropdown"></li>
 
                             <li>
                                 <a class="dropdown-item" href="#">
