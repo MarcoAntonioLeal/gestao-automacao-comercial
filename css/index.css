@@ -24,6 +24,9 @@ nav {
 }
 
 .btn-fechar-sistema {
+    display: flex;
+    align-items: center; /*ajuste do icone na responsividade da tela*/
+
     border: 1.5px solid var(--cor-13);
     border-radius: var(--radius);
     padding: 0 0.7rem;
@@ -116,3 +119,8 @@ nav {
 }
 
 #pdv {color: var(--cor-05);}
+
+
+@media (max-width: 990px) {
+    /*Ajustar a centralização e o que mais precisar*/
+}

@@ -14,3 +14,23 @@ btnPeriodoDeVendas.forEach(element => {
         }
     })
 })
+
+/*
+Colocar o btn de backup dentro do dropdown e verificar como irá ficar o layout. Fazer com o apend para colocar e tirar, verificar se volta automátco ou se realmente temos de voltá-lo na mão
+*/
+
+/* Media Querie */
+function responsividade() {
+    const queryHtml = matchMedia("(max-width: 990px)")
+
+    if (queryHtml.matches) {
+        //document.body.style.backgroundColor = 'red'
+    } else {
+        //document.body.style.backgroundColor = 'black'
+    }
+}
+
+responsividade()
+
+// Executa a função sempre que a tela mudar de tamanho
+addEventListener("resize", responsividade);
