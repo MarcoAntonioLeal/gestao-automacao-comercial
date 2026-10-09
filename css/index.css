@@ -1,7 +1,5 @@
-body {
-    font-weight: bold;
-}    
-  
+body {font-weight: bold;}    
+main {transition-duration: .7s;}
 
    /*====Barra de Navegacao====*/
 nav {
@@ -76,8 +74,8 @@ nav {
 
 .cards {
     display: flex;
-    gap: 2rem;
     flex-wrap: wrap;
+    gap: 2rem;
 }
 
 .cards > a {
@@ -122,5 +120,26 @@ nav {
 
 
 @media (max-width: 990px) {
-    /*Ajustar a centralização e o que mais precisar*/
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition-duration: .7s;
+    }
+
+    #sec-valor-venda {
+        width: 100%;
+    }
+
+    .sec-cards {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /*Parei aqui, tentar ajustar os cards*/
+    .cards {
+        justify-content: center;
+    }
 }
