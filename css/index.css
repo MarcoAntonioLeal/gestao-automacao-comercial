@@ -128,9 +128,7 @@ nav {
         transition-duration: .7s;
     }
 
-    #sec-valor-venda {
-        width: 100%;
-    }
+    #sec-valor-venda {width: 100%;}
 
     .sec-cards {
         display: flex;
@@ -138,8 +136,10 @@ nav {
         text-align: center;
     }
 
-    /*Parei aqui, tentar ajustar os cards*/
-    .cards {
-        justify-content: center;
+    .cards {justify-content: center;}
+
+
+    @media (max-width: 0px) {
+
     }
 }

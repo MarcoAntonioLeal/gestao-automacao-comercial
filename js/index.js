@@ -17,13 +17,15 @@ btnPeriodoDeVendas.forEach(element => {
 
 
 /* Media Querie */
+
+//Para o botão de backup
 const btnBackup = document.querySelector('.backup')
 const imgBackup = document.querySelector('#imgBackup')
 
 const listBackupNavbar = document.querySelector('#listBackupNavbar')
 const listBackupDropdown = document.querySelector('#listBackupDropdown')
 
-function responsividade() {
+function responsividadeBackup() {
     const queryHtml = matchMedia("(max-width: 990px)")
 
     if (queryHtml.matches) {
@@ -47,7 +49,37 @@ function responsividade() {
         listBackupNavbar.append(btnBackup)
     }
 }
-responsividade()
+responsividadeBackup()
+addEventListener("resize", responsividadeBackup)
 
-// Executa a função sempre que a tela mudar de tamanho
-addEventListener("resize", responsividade);
+//Para tag de hora do sistema
+const listHoraNavbar = document.querySelector('.listHoraNavbar')
+const listHoraMain = document.querySelector('#listHoraMain')
+const hora = document.querySelector('.hora')
+
+function responsividadeHora() {
+    const queryHtml = matchMedia("(max-width: 795px)")
+
+    if (queryHtml.matches) {
+
+        /*btnBackup.classList.remove('nav-link', 'me-5', 'btn', 'backup')
+        imgBackup.classList.remove('icon-s')
+
+        btnBackup.classList.add('dropdown-item')
+        imgBackup.classList.add('icon-ms')*/
+
+        listHoraMain.append(hora)
+
+    } else {
+
+        /*btnBackup.classList.remove('dropdown-item')
+        imgBackup.classList.remove('icon-ms')
+
+        btnBackup.classList.add('nav-link', 'me-5', 'btn', 'backup')
+        imgBackup.classList.add('icon-s')*/
+
+        listHoraNavbar.append(hora)
+    }
+}
+responsividadeHora()
+addEventListener("resize", responsividadeHora)

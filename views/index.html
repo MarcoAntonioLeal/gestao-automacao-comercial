@@ -95,8 +95,8 @@
                         </ul>
                     </li>
                     
-                    <li class="nav-item ms-5">
-                        <span class="nav-link text-logo">
+                    <li class="nav-item ms-5 listHoraNavbar">
+                        <span class="nav-link text-logo hora">
                             /*hora atual*/
                         </span>
                     </li>
@@ -112,6 +112,8 @@
     </nav>
 
     <main class="container">
+
+        <div id="listHoraMain"></div>
         
         <section class="style-padrao borda" id="sec-valor-venda">
 
@@ -142,15 +144,15 @@
                 <!--CARDS-->
             <div class="mt-2 cards">
 
-                <!--Caixa-->
+                <!--PDV-->
                 <a href="#" class="style-padrao borda">
                     
                     <div class="card-icon">                   
-                        <img src="../img/caixa.svg" alt="" class="icon-m">
+                        <img src="../img/pdv.svg" alt="" class="icon-m">
                     </div>
 
-                    <div class="card-text">
-                        Caixa    
+                    <div class="card-text" id="pdv">
+                        PDV    
                     </div>
                 </a>
 
@@ -166,15 +168,15 @@
                     </div>
                 </a>
 
-                <!--PDV-->
-                <a href="#" class="style-padrao borda">
+                <!--Caixa-->
+                <a href="#" class="style-padrao borda" id="teste">
                     
                     <div class="card-icon">                   
-                        <img src="../img/pdv.svg" alt="" class="icon-m">
+                        <img src="../img/caixa.svg" alt="" class="icon-m">
                     </div>
 
-                    <div class="card-text" id="pdv">
-                        PDV    
+                    <div class="card-text">
+                        Caixa    
                     </div>
                 </a>
             </div>
