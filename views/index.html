@@ -42,7 +42,7 @@
                     <li class="nav-item dropdown px-3">
                         <button class="nav-link dropdown-toggle text-logo" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            /*usuário*/
+                            Marco
                         </button>
 
                         <ul class="dropdown-menu">
@@ -95,9 +95,9 @@
                         </ul>
                     </li>
                     
-                    <li class="nav-item ms-5 listHoraNavbar">
+                    <li class="nav-item ms-4 listHoraNavbar">
                         <span class="nav-link text-logo hora">
-                            /*hora atual*/
+                            10:40 | 09/10
                         </span>
                     </li>
 
@@ -113,26 +113,26 @@
 
     <main class="container">
 
-        <div id="listHoraMain"></div>
+        <div class="listHoraMain"></div>
         
         <section class="style-padrao borda" id="sec-valor-venda">
+            <div>
+                <div>Movimentação:</div>
 
-            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                    <input type="radio" class="btn-check" name="periodo" value="dia" id="btnradio1" autocomplete="off" checked>
+                    <label class="btn btn-outline-primary" for="btnradio1">Dia</label>
 
-                <input type="radio" class="btn-check" name="periodo" value="Dia" id="btnradio1" autocomplete="off" checked>
-                <label class="btn btn-outline-primary" for="btnradio1">Dia</label>
+                    <input type="radio" class="btn-check" name="periodo" value="semana" id="btnradio2" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btnradio2">Semana</label>
 
-                <input type="radio" class="btn-check" name="periodo" value="Semana" id="btnradio2" autocomplete="off">
-                <label class="btn btn-outline-primary" for="btnradio2">Semana</label>
-
-                <input type="radio" class="btn-check" name="periodo" value="Mês" id="btnradio3" autocomplete="off">
-                <label class="btn btn-outline-primary" for="btnradio3">Mês</label>
-
+                    <input type="radio" class="btn-check" name="periodo" value="mes" id="btnradio3" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btnradio3">Mês</label>
+                </div>
             </div>
 
-            <div id="vendas">
-                <p id="periodo-vendas">Vendas de Hoje</p>
-                <p id="vl-vendas">R$ /*valor*/</p>
+            <div id="vl-vendas">
+                <p >R$ 350.435,22</p>
             </div>
         </section>
 

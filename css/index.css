@@ -1,4 +1,4 @@
-body {font-weight: bold;}    
+body {font-weight: bold; overflow-x: scroll;}    
 main {transition-duration: .7s;}
 
    /*====Barra de Navegacao====*/
@@ -34,15 +34,24 @@ nav {
     transition-duration: .3s;
 }
 
-    
+
+    /*====Hora Main na responsividade====*/
+.listHoraMain {
+    margin-top: 1.5rem;
+    padding: .5rem;
+    border-radius: var(--radius);
+    font-size: x-large;
+}
+
+
     /*====Valor de Vendas====*/
 #sec-valor-venda {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     
     max-width: 80%;
-    height: 8rem;
+    min-height: 8rem;
     margin-top: 5rem;
     padding: 0 2rem;
     border-radius: var(--radius);
@@ -60,12 +69,10 @@ nav {
     margin-top: 1rem;
 }
 
-#vendas {
-    display: flex;
-    justify-content: space-between;
+#vl-vendas {
+    align-self: flex-end;
+    color: var(--cor-05);
 }
-
-#vl-vendas {color: var(--cor-05);}
 
 
     /*====Modulos====*/
@@ -122,7 +129,6 @@ nav {
 
 
 @media (max-width: 990px) {
-
     main {
         display: flex;
         flex-direction: column;
@@ -130,7 +136,7 @@ nav {
         transition-duration: .7s;
     }
 
-    #sec-valor-venda {width: 100%;}
+    #sec-valor-venda {min-width: 100%;}
 
     .sec-cards {
         display: flex;
@@ -139,9 +145,19 @@ nav {
     }
 
     .cards {justify-content: center;}
+}
 
+/*btn toggler*/
+@media (max-width: 575px) {
+    .dropdown {border: none;}
+    #sec-valor-venda {flex-wrap: wrap;}
+}
 
-    @media (max-width: 0px) {
-
+@media (max-width: 440px) {
+    #sec-valor-venda {
+        justify-content: center;
+        gap: 1rem;
     }
 }
+
+

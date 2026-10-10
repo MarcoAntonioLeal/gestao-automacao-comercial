@@ -1,21 +1,3 @@
-const btnPeriodoDeVendas = document.querySelectorAll('.btn-check')
-const periodoDeVendas = document.querySelector('#periodo-vendas')
-
-btnPeriodoDeVendas.forEach(element => {
-    element.addEventListener('click', event => {
-        const periodo = event.target.value
-
-        if(periodo === 'Dia') {
-            periodoDeVendas.textContent = 'Vendas de Hoje'
-        } else if(periodo === 'Semana') {
-            periodoDeVendas.textContent = 'Vendas da Semana'
-        } else {
-            periodoDeVendas.textContent = 'Vendas do Mês'
-        }
-    })
-})
-
-
 /* Media Querie */
 
 //Para o botão de backup
@@ -54,29 +36,25 @@ addEventListener("resize", responsividadeBackup)
 
 //Para tag de hora do sistema
 const listHoraNavbar = document.querySelector('.listHoraNavbar')
-const listHoraMain = document.querySelector('#listHoraMain')
+const listHoraMain = document.querySelector('.listHoraMain')
 const hora = document.querySelector('.hora')
 
 function responsividadeHora() {
-    const queryHtml = matchMedia("(max-width: 795px)")
+    const queryHtml = matchMedia("(max-width: 800px)")
 
     if (queryHtml.matches) {
+        listHoraMain.classList.add('style-padrao', 'borda')
 
-        /*btnBackup.classList.remove('nav-link', 'me-5', 'btn', 'backup')
-        imgBackup.classList.remove('icon-s')
-
-        btnBackup.classList.add('dropdown-item')
-        imgBackup.classList.add('icon-ms')*/
+        hora.classList.remove('nav-link', 'text-logo')
+        hora.classList.add('listHoraMain')
 
         listHoraMain.append(hora)
 
     } else {
-
-        /*btnBackup.classList.remove('dropdown-item')
-        imgBackup.classList.remove('icon-ms')
-
-        btnBackup.classList.add('nav-link', 'me-5', 'btn', 'backup')
-        imgBackup.classList.add('icon-s')*/
+        listHoraMain.classList.remove('style-padrao', 'borda')
+        
+        hora.classList.remove('listHoraMain')
+        hora.classList.add('nav-link', 'text-logo')
 
         listHoraNavbar.append(hora)
     }
