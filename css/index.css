@@ -131,9 +131,9 @@ nav {
 
 
 /*====offcanvas====*/
-/*.offcanvas {
+.offcanvas {
     background-color: var(--cor-04);
-}*/
+}
 
 
 @media (max-width: 990px) {
