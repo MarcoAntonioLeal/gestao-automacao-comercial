@@ -7,7 +7,9 @@ nav {
     font-weight: bold;
 }
 
-.navbar-toggler {background-color: var(--cor-04);}
+.navbar-toggler {
+    background-color: var(--cor-04);
+}
 
 .backup {
     border: 1.5px solid var(--cor-13);
@@ -128,6 +130,12 @@ nav {
 #pdv {color: var(--cor-05);}
 
 
+/*====offcanvas====*/
+/*.offcanvas {
+    background-color: var(--cor-04);
+}*/
+
+
 @media (max-width: 990px) {
     main {
         display: flex;
@@ -147,10 +155,43 @@ nav {
     .cards {justify-content: center;}
 }
 
-/*btn toggler*/
-@media (max-width: 575px) {
+@media (max-width: 576px) {
     .dropdown {border: none;}
     #sec-valor-venda {flex-wrap: wrap;}
+
+     /* Remove a aparência de botão dropdown */
+    #btnMenuUsuario {
+        pointer-events: none;
+        font-weight: bold;
+    }
+
+    #btnMenuUsuario::after {
+        display: none;
+    }
+
+    /* Deixa as opções sempre visíveis */
+    #listaUsuario {
+        display: block;
+        position: static;
+        float: none;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        border: none;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    /* Remove a aparência de itens flutuantes */
+    #listaUsuario .dropdown-item {
+        padding: 0.65rem 1rem;
+        white-space: normal;
+    }
+
+    #menuUsuario {
+        width: 100%;
+    }
 }
 
 @media (max-width: 440px) {
@@ -159,5 +200,3 @@ nav {
         gap: 1rem;
     }
 }
-
-

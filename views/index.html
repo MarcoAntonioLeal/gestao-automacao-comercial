@@ -21,92 +21,107 @@
                 <span class="fs-4 text-logo">Say-System</span>
             </a>
 
-            <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse"
-                data-bs-target="#btnNavBar" aria-controls="btnNavBar" aria-expanded="false"
+            <button class="navbar-toggler shadow-none" type="button" 
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             
-            <div class="collapse navbar-collapse" id="btnNavBar">
+            <div class="offcanvas offcanvas-end" tabindex="-1" 
+            id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
 
-                <ul class="navbar-nav ms-auto">
+                <div class="offcanvas-header">
+                    <h3 class="offcanvas-title" id="offcanvasNavbarLabel">
+                        Say-System
+                        <img src="../img/logo.svg" alt="" class="icon-m">
+                    </h3>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto">
                     
-                    <!--btn backup responsivo-->
-                    <li class="nav-item" id="listBackupNavbar">
-                        <a href="#" class="nav-link me-5 btn backup">
-                            Backup
-                            <img src="../img/salvar.svg" alt="" class="icon-s" id="imgBackup">
-                        </a>
-                    </li>
+                        <!--btn backup responsivo-->
+                        <li class="nav-item" id="listBackupNavbar">
+                            <a href="#" class="nav-link me-5 btn backup">
+                                Backup
+                                <img src="../img/salvar.svg" alt="" class="icon-s" id="imgBackup">
+                            </a>
+                        </li>
 
-                    <li class="nav-item dropdown px-3">
-                        <button class="nav-link dropdown-toggle text-logo" data-bs-toggle="dropdown"
+                        <li class="nav-item dropdown px-3" id="menuUsuario">
+
+                            <button class="nav-link dropdown-toggle text-logo"
+                            id="btnMenuUsuario"
+                            data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            Marco
-                        </button>
+                                Marco
+                            </button>
 
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a class="dropdown-item" href="https://web.whatsapp.com/" target="_blank" rel="noopener noreferrer">
-                                    Whatsapp Web
-                                    <img src="../img/whatsapp.svg" alt="" class="icon-ms">
-                                </a>
-                            </li>
+                            <ul class="dropdown-menu" id="listaUsuario">
+                                <li>
+                                    <a class="dropdown-item" href="https://web.whatsapp.com/" target="_blank" rel="noopener noreferrer">
+                                        Whatsapp Web
+                                        <img src="../img/whatsapp.svg" alt="" class="icon-ms">
+                                    </a>
+                                </li>
 
-                            <li>
-                                <a class="dropdown-item" href="#" target="_blank" rel="noopener noreferrer">
-                                    Manual Sistema
-                                    <img src="../img/manual-sistema.svg" alt="" class="icon-ms">
-                                </a>
-                            </li>
+                                <li>
+                                    <a class="dropdown-item" href="#" target="_blank" rel="noopener noreferrer">
+                                        Manual Sistema
+                                        <img src="../img/manual-sistema.svg" alt="" class="icon-ms">
+                                    </a>
+                                </li>
 
-                            <li><hr class="dropdown-divider"></li>
-                            
-                            <!--btn backup responsivo-->
-                            <li id="listBackupDropdown"></li>
-
-                            <li>
-                                <a class="dropdown-item" href="#">
-                                    Usuários
-                                    <img src="../img/usuario.svg" alt="" class="icon-ms">
-                                </a>
-                            </li>
-
-                            <li>
-                                <a class="dropdown-item" href="#">
-                                    Config. Gerais
-                                    <img src="../img/configuracoes.svg" alt="" class="icon-ms">
-                                </a>
-                            </li>
-
-                            <li>
-                                <a class="dropdown-item" href="#">
-                                    Parâmetros
-                                    <img src="../img/parametros.svg" alt="" class="icon-ms">
-                                </a>
-                            </li>
-
-                            <li>
-                                <a class="dropdown-item" href="../views/login.html">
-                                    Sair
-                                    <img src="../img/sair.svg" alt="" class="icon-ms">
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
+                                <li><hr class="dropdown-divider"></li>
                     
-                    <li class="nav-item ms-4 listHoraNavbar">
-                        <span class="nav-link text-logo hora">
-                            10:40 | 09/10
-                        </span>
-                    </li>
+                                <!--btn backup responsivo-->
+                                <li id="listBackupDropdown"></li>
 
-                    <li class="nav-item ms-4 btn btn-fechar-sistema">
-                        <span class="nav-link">
-                            <img src="../img/fechar-sistema.svg" alt="" class="icon-s">
-                        </span>
-                    </li>
-                </ul>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        Usuários
+                                        <img src="../img/usuario.svg" alt="" class="icon-ms">
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        Config. Gerais
+                                        <img src="../img/configuracoes.svg" alt="" class="icon-ms">
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        Parâmetros
+                                        <img src="../img/parametros.svg" alt="" class="icon-ms">
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item" href="../views/login.html">
+                                        Sair
+                                        <img src="../img/sair.svg" alt="" class="icon-ms">
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    
+                        <li class="nav-item ms-4 listHoraNavbar">
+                            <span class="nav-link text-logo hora">
+                                10:40 | 09/10
+                            </span>
+                        </li>
+                        <li class="nav-item ms-4 btn btn-fechar-sistema">
+                            <span class="nav-link">
+                                <img src="../img/fechar-sistema.svg" alt="" class="icon-s">
+                            </span>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>
