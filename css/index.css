@@ -131,9 +131,9 @@ nav {
 
 
 /*====offcanvas====*/
-/*.offcanvas {
+.offcanvas {
     background-color: var(--cor-04);
-}*/
+}
 
 
 @media (max-width: 990px) {
@@ -156,42 +156,39 @@ nav {
 }
 
 @media (max-width: 576px) {
-    .dropdown {border: none;}
     #sec-valor-venda {flex-wrap: wrap;}
 
-     /* Remove a aparência de botão dropdown */
+     /*Remove a aparência de botão dropdown*/
     #btnMenuUsuario {
         pointer-events: none;
         font-weight: bold;
+
+        &::after {
+            display: none;
+        }
     }
 
-    #btnMenuUsuario::after {
-        display: none;
-    }
-
-    /* Deixa as opções sempre visíveis */
+    /*Deixa as opções sempre visíveis*/
     #listaUsuario {
         display: block;
         position: static;
         float: none;
         width: 100%;
-        margin: 0;
-        padding: 0;
 
         border: none;
         box-shadow: none;
         background-color: transparent;
     }
 
-    /* Remove a aparência de itens flutuantes */
     #listaUsuario .dropdown-item {
-        padding: 0.65rem 1rem;
+        padding: .5rem;
         white-space: normal;
+        color: var(--cor-03) !important;
     }
 
-    #menuUsuario {
-        width: 100%;
-    }
+    #btnMenuUsuario, .offcanvas-title {color: var(--cor-03) !important;}
+    .dropdown-item:hover {background-color: var(--cor-02);}
+    #menuUsuario {width: 100%;}
 }
 
 @media (max-width: 440px) {
