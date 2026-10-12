@@ -1,0 +1,119 @@
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin-top: -7rem;
+    font-size: medium;
+}
+
+/*====Menu====*/
+#sec-menu {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    width: 80%;
+
+    & img {
+        margin: auto;
+    }
+}
+
+.linha-vertical { 
+    width: 1px; 
+    height: 100px; 
+    background-color: var(--cor-11); 
+    border: none; 
+}
+
+#sec-menu > button, #sec-menu > a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 5.8rem;
+    width: 5.8rem;
+    border-radius: var(--radius);
+    background-color: var(--cor-04);
+    box-shadow: 3px 3px 3px var(--cor-shadow);
+    font-size: 1.02rem;
+    color: inherit;
+    transition-duration: .5s;
+
+    &:hover {
+        background-color: var(--cor-10);
+        box-shadow: 3px 3px 3px var(--cor-shadow-hover);
+        transition-duration: .5s;
+    }  
+
+    & hr {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+
+/*====Inputs====*/
+.sec-cadastro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    min-height: 50vh;
+    margin: 1rem 0 2.5rem 0;
+    transition-duration: .5s;
+    border-radius: var(--radius);
+    
+    &:hover {
+        box-shadow: 3px 3px 3px var(--cor-shadow-hover);
+        transition-duration: .5s;
+    }
+
+    & legend {
+        color: var(--cor-05);
+        font-weight: bold;
+    }
+}
+
+label {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+input, select {
+    outline: none;
+    padding: 4px;
+    text-transform: uppercase;
+    color: inherit;
+}
+
+.codigo-e-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & #codigo {
+        width: 5rem;
+        font-weight: bolder;
+        color: var(--cor-11);
+    }
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+    margin-right: 2rem;
+    
+    & #ativo-inativo{
+        width: 3rem;
+        height: 1.5rem;
+    }
+}
+
+input#descricao {width: 30rem;}
+
+.preco-e-custo > input, select {
+    width: 5rem;
+}

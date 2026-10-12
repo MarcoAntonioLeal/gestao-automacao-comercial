@@ -9,14 +9,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="../css/criarProduto.css">
     <link rel="stylesheet" href="../css/configGerais.css">
 </head>
 <body>
     <body>
 
     <header>
-        <div>
+        <div class="style-padrao borda">
             /*usuario*/
         </div>
     </header>
@@ -24,7 +23,7 @@
      <main class="container">
         
         <section id="sec-menu">
-            <button type="button" class="borda btn-menu btn-salvar" data-btn-menu="salvar">
+            <button type="button" class="borda">
                 <img src="../img/salvar.svg" alt="" class="icon-l">
 
                 <div>
@@ -35,7 +34,7 @@
 
             <hr class="linha-vertical">
 
-            <a href="./index.html" class="borda btn-pag-incial">
+            <a href="./index.html" class="borda">
                 <img src="../img/pag-inicial.svg" alt="" class="icon-l">
 
                 <div>
@@ -46,16 +45,19 @@
         </section>
 
         <section class="container sec-cadastro borda style-padrao">
-            <form action="#" class="formCriarProduto">
-                <fieldset>
-                    <legend>Produto</legend>
+            <form action="#" method="#">
+                    <legend>Cadastro Empresa</legend>
 
                     <div>
-                        <label for="descricao">Descrição:</label>
-                        <input type="text" name="descricao" id="descricao" autocomplete="off" maxlength="100" required>
-                            
-                        <label for="cod-barras" class="ms-4">Código de Barras:</label>
-                        <input type="text" name="cod-barras" id="cod-barras" autocomplete="off" maxlength="14" minlength="8" pattern="/^\d{8,14}$/" title="Digite apenas números">
+                        <label for="razao">Razão Social:</label>
+                        <input type="text" name="razao" id="razao" autocomplete="off" maxlength="70" required>
+                    </div>
+
+                    <div>
+                        <select name="" id="">
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
                     </div>
 
                     <hr>
@@ -73,7 +75,8 @@
                         <label for="preco" class="ms-4">Preço:</label>
                         <input type="text" name="preco" id="preco" autocomplete="off" data-preco="preco" maxlength="7" class="calcValorProduto" required pattern="\d+([.,]\d{1,2})?" title="Números inteiros ou com no máximo duas casas decimais">
                     </div>
-                </fieldset>
+
+                    <hr>
             </form>
         </section>
      </main>
@@ -86,7 +89,7 @@
 </body>
 
 <!--
-nome_empresa TEXT NOT NULL CHECK(length(nome_empresa) <= 70),
+    nome_empresa TEXT NOT NULL CHECK(length(nome_empresa) <= 70),
 	tipo_pessoa TEXT NOT NULL CHECK(tipo_pessoa IN ('PF', 'PJ')),
    	cpf TEXT CHECK(length(cpf) = 11),
 	cnpj TEXT CHECK(length(cnpj) = 14),	

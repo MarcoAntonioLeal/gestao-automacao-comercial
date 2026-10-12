@@ -71,13 +71,16 @@ a {
 }
 
 /*====header usuario logado====*/
-header {
+header{
     display: flex;
     align-self: end;
-    justify-content: center;
-    width: 20rem;
-    border-radius: 3px;
-    background-color: var(--cor-09);
+    
+    & > div {
+        width: 20rem;
+        border-radius: var(--radius);
+        text-align: center;
+        background-color: var(--cor-09) !important;
+    }
 }
 
     /*====Main====*/
