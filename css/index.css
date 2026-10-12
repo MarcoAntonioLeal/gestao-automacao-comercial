@@ -181,7 +181,7 @@ nav {
     }
 
     #listaUsuario .dropdown-item {
-        padding: .5rem;
+        padding: .8rem;
         white-space: normal;
         color: var(--cor-03) !important;
     }
