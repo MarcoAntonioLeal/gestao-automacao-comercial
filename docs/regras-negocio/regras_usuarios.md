@@ -6,7 +6,7 @@ Cadastro e gerenciamento dos usuários do sistema.
 
 ## Valores de Caracteres
 
-* O nome possui limite máximo de 15 caracteres.
+* O nome possui limite máximo de 10 caracteres.
 * A senha possui exatamente 4 dígitos numéricos.
 
 ## Datas
@@ -28,7 +28,7 @@ Cadastro e gerenciamento dos usuários do sistema.
 * Usuários inativos não poderão realizar login no sistema.
 * Todo usuário criado inicia sem permissões de acesso aos módulos.
 * As permissões serão concedidas manualmente pelo usuário responsável pelo cadastro.
-* Todos os módulos de cadastro e vendas possuirão controle de acesso por permissões.
+* Todos os módulos de cadastro, vendas e configurações internas possuirão controle de acesso por permissões.
 * Usuários podem ser excluídos do sistema.
 * Recomenda-se a inativação em vez da exclusão para preservar o histórico de associações e movimentações.
 * O código do usuário será utilizado como identificador de negócio do sistema.

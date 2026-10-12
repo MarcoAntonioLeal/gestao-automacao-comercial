@@ -2,7 +2,7 @@ CREATE TABLE usuarios (
 	id INTEGER PRIMARY KEY,
    	codigo TEXT UNIQUE NOT NULL,
    	ativo INTEGER NOT NULL DEFAULT 1 CHECK(ativo IN (0, 1)),
-   	nome TEXT NOT NULL CHECK(length(nome) <= 15),
+   	nome TEXT NOT NULL CHECK(length(nome) <= 10),
 	senha TEXT NOT NULL UNIQUE CHECK(length(senha) = 4),	
 
 	/*permissoes de acesso aos modulos*/
@@ -14,7 +14,9 @@ CREATE TABLE usuarios (
 	mod_produtos INTEGER DEFAULT 0 CHECK(mod_produtos IN (0, 1)), 
 	mod_clientes INTEGER DEFAULT 0 CHECK(mod_clientes IN (0, 1)), 
 	mod_fornecedores INTEGER DEFAULT 0 CHECK(mod_fornecedores IN (0, 1)), 
-	mod_entrada_nota INTEGER DEFAULT 0 CHECK(mod_entrada_nota IN (0, 1)), 
+	mod_entrada_nota INTEGER DEFAULT 0 CHECK(mod_entrada_nota IN (0, 1)),
+	mod_config_gerais INTEGER DEFAULT 0 CHECK(mod_config_gerais IN (0, 1)), 
+	mod_parametros INTEGER DEFAULT 0 CHECK(mod_parametros IN (0, 1)),  
 
 	data_criacao TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	criado_por INTEGER NOT NULL,
