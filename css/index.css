@@ -27,7 +27,8 @@ nav {
 
 .btn-fechar-sistema {
     display: flex;
-    align-items: center; /*ajuste do icone na responsividade da tela*/
+    align-items: center;
+    justify-content: center;
 
     border: 1.5px solid var(--cor-13);
     border-radius: var(--radius);
@@ -189,6 +190,11 @@ nav {
     #btnMenuUsuario, .offcanvas-title {color: var(--cor-03) !important;}
     .dropdown-item:hover {background-color: var(--cor-02);}
     #menuUsuario {width: 100%;}
+
+    .btn-fechar-sistema {
+        align-self: flex-end;
+        width: 6rem;
+    }
 }
 
 @media (max-width: 440px) {
