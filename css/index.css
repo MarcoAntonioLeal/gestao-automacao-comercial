@@ -156,7 +156,7 @@ nav {
     .cards {justify-content: center;}
 }
 
-@media (max-width: 576px) {
+@media (max-width: 575px) {
     #sec-valor-venda {flex-wrap: wrap;}
 
      /*Remove a aparência de botão dropdown*/
