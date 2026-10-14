@@ -87,33 +87,3 @@ input, select {
     text-transform: uppercase;
     color: inherit;
 }
-
-.codigo-e-status {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    & #codigo {
-        width: 5rem;
-        font-weight: bolder;
-        color: var(--cor-11);
-    }
-}
-
-.status {
-    display: flex;
-    align-items: center;
-    gap: .2rem;
-    margin-right: 2rem;
-    
-    & #ativo-inativo{
-        width: 3rem;
-        height: 1.5rem;
-    }
-}
-
-input#descricao {width: 30rem;}
-
-.preco-e-custo > input, select {
-    width: 5rem;
-}

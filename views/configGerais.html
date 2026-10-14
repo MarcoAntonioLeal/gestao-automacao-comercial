@@ -54,29 +54,55 @@
                     </div>
 
                     <div>
-                        <select name="" id="">
-                            <option value=""></option>
-                            <option value=""></option>
+                        <label for="">Tipo Pessoa:</label>
+                        <select name="tipo_pessoa" id="tipo_pessoa">
+                            <option value="PF">Física</option>
+                            <option value="PJ">Jurídica</option>
                         </select>
                     </div>
 
-                    <hr>
-
-                    <div class="preco-e-custo py-3">
-                        <label for="estoque">Estoque:</label>
-                        <input type="text" name="estoque" id="estoque" autocomplete="off" maxlength="7" required pattern="\d+([.,]\d{1,2})?" title="Números inteiros ou com no máximo duas casas decimais" value="0"> <!--  Aqui no value colocar no ejs <%- valor | 0 %>  -->
-
-                        <label for="custo" class="ms-4">Custo:</label>
-                        <input type="text" name="custo" id="custo" autocomplete="off" data-preco = "custo" maxlength="6" class="calcValorProduto" pattern="\d+([.,]\d{1,2})?" title="Números inteiros ou com no máximo duas casas decimais" value="0"> <!--Aqui no value colocar no ejs <%- valor | 0 %>-->
-
-                        <label for="margem" class="ms-4">Margem em % :</label>
-                        <input type="text" name="margem" id="margem" autocomplete="off" data-preco = "margem" maxlength="6" class="calcValorProduto" pattern="\d+([.,]\d{1,2})?" title="Números inteiros ou com no máximo duas casas decimais | Margem do produto não pode ser negativa">
-
-                        <label for="preco" class="ms-4">Preço:</label>
-                        <input type="text" name="preco" id="preco" autocomplete="off" data-preco="preco" maxlength="7" class="calcValorProduto" required pattern="\d+([.,]\d{1,2})?" title="Números inteiros ou com no máximo duas casas decimais">
+                    <div>
+                        <label for="">CPF:</label>
+                        <input type="text" name="identificacao" id="identificacao" required>
                     </div>
 
                     <hr>
+
+                    <div>
+                        <label for="cep">CEP:</label>
+                        <input type="text" name="cep" id="cep" autocomplete="off" maxlength="8" required pattern="" title="">
+
+                        <label for="rua">Rua:</label>
+                        <input type="text" name="rua" id="rua" autocomplete="off" required >
+
+                        <label for="cidade">Cidade:</label>
+                        <input type="text" name="cidade" id="cidade" autocomplete="off" required pattern="" title="">
+
+                        <label for="bairro">Bairro:</label>
+                        <input type="text" name="bairro" id="bairro" autocomplete="off" required pattern="" title="">
+
+                        <label for="uf">UF:</label>
+                        <input type="text" name="uf" id="uf" autocomplete="off" maxlength="2" required pattern="" title="">
+                    </div>
+
+                    <hr>
+
+                    <div>
+                        <label for="telFixo">Telefone Fixo:</label>
+                        <input type="tel" name="telFixo" id="telFixo" autocomplete="off" maxlength="10" pattern="" title="">
+
+                        <label for="celular01">Celualar 01:</label>
+                        <input type="tel" name="celular01" id="celular01" autocomplete="off" maxlength="11" pattern="" title="">
+
+                        <label for="celular02">Celular 02:</label>
+                        <input type="tel" name="celular02" id="celular02" autocomplete="off" maxlength="11" pattern="" title="">
+
+                        <label for="email01">E-mail 01:</label>
+                        <input type="email" name="email01" id="email01" autocomplete="off" pattern="" title="">
+
+                        <label for="email02">E-mail 02:</label>
+                        <input type="email" name="email02" id="email02" autocomplete="off" pattern="" title="">
+                    </div>
             </form>
         </section>
      </main>
@@ -87,20 +113,3 @@
     </footer>
                           
 </body>
-
-<!--
-    nome_empresa TEXT NOT NULL CHECK(length(nome_empresa) <= 70),
-	tipo_pessoa TEXT NOT NULL CHECK(tipo_pessoa IN ('PF', 'PJ')),
-   	cpf TEXT CHECK(length(cpf) = 11),
-	cnpj TEXT CHECK(length(cnpj) = 14),	
-	cep TEXT CHECK(length(cep) = 8),
-	rua TEXT,
-	bairro TEXT,
-	cidade TEXT,
-	uf TEXT CHECK(length(uf) = 2),
-	telefone_fixo TEXT CHECK(length(telefone_fixo) = 10),
-	celular_01 TEXT CHECK(length(celular_01) = 11),
-	celular_02 TEXT CHECK(length(celular_02) = 11),
-	email_01 TEXT,
-	email_02 TEXT,
--->
