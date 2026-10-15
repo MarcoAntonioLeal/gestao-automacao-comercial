@@ -97,23 +97,19 @@ input, select {
     text-transform: uppercase;
 }
 
-label[for="identificacao"],
-label[for="bairro"],
 label[for="uf"],
-label[for="celular01"],
-label[for="celular02"],
-label[for="email02"]
+label[for="identificacao"]
 {margin-left: 1rem;}
 
-#razao, #rua {min-width: 50%}
+#razao, #rua {min-width: 60%}
 #tipo_pessoa {min-width: 10%;}
 #identificacao {min-width: 20%;}
 #cep {width: 8rem;}
 #uf {width: 5rem;}
-#email01, #email02 {min-width: 30%;}
+#email01, #email02 {min-width: 35%;}
 
 
-@media (max-width: 768px) {
+@media (max-width: 767.8px) {
     header {
         justify-content: center;
         margin-bottom: 8rem;
@@ -123,4 +119,18 @@ label[for="email02"]
         justify-content: center;
         margin: auto;
     }
+
+    .sec-endereco {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    #razao {min-width: 70%}
+    #rua {min-width: 80%}
+    #email01, #email02 {min-width: 65%;}
+}
+
+@media (max-width: 505px) {
+    
 }
