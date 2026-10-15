@@ -13,8 +13,7 @@
 </head>
 <body>
     <body>
-
-    <header>
+    <header class="container">
         <div class="style-padrao borda">
             /*usuario*/
         </div>
@@ -48,61 +47,71 @@
             <form action="#" method="#">
                     <legend>Cadastro Empresa</legend>
 
-                    <div>
-                        <label for="razao">Razão Social:</label>
-                        <input type="text" name="razao" id="razao" autocomplete="off" maxlength="70" required>
-                    </div>
+                    <section>
+                        <div>
+                            <label for="razao">Razão Social:</label>
+                            <input type="text" name="razao" id="razao" autocomplete="off" maxlength="70" required>
+                        </div>
 
-                    <div>
-                        <label for="">Tipo Pessoa:</label>
-                        <select name="tipo_pessoa" id="tipo_pessoa">
-                            <option value="PF">Física</option>
-                            <option value="PJ">Jurídica</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label for="">CPF:</label>
-                        <input type="text" name="identificacao" id="identificacao" required>
-                    </div>
-
-                    <hr>
-
-                    <div>
-                        <label for="cep">CEP:</label>
-                        <input type="text" name="cep" id="cep" autocomplete="off" maxlength="8" required pattern="" title="">
-
-                        <label for="rua">Rua:</label>
-                        <input type="text" name="rua" id="rua" autocomplete="off" required >
-
-                        <label for="cidade">Cidade:</label>
-                        <input type="text" name="cidade" id="cidade" autocomplete="off" required pattern="" title="">
-
-                        <label for="bairro">Bairro:</label>
-                        <input type="text" name="bairro" id="bairro" autocomplete="off" required pattern="" title="">
-
-                        <label for="uf">UF:</label>
-                        <input type="text" name="uf" id="uf" autocomplete="off" maxlength="2" required pattern="" title="">
-                    </div>
+                        <div>
+                            <label for="">Tipo Pessoa:</label>
+                            <select name="tipo_pessoa" id="tipo_pessoa">
+                                <option value="PF">Física</option>
+                                <option value="PJ">Jurídica</option>
+                            </select>
+                        
+                            <label for="identificacao">CPF:</label>
+                            <input type="text" name="identificacao" id="identificacao" required>
+                        </div>
+                    </section>
 
                     <hr>
 
-                    <div>
-                        <label for="telFixo">Telefone Fixo:</label>
-                        <input type="tel" name="telFixo" id="telFixo" autocomplete="off" maxlength="10" pattern="" title="">
+                    <section>
+                        <div>
+                            <label for="cep">CEP:</label>
+                            <input type="text" name="cep" id="cep" autocomplete="off" maxlength="8" required pattern="" title="">
+                        </div>
 
-                        <label for="celular01">Celualar 01:</label>
-                        <input type="tel" name="celular01" id="celular01" autocomplete="off" maxlength="11" pattern="" title="">
+                        <div>
+                            <label for="rua">Rua:</label>
+                            <input type="text" name="rua" id="rua" autocomplete="off" required >
+                        </div>
 
-                        <label for="celular02">Celular 02:</label>
-                        <input type="tel" name="celular02" id="celular02" autocomplete="off" maxlength="11" pattern="" title="">
+                        <div>
+                            <label for="cidade">Cidade:</label>
+                            <input type="text" name="cidade" id="cidade" autocomplete="off" required pattern="" title="">
 
-                        <label for="email01">E-mail 01:</label>
-                        <input type="email" name="email01" id="email01" autocomplete="off" pattern="" title="">
+                            <label for="bairro">Bairro:</label>
+                            <input type="text" name="bairro" id="bairro" autocomplete="off" required pattern="" title="">
 
-                        <label for="email02">E-mail 02:</label>
-                        <input type="email" name="email02" id="email02" autocomplete="off" pattern="" title="">
-                    </div>
+                            <label for="uf">UF:</label>
+                            <input type="text" name="uf" id="uf" autocomplete="off" maxlength="2" required pattern="" title="">
+                        </div>
+                    </section>
+
+                    <hr>
+
+                    <section>
+                        <div>
+                            <label for="telFixo">Telefone Fixo:</label>
+                            <input type="tel" name="telFixo" id="telFixo" autocomplete="off" maxlength="10" pattern="" title="">
+
+                            <label for="celular01">Celular 01:</label>
+                            <input type="tel" name="celular01" id="celular01" autocomplete="off" maxlength="11" pattern="" title="">
+
+                            <label for="celular02">Celular 02:</label>
+                            <input type="tel" name="celular02" id="celular02" autocomplete="off" maxlength="11" pattern="" title="">
+                        </div>
+
+                        <div>
+                            <label for="email01">E-mail 01:</label>
+                            <input type="email" name="email01" id="email01" autocomplete="off" pattern="" title="">
+
+                            <label for="email02">E-mail 02:</label>
+                            <input type="email" name="email02" id="email02" autocomplete="off" pattern="" title="">
+                        </div>
+                    </section>
             </form>
         </section>
      </main>

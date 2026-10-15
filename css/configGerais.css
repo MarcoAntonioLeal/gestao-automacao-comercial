@@ -1,3 +1,5 @@
+header {margin-bottom: 5rem;}
+
 main {
     display: flex;
     flex-direction: column;
@@ -58,12 +60,12 @@ main {
 .sec-cadastro {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     
     min-height: 50vh;
     margin: 1rem 0 2.5rem 0;
-    transition-duration: .5s;
     border-radius: var(--radius);
+    transition-duration: .5s;
     
     &:hover {
         box-shadow: 3px 3px 3px var(--cor-shadow-hover);
@@ -71,8 +73,16 @@ main {
     }
 
     & legend {
+        margin-bottom: 1.5rem;
         color: var(--cor-05);
+        font-size: x-large;
         font-weight: bold;
+    }
+
+    & hr {
+        padding-bottom: .5rem;
+        border-radius: var(--radius);
+        background-color: var(--cor-12);
     }
 }
 
@@ -84,6 +94,29 @@ label {
 input, select {
     outline: none;
     padding: 4px;
+    margin-bottom: 1rem;
     text-transform: uppercase;
     color: inherit;
 }
+
+label[for="identificacao"],
+label[for="bairro"],
+label[for="uf"],
+label[for="celular01"],
+label[for="celular02"],
+label[for="email02"]
+{margin-left: 1rem;}
+
+#razao {min-width: 50%}
+
+#tipo_pessoa {min-width: 10%;}
+
+#identificacao {min-width: 20%;}
+
+#cep {width: 8rem;}
+
+#rua {min-width: 50%;}
+
+#uf {width: 5rem;}
+
+#email01, #email02 {min-width: 30%;}

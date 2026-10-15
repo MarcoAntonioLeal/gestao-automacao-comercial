@@ -73,7 +73,7 @@ a {
 /*====header usuario logado====*/
 header{
     display: flex;
-    align-self: end;
+    justify-content: end;
     
     & > div {
         width: 20rem;
