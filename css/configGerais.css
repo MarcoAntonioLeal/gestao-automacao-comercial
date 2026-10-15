@@ -16,9 +16,7 @@ main {
     gap: 1.5rem;
     width: 80%;
 
-    & img {
-        margin: auto;
-    }
+    & img {margin: auto;}
 }
 
 .linha-vertical { 
@@ -44,7 +42,7 @@ main {
     transition-duration: .5s;
 
     &:hover {
-        background-color: var(--cor-10);
+        background-color: var(--cor-14);
         box-shadow: 3px 3px 3px var(--cor-shadow-hover);
         transition-duration: .5s;
     }  
@@ -95,8 +93,8 @@ input, select {
     outline: none;
     padding: 4px;
     margin-bottom: 1rem;
-    text-transform: uppercase;
     color: inherit;
+    text-transform: uppercase;
 }
 
 label[for="identificacao"],
@@ -107,16 +105,22 @@ label[for="celular02"],
 label[for="email02"]
 {margin-left: 1rem;}
 
-#razao {min-width: 50%}
-
+#razao, #rua {min-width: 50%}
 #tipo_pessoa {min-width: 10%;}
-
 #identificacao {min-width: 20%;}
-
 #cep {width: 8rem;}
-
-#rua {min-width: 50%;}
-
 #uf {width: 5rem;}
-
 #email01, #email02 {min-width: 30%;}
+
+
+@media (max-width: 768px) {
+    header {
+        justify-content: center;
+        margin-bottom: 8rem;
+    }
+
+    #sec-menu {
+        justify-content: center;
+        margin: auto;
+    }
+}
