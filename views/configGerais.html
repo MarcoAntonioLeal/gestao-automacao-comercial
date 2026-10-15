@@ -43,9 +43,14 @@
             </a>
         </section>
 
+        <!--
+        As tags <br> com atributo de ajusteDeLInha, 
+        tem a função de ajustar o formulario na sua responsividade
+        -->
+
         <section class="container sec-cadastro borda style-padrao">
             <form action="#" method="#">
-                    <legend>Cadastro Empresa</legend>
+                <legend>Cadastro Empresa</legend>
 
                     <section>
                         <div>
@@ -59,6 +64,8 @@
                                 <option value="PF">Física</option>
                                 <option value="PJ">Jurídica</option>
                             </select>
+
+                            <br id="ajusteDeLinhaCPF">
                         
                             <label for="identificacao">CPF:</label>
                             <input type="text" name="identificacao" id="identificacao" required>
@@ -87,6 +94,8 @@
                             <label for="bairro">Bairro:</label>
                             <input type="text" name="bairro" id="bairro" autocomplete="off" required pattern="" title="">
 
+                            <br id="ajusteDeLinhaUF">
+
                             <label for="uf">UF:</label>
                             <input type="text" name="uf" id="uf" autocomplete="off" maxlength="2" required pattern="" title="">
                         </div>
@@ -97,33 +106,46 @@
 
                     <section>
                         <div>
-                            <label for="telFixo">Telefone Fixo:</label>
+                            <label for="telFixo">Tel. Fixo:</label>
+
+                            <br class="ajusteDeLinha">
+
                             <input type="tel" name="telFixo" id="telFixo" autocomplete="off" maxlength="10" pattern="" title="">
                         </div>
 
-                            <div>
-                                <label for="celular01">Celular 01:</label>
-                                <input type="tel" name="celular01" id="celular01" autocomplete="off" maxlength="11" pattern="" title="">
-                            </div>
+                        <div>
+                            <label for="celular01">Celular 01:</label>
 
-                            <div>
-                                <label for="celular02">Celular 02:</label>
-                                <input type="tel" name="celular02" id="celular02" autocomplete="off" maxlength="11" pattern="" title="">
-                            </div>
-                        
+                            <br class="ajusteDeLinha">
 
-                        
-                            <div>
-                                <label for="email01">E-mail 01:</label>
-                                <input type="email" name="email01" id="email01" autocomplete="off" pattern="" title="">
-                            </div>
-
-                            <div>
-                                <label for="email02">E-mail 02:</label>
-                                <input type="email" name="email02" id="email02" autocomplete="off" pattern="" title="">
-                            </div>
+                            <input type="tel" name="celular01" id="celular01" autocomplete="off" maxlength="11" pattern="" title="">
                         </div>
-                    </section>
+
+                        <div>
+                            <label for="celular02">Celular 02:</label>
+
+                            <br class="ajusteDeLinha">
+
+                            <input type="tel" name="celular02" id="celular02" autocomplete="off" maxlength="11" pattern="" title="">
+                        </div>
+                        
+                        <div>
+                            <label for="email01">E-mail 01:</label>
+
+                            <br class="ajusteDeLinha">
+
+                            <input type="email" name="email01" id="email01" autocomplete="off" pattern="" title="">
+                        </div>
+
+                        <div>
+                            <label for="email02">E-mail 02:</label>
+
+                            <br class="ajusteDeLinha">
+
+                            <input type="email" name="email02" id="email02" autocomplete="off" pattern="" title="">
+                        </div>
+                    </div>
+                </section>
             </form>
         </section>
      </main>

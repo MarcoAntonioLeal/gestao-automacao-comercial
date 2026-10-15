@@ -9,6 +9,17 @@ main {
     font-size: medium;
 }
 
+/*
+As tags <br> com atributo de ajusteDeLInha, 
+tem a função de ajustar o formulario na sua responsividade
+*/
+
+#ajusteDeLinhaCPF,
+#ajusteDeLinhaUF,
+.ajusteDeLinha
+{display: none;}
+
+
 /*====Menu====*/
 #sec-menu {
     display: flex;
@@ -35,14 +46,14 @@ main {
     height: 5.8rem;
     width: 5.8rem;
     border-radius: var(--radius);
-    background-color: var(--cor-04);
+    background-color: var(--cor-00);
     box-shadow: 3px 3px 3px var(--cor-shadow);
     font-size: 1.02rem;
     color: inherit;
     transition-duration: .5s;
 
     &:hover {
-        background-color: var(--cor-14);
+        background-color: var(--cor-04);
         box-shadow: 3px 3px 3px var(--cor-shadow-hover);
         transition-duration: .5s;
     }  
@@ -90,6 +101,7 @@ label {
 }
 
 input, select {
+    height: 100%;
     outline: none;
     padding: 4px;
     margin-bottom: 1rem;
@@ -131,6 +143,17 @@ label[for="identificacao"]
     #email01, #email02 {min-width: 65%;}
 }
 
-@media (max-width: 505px) {
-    
+@media (max-width: 504px) {
+    #ajusteDeLinhaCPF {display: block;}
+    label[for="identificacao"] {margin-left: 0;}
+}
+
+@media (max-width: 432px) {
+    #ajusteDeLinhaUF {display: block;}
+    label[for="uf"] {margin-left: 0;}
+}
+
+@media (max-width: 332px) {
+    .ajusteDeLinha {display: block;}
+    legend {text-align: center;}
 }
