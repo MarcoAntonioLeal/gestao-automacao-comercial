@@ -22,7 +22,7 @@
      <main class="container">
         
         <section id="sec-menu">
-            <button type="button" class="borda">
+            <button type="button" class="borda" id="btnSalvar">
                 <img src="../img/salvar.svg" alt="" class="icon-l">
 
                 <div>
@@ -55,7 +55,13 @@
                     <section>
                         <div>
                             <label for="razao">Razão Social:</label>
-                            <input type="text" name="razao" id="razao" autocomplete="off" maxlength="70" required>
+
+                            <input type="text" 
+                            name="razao" 
+                            id="razao" 
+                            autocomplete="off" 
+                            maxlength="70" 
+                            required>
                         </div>
 
                         <div>
@@ -67,8 +73,27 @@
 
                             <br id="ajusteDeLinhaCPF">
                         
-                            <label for="identificacao">CPF:</label>
-                            <input type="text" name="identificacao" id="identificacao" required>
+                            <label for="idCPF">CPF:</label>
+
+                            <input type="text" 
+                            name="idCPF" 
+                            id="idCPF"
+                            autocomplete="off"
+                            maxlength="11"  
+                            required 
+                            pattern="^\d+$" 
+                            title="Digite somente números">
+
+                            <label for="idCNPJ">CNPJ:</label>
+
+                            <input type="text" 
+                            name="idCNPJ" 
+                            id="idCNPJ"
+                            autocomplete="off" 
+                            maxlength="14" 
+                            required 
+                            pattern="^\d+$" 
+                            title="Digite somente números">
                         </div>
                     </section>
 
@@ -77,27 +102,62 @@
                     <section class="sec-endereco">
                         <div>
                             <label for="cep">CEP:</label>
-                            <input type="text" name="cep" id="cep" autocomplete="off" maxlength="8" required pattern="" title="">
+
+                            <input type="text" 
+                            name="cep" 
+                            id="cep" 
+                            autocomplete="off" 
+                            maxlength="8" 
+                            required 
+                            pattern="^\d+$" 
+                            title="Digite somente números">
                         </div>
 
                         <div>
                             <label for="rua">Rua:</label>
-                            <input type="text" name="rua" id="rua" autocomplete="off" required >
+
+                            <input type="text" 
+                            name="rua" 
+                            id="rua" 
+                            autocomplete="off" 
+                            required>
                         </div>
 
                         <div>
                             <label for="cidade">Cidade:</label>
-                            <input type="text" name="cidade" id="cidade" autocomplete="off" required pattern="" title="">
+
+                            <input type="text" 
+                            name="cidade" 
+                            id="cidade" 
+                            autocomplete="off" 
+                            required 
+                            pattern="[A-Za-zÀ-ÖØ-öø-ÿ ]+" 
+                            title="Digite somente texto">
                         </div>
 
                         <div>
                             <label for="bairro">Bairro:</label>
-                            <input type="text" name="bairro" id="bairro" autocomplete="off" required pattern="" title="">
+
+                            <input type="text" 
+                            name="bairro" 
+                            id="bairro" 
+                            autocomplete="off" 
+                            required 
+                            pattern="[A-Za-zÀ-ÖØ-öø-ÿ ]+" 
+                            title="Digite somente texto">
 
                             <br id="ajusteDeLinhaUF">
 
                             <label for="uf">UF:</label>
-                            <input type="text" name="uf" id="uf" autocomplete="off" maxlength="2" required pattern="" title="">
+
+                            <input type="text" 
+                            name="uf" 
+                            id="uf" 
+                            autocomplete="off" 
+                            maxlength="2" 
+                            required 
+                            pattern="[A-Za-zÀ-ÖØ-öø-ÿ ]+" 
+                            title="Digite somente texto">
                         </div>
                         
                     </section>
@@ -110,7 +170,13 @@
 
                             <br class="ajusteDeLinha">
 
-                            <input type="tel" name="telFixo" id="telFixo" autocomplete="off" maxlength="10" pattern="" title="">
+                            <input type="tel" 
+                            name="telFixo" 
+                            id="telFixo" 
+                            autocomplete="off" 
+                            maxlength="10" 
+                            pattern="[0-9]{10}" 
+                            title="Digite o DDD e o telefone">
                         </div>
 
                         <div>
@@ -118,7 +184,13 @@
 
                             <br class="ajusteDeLinha">
 
-                            <input type="tel" name="celular01" id="celular01" autocomplete="off" maxlength="11" pattern="" title="">
+                            <input type="tel" 
+                            name="celular01" 
+                            id="celular01" 
+                            autocomplete="off" 
+                            maxlength="11" 
+                            pattern="[0-9]{11}" 
+                            title="Digite o DDD e o telefone">
                         </div>
 
                         <div>
@@ -126,7 +198,13 @@
 
                             <br class="ajusteDeLinha">
 
-                            <input type="tel" name="celular02" id="celular02" autocomplete="off" maxlength="11" pattern="" title="">
+                            <input type="tel" 
+                            name="celular02" 
+                            id="celular02" 
+                            autocomplete="off" 
+                            maxlength="11" 
+                            pattern="[0-9]{11}" 
+                            title="Digite o DDD e o telefone">
                         </div>
                         
                         <div>
@@ -134,7 +212,12 @@
 
                             <br class="ajusteDeLinha">
 
-                            <input type="email" name="email01" id="email01" autocomplete="off" pattern="" title="">
+                            <input type="email" 
+                            name="email01" 
+                            id="email01" 
+                            autocomplete="off" 
+                            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" 
+                            title="Digite um e-mail válido">
                         </div>
 
                         <div>
@@ -142,7 +225,12 @@
 
                             <br class="ajusteDeLinha">
 
-                            <input type="email" name="email02" id="email02" autocomplete="off" pattern="" title="">
+                            <input type="email" 
+                            name="email02" 
+                            id="email02" 
+                            autocomplete="off" 
+                            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" 
+                            title="Digite um e-mail válido">
                         </div>
                     </div>
                 </section>
@@ -154,5 +242,6 @@
         <img src="../img/logo.svg" alt="Logo" class="icon-m me-2"> 
         <span class="fs-4 text-logo">Say-System</span>
     </footer>
-                          
+               
+    <script src="../js/configGerais.js"></script>
 </body>
