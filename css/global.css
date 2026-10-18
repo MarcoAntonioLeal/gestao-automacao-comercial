@@ -64,11 +64,10 @@ a {
     box-shadow: none !important;
     opacity: 60%;
     border: 1px solid var(--cor-11);
-
-    &:hover {
-        background-color: var(--cor-00) !important;   
-    }
 }
+
+.display-none {display: none;}
+.display-block {display: inline-block;}
 
 /*====header usuario logado====*/
 header{

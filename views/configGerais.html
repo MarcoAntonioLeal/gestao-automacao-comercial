@@ -73,27 +73,27 @@
 
                             <br id="ajusteDeLinhaCPF">
                         
-                            <label for="idCPF">CPF:</label>
+                            <label for="labelId">CPF:</label>
 
                             <input type="text" 
                             name="idCPF" 
                             id="idCPF"
+                            class="display-block validation-number"
                             autocomplete="off"
-                            maxlength="11"  
+                            maxlength="14"  
                             required 
-                            pattern="^\d+$" 
-                            title="Digite somente números">
-
-                            <label for="idCNPJ">CNPJ:</label>
+                            pattern="[0-9]{14}" 
+                            title="Digite seu CPF">
 
                             <input type="text" 
                             name="idCNPJ" 
                             id="idCNPJ"
+                            class="display-none validation-number"
                             autocomplete="off" 
                             maxlength="14" 
                             required 
-                            pattern="^\d+$" 
-                            title="Digite somente números">
+                            pattern="[0-9]{14}" 
+                            title="Digite seu CNPJ">
                         </div>
                     </section>
 
@@ -106,10 +106,11 @@
                             <input type="text" 
                             name="cep" 
                             id="cep" 
+                            class="validation-number"
                             autocomplete="off" 
                             maxlength="8" 
                             required 
-                            pattern="^\d+$" 
+                            pattern="[0-9]{8}" 
                             title="Digite somente números">
                         </div>
 
@@ -156,7 +157,7 @@
                             autocomplete="off" 
                             maxlength="2" 
                             required 
-                            pattern="[A-Za-zÀ-ÖØ-öø-ÿ ]+" 
+                            pattern="[A-Za-z]+" 
                             title="Digite somente texto">
                         </div>
                         
@@ -172,7 +173,8 @@
 
                             <input type="tel" 
                             name="telFixo" 
-                            id="telFixo" 
+                            id="telFixo"
+                            class="validation-number" 
                             autocomplete="off" 
                             maxlength="10" 
                             pattern="[0-9]{10}" 
@@ -187,6 +189,7 @@
                             <input type="tel" 
                             name="celular01" 
                             id="celular01" 
+                            class="validation-number"
                             autocomplete="off" 
                             maxlength="11" 
                             pattern="[0-9]{11}" 
@@ -200,7 +203,8 @@
 
                             <input type="tel" 
                             name="celular02" 
-                            id="celular02" 
+                            id="celular02"
+                            class="validation-number"
                             autocomplete="off" 
                             maxlength="11" 
                             pattern="[0-9]{11}" 

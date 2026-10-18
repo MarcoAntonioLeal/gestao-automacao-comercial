@@ -110,12 +110,12 @@ input, select {
 }
 
 label[for="uf"],
-label[for="idCPF"]
+label[for="labelId"]
 {margin-left: 1rem;}
 
 #razao, #rua {min-width: 60%}
 #tipo_pessoa {min-width: 10%;}
-#idCPF {min-width: 20%;}
+#idCPF, #idCNPJ {min-width: 20%;}
 #cep {width: 8rem;}
 #uf {width: 5rem;}
 #email01, #email02 {min-width: 35%;}
@@ -145,7 +145,7 @@ label[for="idCPF"]
 
 @media (max-width: 520px) {
     #ajusteDeLinhaCPF {display: block;}
-    label[for="idCPF"] {margin-left: 0;}
+    label[for="labelId"] {margin-left: 0;}
 }
 
 @media (max-width: 432px) {
