@@ -13,6 +13,8 @@ tipoPessoa.addEventListener('change', () => {
 
         cpf.classList.remove('display-block')
         cpf.classList.add('display-none')
+
+        cpf.value = ''
         
         cnpj.disabled = false
         cpf.disabled = true
@@ -24,6 +26,8 @@ tipoPessoa.addEventListener('change', () => {
 
         cpf.classList.remove('display-none')
         cpf.classList.add('display-block')
+
+        cnpj.value = ''
 
         cnpj.disabled = true
         cpf.disabled = false
@@ -47,6 +51,31 @@ validationNumber.forEach(element => {
 
        } else if (element.id === 'idCNPJ') {
 
+        ev.target.value = ev.target.value
+        .replace(/^(\d{2})(\d)/, '$1.$2')
+        .replace(/^(\d{2})\.(\d{3})(\d)/, '$1.$2.$3')
+        .replace(/^(\d{2})\.(\d{3})\.(\d{3})(\d)/, '$1.$2.$3/$4')
+        .replace(/^(\d{2})\.(\d{3})\.(\d{3})\/(\d{4})(\d)/, '$1.$2.$3/$4-$5');
+
+       } else if (element.id === 'cep') {
+
+        ev.target.value = ev.target.value
+        .replace(/(\d{5})(\d)/, '$1-$2')
+
+       } else if (element.id === 'telFixo') {
+        ev.target.value = ev.target.value
+        .replace(/(\d{2})(\d)/, '($1) $2')
+        .replace(/(\d{4})(\d)/, '$1-$2')
+
+       } else if(element.id === 'celular01') {
+        ev.target.value = ev.target.value
+        .replace(/(\d{2})(\d)/, '($1) $2')
+        .replace(/(\d{5})(\d)/, '$1-$2')
+
+       } else if (element.id === 'celular02') {
+        ev.target.value = ev.target.value
+        .replace(/(\d{2})(\d)/, '($1) $2')
+        .replace(/(\d{5})(\d)/, '$1-$2')
        }
     })
 })
