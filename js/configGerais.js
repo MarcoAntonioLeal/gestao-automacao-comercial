@@ -55,7 +55,7 @@ validationNumber.forEach(element => {
         .replace(/^(\d{2})(\d)/, '$1.$2')
         .replace(/^(\d{2})\.(\d{3})(\d)/, '$1.$2.$3')
         .replace(/^(\d{2})\.(\d{3})\.(\d{3})(\d)/, '$1.$2.$3/$4')
-        .replace(/^(\d{2})\.(\d{3})\.(\d{3})\/(\d{4})(\d)/, '$1.$2.$3/$4-$5');
+        .replace(/^(\d{2})\.(\d{3})\.(\d{3})\/(\d{4})(\d)/, '$1.$2.$3/$4-$5')
 
        } else if (element.id === 'cep') {
 
@@ -89,7 +89,7 @@ btnSalvar.addEventListener('click', () => {
     let novoCpf = [...cpf.value.replaceAll('.', '').replace('-', '')]
 
     //1ª validação 
-    let = cpfValidado = novoCpf.some(element => element != novoCpf[0])
+    let cpfValidado = novoCpf.some(element => element != novoCpf[0])
     
     if(!cpfValidado) {
         //colocar modal
@@ -98,60 +98,92 @@ btnSalvar.addEventListener('click', () => {
     }
 
     //2ª validação
-    let primeiroPasso = novoCpf.slice(0, 9)
-    let segundoPasso = []
+    let segundoDigito = novoCpf.slice(0, 9)
     
-    for(let i = 0; i < primeiroPasso.length; i++) {
-        segundoPasso.push(primeiroPasso[i] * (10 - i))
+    let primeiroDigito = novoCpf.slice(0, 9)
+
+    let controlePrimeiroDigito = []
+    
+    for(let i = 0; i < primeiroDigito.length; i++) {
+        controlePrimeiroDigito.push(primeiroDigito[i] * (10 - i))
     }
 
-    let terceiroPasso = segundoPasso.reduce((arg1, arg2) => arg1 + arg2)
+    let somaPrimeiroDigito = controlePrimeiroDigito.reduce((arg1, arg2) => arg1 + arg2)
 
-    if(terceiroPasso % 11 < 2) {
-        if(novoCpf[10] != 0) {
+    //Cálculo do 1º Dígito Verificador (10º dígito do CPF)
+    if(somaPrimeiroDigito % 11 < 2) {
+        segundoDigito.push(0)
+
+        if(novoCpf[9] != 0) {
         //colocar modal
         console.log('colocar modal - teste 02')
         return
         }
+
+    } else if (somaPrimeiroDigito % 11 >= 2) {
+        let resto = 11 - (somaPrimeiroDigito % 11) 
+        
+        segundoDigito.push(resto)
+
+        if(novoCpf[9] != resto) {
+        //colocar modal
+        console.log('colocar modal - teste 03')
+        return
+        }
     }
 
-    console.log(primeiroPasso)
-    console.log(segundoPasso)
-    console.log(terceiroPasso)
-    console.log(novoCpf)
+    //Cálculo do 2º Dígito Verificador (11º dígito do CPF)
+    let controleSegundoDigito = []
+    
+    for(let i = 0; i < segundoDigito.length; i++) {
+        controleSegundoDigito.push(segundoDigito[i] * (11 - i))
+    }
 
-    /*if(form.reportValidity()) {
+    let somaSegundoDigito = controleSegundoDigito.reduce((arg1, arg2) => arg1 + arg2)
+
+    if(somaSegundoDigito % 11 < 2) {
+
+        if(novoCpf[10] != 0) {
+        //colocar modal
+        console.log('colocar modal - teste 04')
+        return
+        }
+
+    } else if (somaSegundoDigito % 11 >= 2) {
+        let resto = 11 - (somaSegundoDigito % 11) 
+
+        if(novoCpf[10] != resto) {
+        //colocar modal
+        console.log('colocar modal - teste 05')
+        return
+        }
+    }
+
+    if(form.reportValidity()) {
         form.submit()
-    }*/
+    }
 })
-            
-        
-
-
-
 
 /*
-Dígitos repetidos: CPFs com todos os dígitos iguais (como 111.111.111-11 ou 000.000.000-00) são automaticamente inválidos, embora passem no cálculo matemático
+Validação do CNPJ
 
+Também é importante rejeitar sequências com todos os dígitos iguais, como ocorre na validação do CPF.
 
-1. Cálculo do 1º Dígito Verificador (10º dígito do CPF)
+A regra de validação do CNPJ é semelhante à do CPF, mas utiliza dois dígitos verificadores calculados por meio de multiplicações com pesos específicos e divisão por 11.
+1. Primeiro dígito verificador
+- Utilize os 12 primeiros dígitos do CNPJ.
+- Multiplique cada dígito por pesos que variam de 5 até 2 e depois de 9 até 2, nessa ordem.
+- Some todos os resultados.
+- Calcule o resto da divisão da soma por 11.
+- Se o resto for menor que 2, o primeiro dígito verificador será 0. Caso contrário, será 11 - resto.
 
-1. Pegue os 9 primeiros dígitos do CPF.
-2. Multiplique cada um deles por pesos decrescentes que vão de 10 até 2 (o 1º dígito por 10, o 2º por 9, e assim por diante, até o 9º dígito por 2).
-3. Some todos os resultados das multiplicações.
-4. Calcule o resto da divisão dessa soma por 11 (soma % 11):
-	• Se o resto for menor que 2, o primeiro dígito verificador é 0.
-	• Se o resto for 2 ou mais, o dígito verificador é 11 menos o resto (11 - resto).
-5. O resultado deve ser igual ao 10º dígito do CPF.
+2. Segundo dígito verificador
+- Utilize os 12 dígitos originais mais o primeiro dígito verificador calculado.
+- Multiplique cada dígito pelos pesos que variam de 6 até 2 e depois de 9 até 2, nessa ordem.
+- Some todos os resultados.
+- Calcule o resto da divisão da soma por 11.
+- Se o resto for menor que 2, o segundo dígito verificador será 0. Caso contrário, será 11 - resto.
 
-2. Cálculo do 2º Dígito Verificador (11º dígito do CPF)
-
-1. Pegue os 10 primeiros dígitos do CPF (incluindo o 1º dígito verificador que você acabou de calcular).
-2. Multiplique cada um deles por pesos decrescentes que vão de 11 até 2 (o 1º por 11, o 2º por 10, até o 10º por 2).
-3. Some todos os resultados.
-4. Calcule o resto da divisão dessa soma por 11 (soma % 11):
-	• Se o resto for menor que 2, o segundo dígito verificador é 0.
-	• Se o resto for 2 ou mais, o dígito verificador é 11 menos o resto (11 - resto).
-5. O resultado deve ser igual ao 11º dígito do CPF
-
+3. Validação final
+Compare os dois dígitos calculados com os dois últimos dígitos do CNPJ informado. Se ambos coincidirem, o CNPJ passa na validação matemática.
 */
