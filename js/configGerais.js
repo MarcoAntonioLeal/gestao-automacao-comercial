@@ -82,9 +82,17 @@ validationNumber.forEach(element => {
 
 const btnSalvar = document.querySelector('#btnSalvar')
 const form = document.querySelector('form')
+const modal = new bootstrap.Modal(document.getElementById('idInvalido'))
+
+let cpfValido = false
 
 btnSalvar.addEventListener('click', () => {
-    
+
+    if(cpf.value == '') {
+        cpfValido = false
+        return
+    }
+
     //Validação do CPF
     let novoCpf = [...cpf.value.replaceAll('.', '').replace('-', '')]
 
@@ -92,8 +100,7 @@ btnSalvar.addEventListener('click', () => {
     let cpfValidado = novoCpf.some(element => element != novoCpf[0])
     
     if(!cpfValidado) {
-        //colocar modal
-        console.log('colocar modal - teste 01')
+        cpfValido = false
         return
     }
 
@@ -115,9 +122,8 @@ btnSalvar.addEventListener('click', () => {
         segundoDigito.push(0)
 
         if(novoCpf[9] != 0) {
-        //colocar modal
-        console.log('colocar modal - teste 02')
-        return
+            cpfValido = false
+            return
         }
 
     } else if (somaPrimeiroDigito % 11 >= 2) {
@@ -126,9 +132,8 @@ btnSalvar.addEventListener('click', () => {
         segundoDigito.push(resto)
 
         if(novoCpf[9] != resto) {
-        //colocar modal
-        console.log('colocar modal - teste 03')
-        return
+            cpfValido = false
+            return
         }
     }
 
@@ -144,27 +149,31 @@ btnSalvar.addEventListener('click', () => {
     if(somaSegundoDigito % 11 < 2) {
 
         if(novoCpf[10] != 0) {
-        //colocar modal
-        console.log('colocar modal - teste 04')
-        return
+            cpfValido = false
+            return
         }
 
     } else if (somaSegundoDigito % 11 >= 2) {
         let resto = 11 - (somaSegundoDigito % 11) 
 
         if(novoCpf[10] != resto) {
-        //colocar modal
-        console.log('colocar modal - teste 05')
-        return
+            cpfValido = false
+            return
         }
     }
 
-    if(form.reportValidity()) {
+    cpfValido = true
+
+    modal.show()
+   if(form.reportValidity()) {
         form.submit()
     }
 })
 
+
 /*
+
+
 Validação do CNPJ
 
 Também é importante rejeitar sequências com todos os dígitos iguais, como ocorre na validação do CPF.

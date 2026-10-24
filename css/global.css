@@ -99,3 +99,18 @@ footer {
     color: var(--cor-02);
     background-color: var(--cor-13);
 }
+
+
+    /*====Modal====*/
+.modal {color: inherit;}
+
+.modal-header {
+    border-bottom: 2px solid var(--cor-04);
+
+        & .modal-title  {
+        font-weight: bold;
+        color: var(--cor-05);
+    }
+}
+
+.modal-footer {border-top: 2px solid var(--cor-04);}

@@ -141,15 +141,6 @@ textarea {
 }
 
 /*====Modal para criar novo grupo====*/
-.modal {
-    color: inherit;
-}
-
-.modal-title {
-    color: var(--cor-05);
-    font-weight: bold;
-}
-
 .sec-modal-menu {
     display: flex;
     gap: 1.3rem;

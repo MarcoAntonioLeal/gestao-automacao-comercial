@@ -113,15 +113,6 @@ td:not(.primeira-coluna), th:not(.primeira-coluna) {
 }
 
 /*====Modal de filtro de pesquisa====*/
-.modal-header {
-    border-bottom: 2px solid var(--cor-04);
-
-        & .modal-header-title {
-        font-weight: bold;
-        color: var(--cor-05);
-    }
-}
-
 .modal-body-pesquisar {
     display: flex;
     justify-content: space-around;
@@ -172,20 +163,8 @@ select {
     color: inherit;
 }
 
-.modal-footer {
-    border-top: 2px solid var(--cor-04);
-}
 
 /*====Modal de fornecedores do produto====*/
-.modal {
-    color: inherit;
-}
-
-.modal-title {
-    color: var(--cor-05);
-    font-weight: bold;
-}
-
 .modal-body-fornecedores, .modal-body-fluxo{
     max-height: 65vh;
     padding-top: 0;
@@ -199,7 +178,6 @@ select {
         font-size: 1.05rem;
     }
 }
-
 
 /*====Modal de fluxo de produtos====*/
 .modal-body-fluxo {
