@@ -35,6 +35,15 @@ tipoPessoa.addEventListener('change', () => {
     }
 })
 
+//Validações dos campos de texto
+const validationText = document.querySelectorAll('.validation-text')
+
+validationText.forEach(element => {
+    element.addEventListener('input', ev => {
+        ev.target.value = ev.target.value.replace(/[^a-zA-Z\u00C0-\u00FF\s]/g, '')
+    })
+})
+
 //Validações dos campos de números e suas respectivas máscaras
 const validationNumber = document.querySelectorAll('.validation-number')
 
@@ -251,7 +260,7 @@ btnSalvar.addEventListener('click', () => {
 
             if(novoCnpj[13] != resto) {
                 modal.show()
-                modalBody.textContent = 'CPF Inválido'
+                modalBody.textContent = 'CNPJ Inválido'
                 return
             }
         }
