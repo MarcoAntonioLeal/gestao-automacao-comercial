@@ -89,7 +89,7 @@ btnSalvar.addEventListener('click', () => {
 
     if(labelId.textContent == 'CPF:') {
 
-        //Validação do CPF
+//-------------------Validação do CPF--------------------------
         let novoCpf = [...cpf.value.replaceAll('.', '').replace('-', '')]
 
         //1ª validação 
@@ -165,7 +165,7 @@ btnSalvar.addEventListener('click', () => {
 
     } else {
 
-        //Validação do CNPJ
+//-------------------Validação do CNPJ--------------------------
         let novoCnpj = [...cnpj.value.replaceAll('.', '').replace('-', '').replace('/', '')]
     
         //1ª validação 
@@ -176,37 +176,88 @@ btnSalvar.addEventListener('click', () => {
             modalBody.textContent = 'CNPJ Inválido'
             return
         }
-    
-      console.log(novoCnpj)
 
+        //2ª validação
+        let primeiraParte = novoCnpj.slice(0, 4)
+        let segundaParte = novoCnpj.slice(4, 12)
+        let terceiraParte = novoCnpj.slice(0, 12)
+
+        let controlePrimeiraParte = []
+        let controleSegundaParte = []
+    
+        for(let i = 0; i < primeiraParte.length; i++) {
+            controlePrimeiraParte.push(primeiraParte[i] * (5 - i))
+        }
+
+        for(let i = 0; i < segundaParte.length; i++) {
+            controleSegundaParte.push(segundaParte[i] * (9 - i))
+        }
+
+        let somaPrimeiraParte = controlePrimeiraParte.reduce((arg1, arg2) => arg1 + arg2)
+        let somaSegundaParte = controleSegundaParte.reduce((arg1, arg2) => arg1 + arg2)
+        let somaTotal = somaPrimeiraParte + somaSegundaParte
+
+        //Cálculo do 1º Dígito Verificador (13º dígito do CNPJ)
+        if(somaTotal % 11 < 2) {
+            terceiraParte.push(0)
+
+            if(novoCnpj[12] != 0) {
+                modal.show()
+                modalBody.textContent = 'CNPJ Inválido'
+                return
+            }
+
+        } else if (somaTotal % 11 >= 2) {
+            let resto = 11 - (somaTotal % 11) 
+        
+            terceiraParte.push(resto)
+
+            if(novoCnpj[12] != resto) {
+                modal.show()
+                modalBody.textContent = 'CNPJ Inválido'
+                return
+            }
+        }
+        
+        //Cálculo do 2º Dígito Verificador (14º dígito do CNPJ)
+        let quartaParte = terceiraParte.slice(0, 5)
+        let quintaParte = terceiraParte.slice(5, 13)
+
+        let controleQuartaParte = []
+        let controleQuintaParte = []
+    
+        for(let i = 0; i < quartaParte.length; i++) {
+            controleQuartaParte.push(quartaParte[i] * (6 - i))
+        }
+
+        for(let i = 0; i < quintaParte.length; i++) {
+            controleQuintaParte.push(quintaParte[i] * (9 - i))
+        }
+
+        let somaQuartaParte = controleQuartaParte.reduce((arg1, arg2) => arg1 + arg2)
+        let somaQuintaParte = controleQuintaParte.reduce((arg1, arg2) => arg1 + arg2)
+        let somaTotal2 = somaQuartaParte + somaQuintaParte
+
+        if(somaTotal2 % 11 < 2) {
+
+            if(novoCnpj[13] != 0) {
+                modal.show()
+                modalBody.textContent = 'CNPJ Inválido'
+                return
+            }
+
+        } else if (somaTotal2 % 11 >= 2) {
+            let resto = 11 - (somaTotal2 % 11) 
+
+            if(novoCnpj[13] != resto) {
+                modal.show()
+                modalBody.textContent = 'CPF Inválido'
+                return
+            }
+        }
     }
 
     if(form.reportValidity()) {
         form.submit()
     }
 })
-
-
-/*
-Validação do CNPJ
-
-Também é importante rejeitar sequências com todos os dígitos iguais, como ocorre na validação do CPF.
-
-A regra de validação do CNPJ é semelhante à do CPF, mas utiliza dois dígitos verificadores calculados por meio de multiplicações com pesos específicos e divisão por 11.
-1. Primeiro dígito verificador
-- Utilize os 12 primeiros dígitos do CNPJ.
-- Multiplique cada dígito por pesos que variam de 5 até 2 e depois de 9 até 2, nessa ordem.
-- Some todos os resultados.
-- Calcule o resto da divisão da soma por 11.
-- Se o resto for menor que 2, o primeiro dígito verificador será 0. Caso contrário, será 11 - resto.
-
-2. Segundo dígito verificador
-- Utilize os 12 dígitos originais mais o primeiro dígito verificador calculado.
-- Multiplique cada dígito pelos pesos que variam de 6 até 2 e depois de 9 até 2, nessa ordem.
-- Some todos os resultados.
-- Calcule o resto da divisão da soma por 11.
-- Se o resto for menor que 2, o segundo dígito verificador será 0. Caso contrário, será 11 - resto.
-
-3. Validação final
-Compare os dois dígitos calculados com os dois últimos dígitos do CNPJ informado. Se ambos coincidirem, o CNPJ passa na validação matemática.
-*/
