@@ -122,10 +122,20 @@ label[for="labelId"]
 
 
 /*====Modal====*/
+.modal-content {background-color: var(--cor-00);}
+.modal-header {border: none;}
+
 .modal-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 6rem;
+    margin-bottom: 3rem;
+
     color: var(--cor-08);
     text-align: center;
-    font-size: larger;
+    font-size: x-large;
     font-weight: bold;
 }
 

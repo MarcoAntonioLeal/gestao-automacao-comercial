@@ -83,97 +83,111 @@ validationNumber.forEach(element => {
 const btnSalvar = document.querySelector('#btnSalvar')
 const form = document.querySelector('form')
 const modal = new bootstrap.Modal(document.getElementById('idInvalido'))
-
-let cpfValido = false
+const modalBody = document.querySelector('.modal-body')
 
 btnSalvar.addEventListener('click', () => {
 
-    if(cpf.value == '') {
-        cpfValido = false
-        return
-    }
+    if(labelId.textContent == 'CPF:') {
 
-    //Validação do CPF
-    let novoCpf = [...cpf.value.replaceAll('.', '').replace('-', '')]
+        //Validação do CPF
+        let novoCpf = [...cpf.value.replaceAll('.', '').replace('-', '')]
 
-    //1ª validação 
-    let cpfValidado = novoCpf.some(element => element != novoCpf[0])
+        //1ª validação 
+        let cpfValidado = novoCpf.some(element => element != novoCpf[0])
     
-    if(!cpfValidado) {
-        cpfValido = false
-        return
-    }
-
-    //2ª validação
-    let segundoDigito = novoCpf.slice(0, 9)
-    
-    let primeiroDigito = novoCpf.slice(0, 9)
-
-    let controlePrimeiroDigito = []
-    
-    for(let i = 0; i < primeiroDigito.length; i++) {
-        controlePrimeiroDigito.push(primeiroDigito[i] * (10 - i))
-    }
-
-    let somaPrimeiroDigito = controlePrimeiroDigito.reduce((arg1, arg2) => arg1 + arg2)
-
-    //Cálculo do 1º Dígito Verificador (10º dígito do CPF)
-    if(somaPrimeiroDigito % 11 < 2) {
-        segundoDigito.push(0)
-
-        if(novoCpf[9] != 0) {
-            cpfValido = false
+        if(!cpfValidado) {
+            modal.show()
+            modalBody.textContent = 'CPF Inválido'
             return
         }
 
-    } else if (somaPrimeiroDigito % 11 >= 2) {
-        let resto = 11 - (somaPrimeiroDigito % 11) 
+        //2ª validação
+        let segundoDigito = novoCpf.slice(0, 9)
+    
+        let primeiroDigito = novoCpf.slice(0, 9)
+
+        let controlePrimeiroDigito = []
+    
+        for(let i = 0; i < primeiroDigito.length; i++) {
+            controlePrimeiroDigito.push(primeiroDigito[i] * (10 - i))
+        }
+
+        let somaPrimeiroDigito = controlePrimeiroDigito.reduce((arg1, arg2) => arg1 + arg2)
+
+        //Cálculo do 1º Dígito Verificador (10º dígito do CPF)
+        if(somaPrimeiroDigito % 11 < 2) {
+            segundoDigito.push(0)
+
+            if(novoCpf[9] != 0) {
+                modal.show()
+                modalBody.textContent = 'CPF Inválido'
+                return
+            }
+
+        } else if (somaPrimeiroDigito % 11 >= 2) {
+            let resto = 11 - (somaPrimeiroDigito % 11) 
         
-        segundoDigito.push(resto)
+            segundoDigito.push(resto)
 
-        if(novoCpf[9] != resto) {
-            cpfValido = false
-            return
+            if(novoCpf[9] != resto) {
+                modal.show()
+                modalBody.textContent = 'CPF Inválido'
+                return
+            }
         }
-    }
 
-    //Cálculo do 2º Dígito Verificador (11º dígito do CPF)
-    let controleSegundoDigito = []
+        //Cálculo do 2º Dígito Verificador (11º dígito do CPF)
+        let controleSegundoDigito = []
     
-    for(let i = 0; i < segundoDigito.length; i++) {
-        controleSegundoDigito.push(segundoDigito[i] * (11 - i))
-    }
-
-    let somaSegundoDigito = controleSegundoDigito.reduce((arg1, arg2) => arg1 + arg2)
-
-    if(somaSegundoDigito % 11 < 2) {
-
-        if(novoCpf[10] != 0) {
-            cpfValido = false
-            return
+        for(let i = 0; i < segundoDigito.length; i++) {
+            controleSegundoDigito.push(segundoDigito[i] * (11 - i))
         }
 
-    } else if (somaSegundoDigito % 11 >= 2) {
-        let resto = 11 - (somaSegundoDigito % 11) 
+        let somaSegundoDigito = controleSegundoDigito.reduce((arg1, arg2) => arg1 + arg2)
 
-        if(novoCpf[10] != resto) {
-            cpfValido = false
+        if(somaSegundoDigito % 11 < 2) {
+
+            if(novoCpf[10] != 0) {
+                modal.show()
+                modalBody.textContent = 'CPF Inválido'
+                return
+            }
+
+        } else if (somaSegundoDigito % 11 >= 2) {
+            let resto = 11 - (somaSegundoDigito % 11) 
+
+            if(novoCpf[10] != resto) {
+                modal.show()
+                modalBody.textContent = 'CPF Inválido'
+                return
+            }
+        }
+
+    } else {
+
+        //Validação do CNPJ
+        let novoCnpj = [...cnpj.value.replaceAll('.', '').replace('-', '').replace('/', '')]
+    
+        //1ª validação 
+        let cnpjValidado = novoCnpj.some(element => element != novoCnpj[0])
+        
+        if(!cnpjValidado) {
+            modal.show()
+            modalBody.textContent = 'CNPJ Inválido'
             return
         }
+    
+      console.log(novoCnpj)
+
     }
 
-    cpfValido = true
-
-    modal.show()
-   if(form.reportValidity()) {
+    if(form.reportValidity()) {
         form.submit()
     }
 })
 
 
 /*
-
-
 Validação do CNPJ
 
 Também é importante rejeitar sequências com todos os dígitos iguais, como ocorre na validação do CPF.
