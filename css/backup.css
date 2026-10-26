@@ -1,0 +1,107 @@
+header {margin-bottom: 5rem;}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin-top: -5rem;
+    font-size: medium;
+}
+
+/*====Menu====*/
+#sec-menu img {margin: auto;}
+    
+#sec-menu > a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 5.8rem;
+    width: 5.8rem;
+    border-radius: var(--radius);
+    background-color: var(--cor-00);
+    box-shadow: 3px 3px 3px var(--cor-shadow);
+    font-size: 1.02rem;
+    color: inherit;
+    transition-duration: .5s;
+
+    &:hover {
+        background-color: var(--cor-04);
+        box-shadow: 3px 3px 3px var(--cor-shadow-hover);
+        transition-duration: .5s;
+    }  
+
+    & hr {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+
+/*====Lista e Backup====*/
+.sec-cadastro {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 50vh;
+    margin: 1rem 0 2.5rem 0;
+    border-radius: var(--radius);
+    transition-duration: .5s;
+    
+    &:hover {
+        box-shadow: 3px 3px 3px var(--cor-shadow-hover);
+        transition-duration: .5s;
+    }
+
+    & h3, h5 {
+        margin-bottom: 1.5rem;
+        color: var(--cor-05);
+        font-weight: bold;
+    }
+}
+
+button {
+    min-width: 40%;
+    margin-bottom: 2rem;
+    padding: 2.5rem;
+    font-size: large;
+    color: inherit;
+    font-weight: bold;
+    border-radius: var(--radius);
+    box-shadow: 3px 3px 3px var(--cor-shadow);
+    transition-duration: .5s;
+
+    &:hover {
+        background-color: var(--cor-04);
+        box-shadow: 3px 3px 3px var(--cor-shadow-hover);
+        transition-duration: .5s;
+    }
+}
+
+ol {margin-bottom: -1rem;}
+li {margin-bottom: 1.2rem;}
+#backupTextAtencao {color: var(--cor-08);}
+
+#backupAtencao {
+    display: flex;
+    align-items: center;
+    text-decoration: underline;
+    color: var(--cor-08);
+
+    & strong {margin-left: 4px;}
+}
+
+
+@media (max-width: 768px) {
+    h5 {text-align: center;}
+}
+
+@media (max-width: 575px) { 
+    header {
+        justify-content: center;
+        margin-bottom: 7rem;
+    }
+    #sec-menu {margin: auto;}
+}
