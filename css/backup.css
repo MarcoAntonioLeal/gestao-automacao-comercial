@@ -82,6 +82,7 @@ button {
 
 ol {margin-bottom: -1rem;}
 li {margin-bottom: 1.2rem;}
+code {color: var(--cor-01);}
 #backupTextAtencao {color: var(--cor-08);}
 
 #backupAtencao {
