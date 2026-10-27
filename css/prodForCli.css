@@ -7,47 +7,10 @@ main {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-
     gap: 1.5rem;
     padding: 0 2rem;
 
-    & img {
-        margin: auto;
-    }
-}
-
-.linha-vertical { 
-    width: 1.5px; 
-    height: 100px; 
-    background-color: black; 
-    border: none; 
-}
-
-#sec-menu > a, #sec-menu > button {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-
-    height: 5.8rem;
-    width: 5.8rem;
-    font-size: 1.02rem;
-    border-radius: var(--radius);
-    background-color: var(--cor-00);
-    color: inherit;
-    box-shadow: 3px 3px 3px var(--cor-shadow);
-    transition-duration: .5s;
-
-    &:hover {
-        background-color: var(--cor-04);
-        box-shadow: 3px 3px 3px var(--cor-shadow-hover);
-        transition-duration: .5s;
-    }
-
-    & hr {
-        width: 100%;
-        margin: auto;
-    }
+    & img {margin: auto;}
 }
 
 .busca-elemento {

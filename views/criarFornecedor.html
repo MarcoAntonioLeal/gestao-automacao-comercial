@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Novo Fornecedor</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/cadastros.css">
+</head>
+<body>
+    <header class="container">
+        <div class="style-padrao borda">
+            /*usuario*/
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section id="sec-menu">
+            <button type="button" class="borda">
+                <img src="../img/salvar.svg" alt="" class="icon-l">
+
+                <div>
+                    <hr>
+                    Salvar
+                </div>
+            </button>
+
+            <hr class="linha-vertical">
+
+            <a href="./index.html" class="borda">
+                <img src="../img/pag-inicial.svg" alt="" class="icon-l">
+
+                <div>
+                    <hr>
+                    Pg. Inicial
+                </div>
+            </a>
+        </section>
+
+        <!--
+        As tags <br> com atributo de ajusteDeLInha, 
+        tem a função de ajustar o formulario na sua responsividade
+        -->
+
+        <section class="container sec-cadastro borda style-padrao">
+            <form action="#" method="#">
+                <legend>Cadastro de Fornecedor</legend>
+
+                    <section>
+                        <div>
+                            <label for="razao">Razão Social:</label>
+
+                            <input type="text" 
+                            name="razao" 
+                            id="razao" 
+                            autocomplete="off" 
+                            maxlength="70" 
+                            required>
+                        </div>
+
+                        <div>
+                            <label for="">Tipo Pessoa:</label>
+                            <select name="tipo_pessoa" id="tipo_pessoa">
+                                <option value="PF">Física</option>
+                                <option value="PJ">Jurídica</option>
+                            </select>
+
+                            <br id="ajusteDeLinhaCPF">
+                        
+                            <label for="labelId">CPF:</label>
+
+                            <input type="text" 
+                            name="idCPF" 
+                            id="idCPF"
+                            class="display-block validation-number"
+                            autocomplete="off"
+                            maxlength="14"  
+                            required 
+                            pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}" 
+                            title="Digite seu CPF">
+
+                            <input type="text" 
+                            name="idCNPJ" 
+                            id="idCNPJ"
+                            class="display-none validation-number"
+                            autocomplete="off" 
+                            maxlength="18" 
+                            required 
+                            pattern="[0-9]{2}\.[0-9]{3}\.[0-9]{3}/[0-9]{4}-[0-9]{2}" 
+                            title="Digite seu CNPJ">
+                        </div>
+                    </section>
+
+                    <hr>
+
+                    <section class="sec-endereco">
+                        <div>
+                            <label for="cep">CEP:</label>
+
+                            <input type="text" 
+                            name="cep" 
+                            id="cep" 
+                            class="validation-number"
+                            autocomplete="off" 
+                            maxlength="9" 
+                            required 
+                            pattern="[0-9]{5}-[0-9]{3}" 
+                            title="Digite somente números">
+                        </div>
+
+                        <div>
+                            <label for="rua">Rua:</label>
+
+                            <input type="text" 
+                            name="rua" 
+                            id="rua" 
+                            autocomplete="off" 
+                            required>
+                        </div>
+
+                        <div>
+                            <label for="cidade">Cidade:</label>
+
+                            <input type="text" 
+                            name="cidade" 
+                            id="cidade" 
+                            class="validation-text"
+                            autocomplete="off" 
+                            required 
+                            pattern="[A-Za-zÀ-ÖØ-öø-ÿ ]+" 
+                            title="Digite somente texto">
+                        </div>
+
+                        <div>
+                            <label for="bairro">Bairro:</label>
+
+                            <input type="text" 
+                            name="bairro" 
+                            id="bairro" 
+                            class="validation-text"
+                            autocomplete="off" 
+                            required 
+                            pattern="[A-Za-zÀ-ÖØ-öø-ÿ ]+" 
+                            title="Digite somente texto">
+
+                            <br id="ajusteDeLinhaUF">
+
+                            <label for="uf">UF:</label>
+
+                            <input type="text" 
+                            name="uf" 
+                            id="uf" 
+                            class="validation-text"
+                            autocomplete="off" 
+                            maxlength="2" 
+                            required 
+                            pattern="[A-Za-z]+" 
+                            title="Digite somente texto">
+                        </div>
+                    </section>
+
+                    <hr>
+
+                    <section>
+                        <div>
+                            <label for="telFixo">Tel. Fixo:</label>
+
+                            <br class="ajusteDeLinha">
+
+                            <input type="tel" 
+                            name="telFixo" 
+                            id="telFixo"
+                            class="validation-number" 
+                            autocomplete="off" 
+                            maxlength="14" 
+                            pattern="\([0-9]{2}\) [0-9]{4}-[0-9]{4}" 
+                            title="Digite o DDD e o telefone">
+                        </div>
+
+                        <div>
+                            <label for="celular01">Celular 01:</label>
+
+                            <br class="ajusteDeLinha">
+
+                            <input type="tel" 
+                            name="celular01" 
+                            id="celular01" 
+                            class="validation-number"
+                            autocomplete="off" 
+                            maxlength="15" 
+                            pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" 
+                            title="Digite o DDD e o telefone">
+                        </div>
+
+                        <div>
+                            <label for="celular02">Celular 02:</label>
+
+                            <br class="ajusteDeLinha">
+
+                            <input type="tel" 
+                            name="celular02" 
+                            id="celular02"
+                            class="validation-number"
+                            autocomplete="off" 
+                            maxlength="15" 
+                            pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" 
+                            title="Digite o DDD e o telefone">
+                        </div>
+                        
+                        <div>
+                            <label for="email01">E-mail 01:</label>
+
+                            <br class="ajusteDeLinha">
+
+                            <input type="email" 
+                            name="email01" 
+                            id="email01" 
+                            autocomplete="off" 
+                            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" 
+                            title="Digite um e-mail válido">
+                        </div>
+
+                        <div>
+                            <label for="email02">E-mail 02:</label>
+
+                            <br class="ajusteDeLinha">
+
+                            <input type="email" 
+                            name="email02" 
+                            id="email02" 
+                            autocomplete="off" 
+                            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" 
+                            title="Digite um e-mail válido">
+                        </div>
+                    </div>
+                </section>
+            </form>
+        </section>
+
+        <!--modal cpf/cnpj inválidos-->
+        <div class="modal fade" id="idInvalido" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-sm">
+                <div class="modal-content">
+            
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    
+                    <div class="modal-body"></div>
+                </div>
+            </div>
+        </div>
+     </main>
+
+     <footer>
+        <img src="../img/logo.svg" alt="" class="icon-m me-2"> 
+        <span class="fs-4 text-logo">Say-System</span>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+               
+    <script src="../js/cadastros.js"></script>
+</body>

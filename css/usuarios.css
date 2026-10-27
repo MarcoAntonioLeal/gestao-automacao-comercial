@@ -1,0 +1,58 @@
+header {margin-bottom: 5rem;}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin-top: -7rem;
+    font-size: medium;
+}
+
+
+/*====Menu====*/
+#sec-menu {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    width: 80%;
+
+    & img {margin: auto;}
+}
+
+input, select {
+    height: 100%;
+    outline: none;
+    padding: 4px;
+    margin-bottom: 1rem;
+    color: inherit;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+/*
+@media (max-width: 767.8px) {
+    header {
+        justify-content: center;
+        margin-bottom: 8rem;
+    }
+
+    #sec-menu {
+        justify-content: center;
+        margin: auto;
+    }
+
+    .sec-endereco {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    #razao {min-width: 70%}
+    #rua {min-width: 80%}
+    #email01, #email02 {min-width: 65%;}
+}*/
