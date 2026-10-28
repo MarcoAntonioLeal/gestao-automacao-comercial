@@ -23,23 +23,16 @@ main {
 input, select {
     outline: none;
     padding: 4px;
-    margin-bottom: 1rem;
     color: inherit;
     text-transform: uppercase;
 }
 
 .sec-novo-user {
     display: flex;
-
-    & input {
-        width: 8rem;
-    }
+    & input {width: 8rem;}
 }
 
-
-
-
-
+td {padding: .8rem !important;}
 
 /*
 @media (max-width: 767.8px) {

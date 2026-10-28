@@ -1,4 +1,4 @@
-    /*===Configuracoes Gerais===*/
+/*===Configuracoes Gerais===*/
 * {
     margin: 0;
     padding: 0;
@@ -156,8 +156,21 @@ label {
     font-size: 1.1rem;
 }
 
+/*====Tabela====*/
+table {
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: center;
+    --bs-table-bg: #F8F9FA !important;
+    --bs-table-striped-bg: #d9e3f3 !important;
+}
 
-    /*====Footer====*/
+th, td {
+    color: inherit !important;
+}
+
+
+/*====Footer====*/
 footer {
     display: flex;
     justify-content: center;
@@ -172,7 +185,7 @@ footer {
 }
 
 
-    /*====Modal====*/
+/*====Modal====*/
 .modal {color: inherit;}
 
 .modal-header {
