@@ -36,13 +36,13 @@ input, select {
 .sec-table {
     max-height: 55vh;
     overflow-y: auto;
-    /*border-top: 1px solid var(--cor-03);*/
+    border-top: 1px solid var(--cor-03);
 }
 
 
 table {
-    border-collapse: separate;
-    /*border-spacing: 0; */
+    /*border-collapse: separate;*/
+    
 }
 
 
