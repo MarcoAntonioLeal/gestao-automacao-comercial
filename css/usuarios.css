@@ -32,7 +32,39 @@ input, select {
     & input {width: 8rem;}
 }
 
+/*====Tabela====*/
+.sec-table {
+    max-height: 55vh;
+    overflow-y: auto;
+    /*border-top: 1px solid var(--cor-03);*/
+}
+
+
+table {
+    border-collapse: separate;
+    /*border-spacing: 0; */
+}
+
+
+thead {
+    position: sticky;
+    top: 0;
+}
+
+
+
+
 td {padding: .8rem !important;}
+
+
+/*====Modal====*/
+.modal-footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
 
 /*
 @media (max-width: 767.8px) {
