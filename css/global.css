@@ -162,7 +162,7 @@ table {
     vertical-align: middle;
     text-align: center;
     --bs-table-bg: #F8F9FA !important;
-    --bs-table-striped-bg: #d9e3f3 !important;
+    --bs-table-striped-bg: #E9EDF5 !important;
 }
 
 th, td {
