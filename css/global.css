@@ -165,9 +165,7 @@ table {
     --bs-table-striped-bg: #E9EDF5 !important;
 }
 
-th, td {
-    color: inherit !important;
-}
+th, td {color: inherit !important;}
 
 
 /*====Footer====*/
