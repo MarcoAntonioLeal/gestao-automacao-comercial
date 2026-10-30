@@ -1,11 +1,7 @@
-header {margin-bottom: 5rem;}
-
 main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    margin-top: -7rem;
     font-size: medium;
 }
 
@@ -20,17 +16,43 @@ main {
     & img {margin: auto;}
 }
 
-input, select {
+input {
     outline: none;
-    padding: 4px;
+    padding: 5px !important;
     color: inherit;
     text-transform: uppercase;
 }
 
 .sec-novo-user {
     display: flex;
-    & input {width: 8rem;}
+    align-items: center;
+
+    & input#novoUser {width: 8rem;}
+
+    & input#senhaUser {
+        width: 5rem;
+        border: 1px solid;
+    }
 }
+
+#divSenhaUser {
+    display: inherit;
+    align-items: inherit;
+    margin-left: 2rem;
+
+    & > .input-group {
+        display: inherit;
+        align-items: inherit;
+    }     
+}
+
+.btnEyeSenha {
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    background-color: var(--cor-04) !important;
+}
+
 
 /*====Tabela====*/
 .sec-table {
@@ -45,10 +67,19 @@ table {
 
     & thead {
         position: sticky;
-        top: 0;   
+        top: 0;
+        z-index: 3;   
     }
 
-    & td {padding: .8rem !important;}
+    & td {
+        padding: .8rem !important;
+        vertical-align: middle;
+    }
+}
+
+#senhaUserCadastrado {
+    width: 3.5rem;
+    background-color: var(--cor-02);
 }
 
 
@@ -72,7 +103,6 @@ table {
 @media (max-width: 992px) {
     header {
         justify-content: center;
-        margin-bottom: 8rem;
     }
 
     #sec-menu {
@@ -82,13 +112,15 @@ table {
 }
 
 /*botão toogle*/
-@media (max-width: 511px) {
+@media (max-width: 518px) {
     #meuMenu:has(.show), #btn-toggler {
         display: block;
     }
 
     .sec-novo-user {
         flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
         gap: 1rem;
     }
 }

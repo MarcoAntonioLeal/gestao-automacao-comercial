@@ -103,25 +103,24 @@
                 <section class="sec-novo-user">
                     <div>
                         <label for="novoUser">Novo Usuário:</label>
-                        <input type="text" 
-                        name="novoUser" 
-                        id="novoUser"
-                        maxlength="10"
-                        autocomplete="off" 
-                        required 
+                        <input type="text" name="novoUser" id="novoUser" autocomplete="off"
+                        maxlength="10" required 
                         pattern="[A-Za-zÀ-ÖØ-öø-ÿ ]+" 
                         title="Digite somente texto">
                     </div>
-                    <div>
-                        <label for="senhaUser" class="ms-4">Senha:</label>
-                        <input type="password" 
-                        name="senhaUser" 
-                        id="senhaUser"
-                        autocomplete="off" 
-                        maxlength="4" 
-                        required 
-                        pattern="[0-9]{4}" 
-                        title="Digite somente números">
+
+                    <div id="divSenhaUser">
+                        <label for="senhaUser" class="me-1">Senha:</label>
+
+                        <div class="input-group flex-nowrap">
+                            <input type="password" name="senhaUser" id="senhaUser" autocomplete="off" maxlength="4" required 
+                            pattern="[0-9]{4}" 
+                            title="Digite somente números">
+
+                            <button class="btn btnEyeSenha" type="button">
+                                <img src="../img/eye-close.svg" alt="" class="icon-xs">
+                            </button>
+                        </div>
                     </div>
                 </section>
             </form>
@@ -162,9 +161,17 @@
                                 </div>
                             </td>
 
-                            <td>Marco Anto</td>
+                            <td>Marco Admi</td>
 
-                            <td>1234</td>
+                            <td>
+                                <div class="input-group flex-nowrap">
+                                    <input type="password" id="senhaUserCadastrado" class="form-control" value="1234" autocomplete="off" maxlength="4" disabled>
+
+                                    <button class="btn btnEyeSenha" type="button">
+                                        <img src="../img/eye-close.svg" alt="" class="icon-xs">
+                                    </button>
+                                </div>
+                            </td>
 
                             <td>
                                 <input type="checkbox" name="todos" id="todos" class="form-check-input">
@@ -215,6 +222,13 @@
 
 
 
+
+
+
+
+
+                        
+
                         <tr>
                             <td>
                                 <input type="checkbox" name="selecionar" id="selecionar" class="form-check-input">
@@ -226,9 +240,17 @@
                                 </div>
                             </td>
 
-                            <td>Marco</td>
+                            <td>Marco Admi</td>
 
-                            <td>1234</td>
+                            <td>
+                                <div class="input-group flex-nowrap">
+                                    <input type="password" id="senhaUserCadastrado" class="form-control" value="1234" autocomplete="off" maxlength="4" disabled>
+
+                                    <button class="btn btnEyeSenha" type="button">
+                                        <img src="../img/eye-close.svg" alt="" class="icon-xs">
+                                    </button>
+                                </div>
+                            </td>
 
                             <td>
                                 <input type="checkbox" name="todos" id="todos" class="form-check-input">
@@ -285,9 +307,17 @@
                                 </div>
                             </td>
 
-                            <td>Marco</td>
+                            <td>Marco Admi</td>
 
-                            <td>1234</td>
+                            <td>
+                                <div class="input-group flex-nowrap">
+                                    <input type="password" id="senhaUserCadastrado" class="form-control" value="1234" autocomplete="off" maxlength="4" disabled>
+
+                                    <button class="btn btnEyeSenha" type="button">
+                                        <img src="../img/eye-close.svg" alt="" class="icon-xs">
+                                    </button>
+                                </div>
+                            </td>
 
                             <td>
                                 <input type="checkbox" name="todos" id="todos" class="form-check-input">
@@ -344,9 +374,17 @@
                                 </div>
                             </td>
 
-                            <td>Marco</td>
+                            <td>Marco Admi</td>
 
-                            <td>1234</td>
+                            <td>
+                                <div class="input-group flex-nowrap">
+                                    <input type="password" id="senhaUserCadastrado" class="form-control" value="1234" autocomplete="off" maxlength="4" disabled>
+
+                                    <button class="btn btnEyeSenha" type="button">
+                                        <img src="../img/eye-close.svg" alt="" class="icon-xs">
+                                    </button>
+                                </div>
+                            </td>
 
                             <td>
                                 <input type="checkbox" name="todos" id="todos" class="form-check-input">
@@ -403,9 +441,17 @@
                                 </div>
                             </td>
 
-                            <td>Marco</td>
+                            <td>Marco Admi</td>
 
-                            <td>1234</td>
+                            <td>
+                                <div class="input-group flex-nowrap">
+                                    <input type="password" id="senhaUserCadastrado" class="form-control" value="1234" autocomplete="off" maxlength="4" disabled>
+
+                                    <button class="btn btnEyeSenha" type="button">
+                                        <img src="../img/eye-close.svg" alt="" class="icon-xs">
+                                    </button>
+                                </div>
+                            </td>
 
                             <td>
                                 <input type="checkbox" name="todos" id="todos" class="form-check-input">
@@ -462,9 +508,17 @@
                                 </div>
                             </td>
 
-                            <td>Marco</td>
+                            <td>Marco Admi</td>
 
-                            <td>1234</td>
+                            <td>
+                                <div class="input-group flex-nowrap">
+                                    <input type="password" id="senhaUserCadastrado" class="form-control" value="1234" autocomplete="off" maxlength="4" disabled>
+
+                                    <button class="btn btnEyeSenha" type="button">
+                                        <img src="../img/eye-close.svg" alt="" class="icon-xs">
+                                    </button>
+                                </div>
+                            </td>
 
                             <td>
                                 <input type="checkbox" name="todos" id="todos" class="form-check-input">
@@ -510,6 +564,409 @@
                                 <input type="checkbox" name="acessoParam" id="acessoParam" class="form-check-input">
                             </td>
                         </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="selecionar" id="selecionar" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <div class="form-switch">
+                                    <input type="checkbox" name="status" id="status" class="form-check-input" role="switch" checked>
+                                </div>
+                            </td>
+
+                            <td>Marco Admi</td>
+
+                            <td>
+                                <div class="input-group flex-nowrap">
+                                    <input type="password" id="senhaUserCadastrado" class="form-control" value="1234" autocomplete="off" maxlength="4" disabled>
+
+                                    <button class="btn btnEyeSenha" type="button">
+                                        <img src="../img/eye-close.svg" alt="" class="icon-xs">
+                                    </button>
+                                </div>
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="todos" id="todos" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoUser" id="acessoUser" class="form-check-input">
+                            </td>
+                            
+                            <td>
+                                <input type="checkbox" name="acessoCxPedido" id="acessoCxPedido" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoCaixa" id="acessoCaixa" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoPDV" id="acessoPDV" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoProd" id="acessoProd" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoCli" id="acessoCli" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoForn" id="acessoForn" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoEntrNota" id="acessoEntrNota" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoConfigGeral" id="acessoConfigGeral" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoParam" id="acessoParam" class="form-check-input">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="selecionar" id="selecionar" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <div class="form-switch">
+                                    <input type="checkbox" name="status" id="status" class="form-check-input" role="switch" checked>
+                                </div>
+                            </td>
+
+                            <td>Marco Admi</td>
+
+                            <td>
+                                <div class="input-group flex-nowrap">
+                                    <input type="password" id="senhaUserCadastrado" class="form-control" value="1234" autocomplete="off" maxlength="4" disabled>
+
+                                    <button class="btn btnEyeSenha" type="button">
+                                        <img src="../img/eye-close.svg" alt="" class="icon-xs">
+                                    </button>
+                                </div>
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="todos" id="todos" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoUser" id="acessoUser" class="form-check-input">
+                            </td>
+                            
+                            <td>
+                                <input type="checkbox" name="acessoCxPedido" id="acessoCxPedido" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoCaixa" id="acessoCaixa" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoPDV" id="acessoPDV" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoProd" id="acessoProd" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoCli" id="acessoCli" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoForn" id="acessoForn" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoEntrNota" id="acessoEntrNota" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoConfigGeral" id="acessoConfigGeral" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoParam" id="acessoParam" class="form-check-input">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="selecionar" id="selecionar" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <div class="form-switch">
+                                    <input type="checkbox" name="status" id="status" class="form-check-input" role="switch" checked>
+                                </div>
+                            </td>
+
+                            <td>Marco Admi</td>
+
+                            <td>
+                                <div class="input-group flex-nowrap">
+                                    <input type="password" id="senhaUserCadastrado" class="form-control" value="1234" autocomplete="off" maxlength="4" disabled>
+
+                                    <button class="btn btnEyeSenha" type="button">
+                                        <img src="../img/eye-close.svg" alt="" class="icon-xs">
+                                    </button>
+                                </div>
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="todos" id="todos" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoUser" id="acessoUser" class="form-check-input">
+                            </td>
+                            
+                            <td>
+                                <input type="checkbox" name="acessoCxPedido" id="acessoCxPedido" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoCaixa" id="acessoCaixa" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoPDV" id="acessoPDV" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoProd" id="acessoProd" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoCli" id="acessoCli" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoForn" id="acessoForn" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoEntrNota" id="acessoEntrNota" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoConfigGeral" id="acessoConfigGeral" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoParam" id="acessoParam" class="form-check-input">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="selecionar" id="selecionar" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <div class="form-switch">
+                                    <input type="checkbox" name="status" id="status" class="form-check-input" role="switch" checked>
+                                </div>
+                            </td>
+
+                            <td>Marco Admi</td>
+
+                            <td>
+                                <div class="input-group flex-nowrap">
+                                    <input type="password" id="senhaUserCadastrado" class="form-control" value="1234" autocomplete="off" maxlength="4" disabled>
+
+                                    <button class="btn btnEyeSenha" type="button">
+                                        <img src="../img/eye-close.svg" alt="" class="icon-xs">
+                                    </button>
+                                </div>
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="todos" id="todos" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoUser" id="acessoUser" class="form-check-input">
+                            </td>
+                            
+                            <td>
+                                <input type="checkbox" name="acessoCxPedido" id="acessoCxPedido" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoCaixa" id="acessoCaixa" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoPDV" id="acessoPDV" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoProd" id="acessoProd" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoCli" id="acessoCli" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoForn" id="acessoForn" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoEntrNota" id="acessoEntrNota" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoConfigGeral" id="acessoConfigGeral" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoParam" id="acessoParam" class="form-check-input">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="selecionar" id="selecionar" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <div class="form-switch">
+                                    <input type="checkbox" name="status" id="status" class="form-check-input" role="switch" checked>
+                                </div>
+                            </td>
+
+                            <td>Marco Admi</td>
+
+                            <td>
+                                <div class="input-group flex-nowrap">
+                                    <input type="password" id="senhaUserCadastrado" class="form-control" value="1234" autocomplete="off" maxlength="4" disabled>
+
+                                    <button class="btn btnEyeSenha" type="button">
+                                        <img src="../img/eye-close.svg" alt="" class="icon-xs">
+                                    </button>
+                                </div>
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="todos" id="todos" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoUser" id="acessoUser" class="form-check-input">
+                            </td>
+                            
+                            <td>
+                                <input type="checkbox" name="acessoCxPedido" id="acessoCxPedido" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoCaixa" id="acessoCaixa" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoPDV" id="acessoPDV" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoProd" id="acessoProd" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoCli" id="acessoCli" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoForn" id="acessoForn" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoEntrNota" id="acessoEntrNota" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoConfigGeral" id="acessoConfigGeral" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoParam" id="acessoParam" class="form-check-input">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="selecionar" id="selecionar" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <div class="form-switch">
+                                    <input type="checkbox" name="status" id="status" class="form-check-input" role="switch" checked>
+                                </div>
+                            </td>
+
+                            <td>Marco Admi</td>
+
+                            <td>
+                                <div class="input-group flex-nowrap">
+                                    <input type="password" id="senhaUserCadastrado" class="form-control" value="1234" autocomplete="off" maxlength="4" disabled>
+
+                                    <button class="btn btnEyeSenha" type="button">
+                                        <img src="../img/eye-close.svg" alt="" class="icon-xs">
+                                    </button>
+                                </div>
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="todos" id="todos" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoUser" id="acessoUser" class="form-check-input">
+                            </td>
+                            
+                            <td>
+                                <input type="checkbox" name="acessoCxPedido" id="acessoCxPedido" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoCaixa" id="acessoCaixa" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoPDV" id="acessoPDV" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoProd" id="acessoProd" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoCli" id="acessoCli" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoForn" id="acessoForn" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoEntrNota" id="acessoEntrNota" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoConfigGeral" id="acessoConfigGeral" class="form-check-input">
+                            </td>
+
+                            <td>
+                                <input type="checkbox" name="acessoParam" id="acessoParam" class="form-check-input">
+                            </td>
+                        </tr>
+                        
                     </tbody>
                 </table>
             </section>       
@@ -522,4 +979,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <script src="../js/usuarios.js"></script>
 </body>
