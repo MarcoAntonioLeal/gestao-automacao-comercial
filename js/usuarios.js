@@ -66,3 +66,24 @@ function responsividadeMenu() {
 }
 responsividadeMenu()
 addEventListener("resize", responsividadeMenu)
+
+//seção novo uauário
+const senhaUser = document.querySelector('#senhaUser')
+
+senhaUser.addEventListener('input', () => {
+    senhaUser.value = senhaUser.value.replace(/\D/g, '')
+})
+
+const btnEyeSenha = document.querySelector('#btnEyeSenha')
+const imgEyeSenha = document.querySelector('#imgEyeSenha')
+
+btnEyeSenha.addEventListener('click', () => {
+    if(senhaUser.type == 'password') {
+        senhaUser.type = 'text'
+        imgEyeSenha.src = '../img/eye-open.svg'
+
+    } else {
+        senhaUser.type = 'password'
+        imgEyeSenha.src = '../img/eye-close.svg'
+    }
+})
