@@ -68,7 +68,7 @@ table {
     & thead {
         position: sticky;
         top: 0;
-        z-index: 3;   
+        z-index: 6;   
     }
 
     & td {
@@ -99,10 +99,21 @@ table {
     background-color: var(--cor-04);
 }
 
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 0;
+    list-style-type: none;
+}
+
 
 @media (max-width: 992px) {
     header {
         justify-content: center;
+        margin-bottom: 1.5rem;
     }
 
     #sec-menu {
@@ -111,16 +122,48 @@ table {
     }
 }
 
-/*botão toogle*/
-@media (max-width: 518px) {
-    #meuMenu:has(.show), #btn-toggler {
-        display: block;
-    }
 
+@media (max-width: 535px) {
     .sec-novo-user {
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
         gap: 1rem;
+    }
+}
+
+/*botão toogle*/
+@media (max-width: 500px) {
+    #meuMenu:has(.show), #btn-toggler {
+        display: block;
+    }
+
+    .linha-vertical {height: 5rem;}
+
+    li > button, li > a {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+
+        height: 4.8rem;
+        width: 4.8rem;
+
+        border: 1px solid var(--cor-12) !important;
+        box-shadow: 3px 3px 3px var(--cor-shadow);
+        font-size: 1.02rem;
+        color: inherit;
+        transition-duration: .5s !important;
+
+        &:hover {
+            background-color: var(--cor-04) !important;
+            box-shadow: 3px 3px 3px var(--cor-shadow-hover);
+            transition-duration: .5s;
+        }  
+
+        & hr {
+            width: 100%;
+            margin: auto;
+        }
     }
 }

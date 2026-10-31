@@ -34,16 +34,18 @@
 
     <div class="collapse" id="meuMenu">
         <ul>
-            <li><a href="#">Início</a></li>
-            <li><a href="#">Configurações</a></li>
-            <li><a href="#">Sair</a></li>
+            <li id="liBtnSalvar"></li>
+            <li id="liLinha1"></li>
+            <li id="liBtnExcluir"></li>
+            <li id="liLinha2"></li>
+            <li id="liPagInicial"></li>
         </ul>
     </div>
 
         <section id="sec-menu">
 
-            <button type="button" class="borda">
-                <img src="../img/salvar.svg" alt="" class="icon-l">
+            <button type="button" class="borda" id="btnSalvar">
+                <img src="../img/salvar.svg" alt="" class="icon-l" id="imgSalvar">
 
                 <div>
                     <hr>
@@ -51,10 +53,10 @@
                 </div>
             </button>
             
-            <hr class="linha-vertical">
+            <hr class="linha-vertical" id="linha1">
 
-            <button type="button" class="borda" data-bs-toggle="modal" data-bs-target="#staticExcluir">
-                <img src="../img/excluir.svg" alt="" class="icon-l">
+            <button type="button" class="borda" id="btnExcluir" data-bs-toggle="modal" data-bs-target="#staticExcluir">
+                <img src="../img/excluir.svg" alt="" class="icon-l" id="imgExcluir">
 
                 <div>
                     <hr>
@@ -62,14 +64,16 @@
                 </div>
             </button>
 
-            <hr class="linha-vertical">
+            <hr class="linha-vertical" id="linha2">
 
-            <a href="./index.html" class="borda">
-                <img src="../img/pag-inicial.svg" alt="" class="icon-l">
+            <a href="./index.html" class="borda" id="pagInicial">
+                <img src="../img/pag-inicial.svg" alt="" class="icon-l" id="imgPagInicial">
 
                 <div>
                     <hr>
-                    Pg. Inicial
+                    <div id="textPagInicial">
+                        Pg. Inicial
+                    </div>
                 </div>
             </a>
         </section>
