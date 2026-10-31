@@ -68,8 +68,12 @@ responsividadeMenu()
 addEventListener("resize", responsividadeMenu)
 
 //seção novo uauário
-const senhaUser = document.querySelector('#senhaUser')
+const novoUser = document.querySelector('#novoUser')
+novoUser.addEventListener('input', () => {
+    novoUser.value = novoUser.value.replace(/[^a-zA-Z\u00C0-\u00FF\s]/g, '')
+})
 
+const senhaUser = document.querySelector('#senhaUser')
 senhaUser.addEventListener('input', () => {
     senhaUser.value = senhaUser.value.replace(/\D/g, '')
 })
