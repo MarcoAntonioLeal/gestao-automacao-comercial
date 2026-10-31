@@ -203,3 +203,9 @@ nav {
         gap: 1rem;
     }
 }
+
+@media (max-width: 360px) {
+    .navbar-brand, .navbar-toggler {
+        margin: auto;
+    }
+}
