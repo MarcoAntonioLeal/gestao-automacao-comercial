@@ -7,6 +7,12 @@ main {
 
 
 /*====Menu====*/
+.sec-cadastro {
+    justify-content: stretch;
+    min-height: 70vh;
+}
+
+
 #sec-menu {
     display: flex;
     align-items: center;
