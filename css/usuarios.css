@@ -99,9 +99,7 @@ table {
     justify-content: space-between;
     align-items: center;
 
-    & button {
-        width: 6rem;
-    }
+    & button {width: 6rem;}
 }
 
 /*====Botão Toggler====*/
