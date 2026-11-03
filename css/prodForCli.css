@@ -88,9 +88,8 @@ td:not(.primeira-coluna), th:not(.primeira-coluna) {
         background-color: var(--cor-04);
     }
 
-    & input {
-        margin-bottom: 1rem;
-    }
+    & input {margin-bottom: 1rem;}
+    & label {font-weight: normal;}
 }
 
 .modal-filtro-de-busca {
