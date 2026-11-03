@@ -96,8 +96,12 @@ table {
 /*====Modal====*/
 .modal-footer {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+
+    & button {
+        width: 6rem;
+    }
 }
 
 /*====Botão Toggler====*/
