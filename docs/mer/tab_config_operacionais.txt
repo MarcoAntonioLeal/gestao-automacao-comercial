@@ -1,4 +1,4 @@
-CREATE TABLE config_operacionais {
+CREATE TABLE config_operacionais (
 	id INTEGER PRIMARY KEY CHECK(id = 1),
 	data_criacao TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	criado_por INTEGER NOT NULL,
