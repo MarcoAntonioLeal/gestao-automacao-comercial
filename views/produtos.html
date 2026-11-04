@@ -115,7 +115,9 @@
                                     <select name="buscaGrupo" id="buscaGrupo">
                                         <option value="" disabled selected></option>
                                         <option value="">grupo 1</option>
-                                        <option value="">grupo 2</option>
+                                        <!--No backend
+                                        <option value="<%=  %>"><%=  %></option>
+                                        -->
                                     </select>
 
                                     <button type="button" class="btn btn-sm" data-btn-apagar="grupo">
@@ -129,7 +131,9 @@
                                     <select name="buscaFornecedor" id="buscaFornecedor">
                                         <option value="" disabled selected></option>
                                         <option value="">Fornecedor 1</option>
-                                        <option value="">Fornecedor 2</option>
+                                        <!--No backend
+                                        <option value="<%=  %>"><%=  %></option>
+                                        -->
                                     </select>
 
                                     <button type="button" class="btn btn-sm" data-btn-apagar="fornecedor">
@@ -207,7 +211,7 @@
                 </button>
             </div>
 
-            <div>
+           <!-- <div>
                 <strong>Legendas:</strong>
                 <ul class="legenda">
                     <li>
@@ -222,15 +226,14 @@
                         <img src="../img/fluxo.svg" alt="" class="icon-xs"> Fluxo de Produtos
                     </li>
                 </ul>
-            </div>
-            
+            </div>-->
         </section>
 
-        <section class="sec-table ">
-            <table class="table table-striped table-primary border-secondary" style="border-spacing: 2px;">
+        <section class="table-responsive sec-table ">
+            <table class="table table-striped table-bordered">
 
                 <thead>
-                    <tr class="table-secondary">
+                    <tr>
                         <th id="width-descricao">Descrição</th>
                         <th id="width-codigo">Código</th>
                         <th id="width-estoque">Estoque</th>
@@ -280,6 +283,676 @@
                         </td>
                     </tr>
                     <!--linha de molde-->
+
+
+
+
+
+
+
+                    <tr>
+                        <td class="primeira-coluna">Meu primeiro produto</td>
+                        <td>1</td>
+                        <td>15</td>
+                        <td>1</td>
+                        <td>60</td>
+                        <td>9,50</td>
+                        <td>29,90</td>
+
+                        <td>
+                            <a href="./criarProduto.html">
+                                <img src="../img/lapis.svg" alt="" class="icon-xs">
+                            </a>
+                        </td>
+
+                        <!-- botao de abertura do modal de fornecedores do produto -->
+                        <td>
+                            <img src="../img/modulo-fornecedor.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fornecedoresProduto">
+                        </td>
+
+                        <td>
+                            <img src="../img/fluxo.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fluxoProduto">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="primeira-coluna">Meu primeiro produto</td>
+                        <td>1</td>
+                        <td>15</td>
+                        <td>1</td>
+                        <td>60</td>
+                        <td>9,50</td>
+                        <td>29,90</td>
+
+                        <td>
+                            <a href="./criarProduto.html">
+                                <img src="../img/lapis.svg" alt="" class="icon-xs">
+                            </a>
+                        </td>
+
+                        <!-- botao de abertura do modal de fornecedores do produto -->
+                        <td>
+                            <img src="../img/modulo-fornecedor.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fornecedoresProduto">
+                        </td>
+
+                        <td>
+                            <img src="../img/fluxo.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fluxoProduto">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="primeira-coluna">Meu primeiro produto</td>
+                        <td>1</td>
+                        <td>15</td>
+                        <td>1</td>
+                        <td>60</td>
+                        <td>9,50</td>
+                        <td>29,90</td>
+
+                        <td>
+                            <a href="./criarProduto.html">
+                                <img src="../img/lapis.svg" alt="" class="icon-xs">
+                            </a>
+                        </td>
+
+                        <!-- botao de abertura do modal de fornecedores do produto -->
+                        <td>
+                            <img src="../img/modulo-fornecedor.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fornecedoresProduto">
+                        </td>
+
+                        <td>
+                            <img src="../img/fluxo.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fluxoProduto">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="primeira-coluna">Meu primeiro produto</td>
+                        <td>1</td>
+                        <td>15</td>
+                        <td>1</td>
+                        <td>60</td>
+                        <td>9,50</td>
+                        <td>29,90</td>
+
+                        <td>
+                            <a href="./criarProduto.html">
+                                <img src="../img/lapis.svg" alt="" class="icon-xs">
+                            </a>
+                        </td>
+
+                        <!-- botao de abertura do modal de fornecedores do produto -->
+                        <td>
+                            <img src="../img/modulo-fornecedor.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fornecedoresProduto">
+                        </td>
+
+                        <td>
+                            <img src="../img/fluxo.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fluxoProduto">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="primeira-coluna">Meu primeiro produto</td>
+                        <td>1</td>
+                        <td>15</td>
+                        <td>1</td>
+                        <td>60</td>
+                        <td>9,50</td>
+                        <td>29,90</td>
+
+                        <td>
+                            <a href="./criarProduto.html">
+                                <img src="../img/lapis.svg" alt="" class="icon-xs">
+                            </a>
+                        </td>
+
+                        <!-- botao de abertura do modal de fornecedores do produto -->
+                        <td>
+                            <img src="../img/modulo-fornecedor.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fornecedoresProduto">
+                        </td>
+
+                        <td>
+                            <img src="../img/fluxo.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fluxoProduto">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="primeira-coluna">Meu primeiro produto</td>
+                        <td>1</td>
+                        <td>15</td>
+                        <td>1</td>
+                        <td>60</td>
+                        <td>9,50</td>
+                        <td>29,90</td>
+
+                        <td>
+                            <a href="./criarProduto.html">
+                                <img src="../img/lapis.svg" alt="" class="icon-xs">
+                            </a>
+                        </td>
+
+                        <!-- botao de abertura do modal de fornecedores do produto -->
+                        <td>
+                            <img src="../img/modulo-fornecedor.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fornecedoresProduto">
+                        </td>
+
+                        <td>
+                            <img src="../img/fluxo.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fluxoProduto">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="primeira-coluna">Meu primeiro produto</td>
+                        <td>1</td>
+                        <td>15</td>
+                        <td>1</td>
+                        <td>60</td>
+                        <td>9,50</td>
+                        <td>29,90</td>
+
+                        <td>
+                            <a href="./criarProduto.html">
+                                <img src="../img/lapis.svg" alt="" class="icon-xs">
+                            </a>
+                        </td>
+
+                        <!-- botao de abertura do modal de fornecedores do produto -->
+                        <td>
+                            <img src="../img/modulo-fornecedor.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fornecedoresProduto">
+                        </td>
+
+                        <td>
+                            <img src="../img/fluxo.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fluxoProduto">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="primeira-coluna">Meu primeiro produto</td>
+                        <td>1</td>
+                        <td>15</td>
+                        <td>1</td>
+                        <td>60</td>
+                        <td>9,50</td>
+                        <td>29,90</td>
+
+                        <td>
+                            <a href="./criarProduto.html">
+                                <img src="../img/lapis.svg" alt="" class="icon-xs">
+                            </a>
+                        </td>
+
+                        <!-- botao de abertura do modal de fornecedores do produto -->
+                        <td>
+                            <img src="../img/modulo-fornecedor.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fornecedoresProduto">
+                        </td>
+
+                        <td>
+                            <img src="../img/fluxo.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fluxoProduto">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="primeira-coluna">Meu primeiro produto</td>
+                        <td>1</td>
+                        <td>15</td>
+                        <td>1</td>
+                        <td>60</td>
+                        <td>9,50</td>
+                        <td>29,90</td>
+
+                        <td>
+                            <a href="./criarProduto.html">
+                                <img src="../img/lapis.svg" alt="" class="icon-xs">
+                            </a>
+                        </td>
+
+                        <!-- botao de abertura do modal de fornecedores do produto -->
+                        <td>
+                            <img src="../img/modulo-fornecedor.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fornecedoresProduto">
+                        </td>
+
+                        <td>
+                            <img src="../img/fluxo.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fluxoProduto">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="primeira-coluna">Meu primeiro produto</td>
+                        <td>1</td>
+                        <td>15</td>
+                        <td>1</td>
+                        <td>60</td>
+                        <td>9,50</td>
+                        <td>29,90</td>
+
+                        <td>
+                            <a href="./criarProduto.html">
+                                <img src="../img/lapis.svg" alt="" class="icon-xs">
+                            </a>
+                        </td>
+
+                        <!-- botao de abertura do modal de fornecedores do produto -->
+                        <td>
+                            <img src="../img/modulo-fornecedor.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fornecedoresProduto">
+                        </td>
+
+                        <td>
+                            <img src="../img/fluxo.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fluxoProduto">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="primeira-coluna">Meu primeiro produto</td>
+                        <td>1</td>
+                        <td>15</td>
+                        <td>1</td>
+                        <td>60</td>
+                        <td>9,50</td>
+                        <td>29,90</td>
+
+                        <td>
+                            <a href="./criarProduto.html">
+                                <img src="../img/lapis.svg" alt="" class="icon-xs">
+                            </a>
+                        </td>
+
+                        <!-- botao de abertura do modal de fornecedores do produto -->
+                        <td>
+                            <img src="../img/modulo-fornecedor.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fornecedoresProduto">
+                        </td>
+
+                        <td>
+                            <img src="../img/fluxo.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fluxoProduto">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="primeira-coluna">Meu primeiro produto</td>
+                        <td>1</td>
+                        <td>15</td>
+                        <td>1</td>
+                        <td>60</td>
+                        <td>9,50</td>
+                        <td>29,90</td>
+
+                        <td>
+                            <a href="./criarProduto.html">
+                                <img src="../img/lapis.svg" alt="" class="icon-xs">
+                            </a>
+                        </td>
+
+                        <!-- botao de abertura do modal de fornecedores do produto -->
+                        <td>
+                            <img src="../img/modulo-fornecedor.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fornecedoresProduto">
+                        </td>
+
+                        <td>
+                            <img src="../img/fluxo.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fluxoProduto">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="primeira-coluna">Meu primeiro produto</td>
+                        <td>1</td>
+                        <td>15</td>
+                        <td>1</td>
+                        <td>60</td>
+                        <td>9,50</td>
+                        <td>29,90</td>
+
+                        <td>
+                            <a href="./criarProduto.html">
+                                <img src="../img/lapis.svg" alt="" class="icon-xs">
+                            </a>
+                        </td>
+
+                        <!-- botao de abertura do modal de fornecedores do produto -->
+                        <td>
+                            <img src="../img/modulo-fornecedor.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fornecedoresProduto">
+                        </td>
+
+                        <td>
+                            <img src="../img/fluxo.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fluxoProduto">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="primeira-coluna">Meu primeiro produto</td>
+                        <td>1</td>
+                        <td>15</td>
+                        <td>1</td>
+                        <td>60</td>
+                        <td>9,50</td>
+                        <td>29,90</td>
+
+                        <td>
+                            <a href="./criarProduto.html">
+                                <img src="../img/lapis.svg" alt="" class="icon-xs">
+                            </a>
+                        </td>
+
+                        <!-- botao de abertura do modal de fornecedores do produto -->
+                        <td>
+                            <img src="../img/modulo-fornecedor.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fornecedoresProduto">
+                        </td>
+
+                        <td>
+                            <img src="../img/fluxo.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fluxoProduto">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="primeira-coluna">Meu primeiro produto</td>
+                        <td>1</td>
+                        <td>15</td>
+                        <td>1</td>
+                        <td>60</td>
+                        <td>9,50</td>
+                        <td>29,90</td>
+
+                        <td>
+                            <a href="./criarProduto.html">
+                                <img src="../img/lapis.svg" alt="" class="icon-xs">
+                            </a>
+                        </td>
+
+                        <!-- botao de abertura do modal de fornecedores do produto -->
+                        <td>
+                            <img src="../img/modulo-fornecedor.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fornecedoresProduto">
+                        </td>
+
+                        <td>
+                            <img src="../img/fluxo.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fluxoProduto">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="primeira-coluna">Meu primeiro produto</td>
+                        <td>1</td>
+                        <td>15</td>
+                        <td>1</td>
+                        <td>60</td>
+                        <td>9,50</td>
+                        <td>29,90</td>
+
+                        <td>
+                            <a href="./criarProduto.html">
+                                <img src="../img/lapis.svg" alt="" class="icon-xs">
+                            </a>
+                        </td>
+
+                        <!-- botao de abertura do modal de fornecedores do produto -->
+                        <td>
+                            <img src="../img/modulo-fornecedor.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fornecedoresProduto">
+                        </td>
+
+                        <td>
+                            <img src="../img/fluxo.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fluxoProduto">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="primeira-coluna">Meu primeiro produto</td>
+                        <td>1</td>
+                        <td>15</td>
+                        <td>1</td>
+                        <td>60</td>
+                        <td>9,50</td>
+                        <td>29,90</td>
+
+                        <td>
+                            <a href="./criarProduto.html">
+                                <img src="../img/lapis.svg" alt="" class="icon-xs">
+                            </a>
+                        </td>
+
+                        <!-- botao de abertura do modal de fornecedores do produto -->
+                        <td>
+                            <img src="../img/modulo-fornecedor.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fornecedoresProduto">
+                        </td>
+
+                        <td>
+                            <img src="../img/fluxo.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fluxoProduto">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="primeira-coluna">Meu primeiro produto</td>
+                        <td>1</td>
+                        <td>15</td>
+                        <td>1</td>
+                        <td>60</td>
+                        <td>9,50</td>
+                        <td>29,90</td>
+
+                        <td>
+                            <a href="./criarProduto.html">
+                                <img src="../img/lapis.svg" alt="" class="icon-xs">
+                            </a>
+                        </td>
+
+                        <!-- botao de abertura do modal de fornecedores do produto -->
+                        <td>
+                            <img src="../img/modulo-fornecedor.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fornecedoresProduto">
+                        </td>
+
+                        <td>
+                            <img src="../img/fluxo.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fluxoProduto">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="primeira-coluna">Meu primeiro produto</td>
+                        <td>1</td>
+                        <td>15</td>
+                        <td>1</td>
+                        <td>60</td>
+                        <td>9,50</td>
+                        <td>29,90</td>
+
+                        <td>
+                            <a href="./criarProduto.html">
+                                <img src="../img/lapis.svg" alt="" class="icon-xs">
+                            </a>
+                        </td>
+
+                        <!-- botao de abertura do modal de fornecedores do produto -->
+                        <td>
+                            <img src="../img/modulo-fornecedor.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fornecedoresProduto">
+                        </td>
+
+                        <td>
+                            <img src="../img/fluxo.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fluxoProduto">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="primeira-coluna">Meu primeiro produto</td>
+                        <td>1</td>
+                        <td>15</td>
+                        <td>1</td>
+                        <td>60</td>
+                        <td>9,50</td>
+                        <td>29,90</td>
+
+                        <td>
+                            <a href="./criarProduto.html">
+                                <img src="../img/lapis.svg" alt="" class="icon-xs">
+                            </a>
+                        </td>
+
+                        <!-- botao de abertura do modal de fornecedores do produto -->
+                        <td>
+                            <img src="../img/modulo-fornecedor.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fornecedoresProduto">
+                        </td>
+
+                        <td>
+                            <img src="../img/fluxo.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fluxoProduto">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="primeira-coluna">Meu primeiro produto</td>
+                        <td>1</td>
+                        <td>15</td>
+                        <td>1</td>
+                        <td>60</td>
+                        <td>9,50</td>
+                        <td>29,90</td>
+
+                        <td>
+                            <a href="./criarProduto.html">
+                                <img src="../img/lapis.svg" alt="" class="icon-xs">
+                            </a>
+                        </td>
+
+                        <!-- botao de abertura do modal de fornecedores do produto -->
+                        <td>
+                            <img src="../img/modulo-fornecedor.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fornecedoresProduto">
+                        </td>
+
+                        <td>
+                            <img src="../img/fluxo.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fluxoProduto">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="primeira-coluna">Meu primeiro produto</td>
+                        <td>1</td>
+                        <td>15</td>
+                        <td>1</td>
+                        <td>60</td>
+                        <td>9,50</td>
+                        <td>29,90</td>
+
+                        <td>
+                            <a href="./criarProduto.html">
+                                <img src="../img/lapis.svg" alt="" class="icon-xs">
+                            </a>
+                        </td>
+
+                        <!-- botao de abertura do modal de fornecedores do produto -->
+                        <td>
+                            <img src="../img/modulo-fornecedor.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fornecedoresProduto">
+                        </td>
+
+                        <td>
+                            <img src="../img/fluxo.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fluxoProduto">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="primeira-coluna">Meu primeiro produto</td>
+                        <td>1</td>
+                        <td>15</td>
+                        <td>1</td>
+                        <td>60</td>
+                        <td>9,50</td>
+                        <td>29,90</td>
+
+                        <td>
+                            <a href="./criarProduto.html">
+                                <img src="../img/lapis.svg" alt="" class="icon-xs">
+                            </a>
+                        </td>
+
+                        <!-- botao de abertura do modal de fornecedores do produto -->
+                        <td>
+                            <img src="../img/modulo-fornecedor.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fornecedoresProduto">
+                        </td>
+
+                        <td>
+                            <img src="../img/fluxo.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fluxoProduto">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="primeira-coluna">Meu primeiro produto</td>
+                        <td>1</td>
+                        <td>15</td>
+                        <td>1</td>
+                        <td>60</td>
+                        <td>9,50</td>
+                        <td>29,90</td>
+
+                        <td>
+                            <a href="./criarProduto.html">
+                                <img src="../img/lapis.svg" alt="" class="icon-xs">
+                            </a>
+                        </td>
+
+                        <!-- botao de abertura do modal de fornecedores do produto -->
+                        <td>
+                            <img src="../img/modulo-fornecedor.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fornecedoresProduto">
+                        </td>
+
+                        <td>
+                            <img src="../img/fluxo.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fluxoProduto">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="primeira-coluna">Meu primeiro produto</td>
+                        <td>1</td>
+                        <td>15</td>
+                        <td>1</td>
+                        <td>60</td>
+                        <td>9,50</td>
+                        <td>29,90</td>
+
+                        <td>
+                            <a href="./criarProduto.html">
+                                <img src="../img/lapis.svg" alt="" class="icon-xs">
+                            </a>
+                        </td>
+
+                        <!-- botao de abertura do modal de fornecedores do produto -->
+                        <td>
+                            <img src="../img/modulo-fornecedor.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fornecedoresProduto">
+                        </td>
+
+                        <td>
+                            <img src="../img/fluxo.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fluxoProduto">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="primeira-coluna">Meu primeiro produto</td>
+                        <td>1</td>
+                        <td>15</td>
+                        <td>1</td>
+                        <td>60</td>
+                        <td>9,50</td>
+                        <td>29,90</td>
+
+                        <td>
+                            <a href="./criarProduto.html">
+                                <img src="../img/lapis.svg" alt="" class="icon-xs">
+                            </a>
+                        </td>
+
+                        <!-- botao de abertura do modal de fornecedores do produto -->
+                        <td>
+                            <img src="../img/modulo-fornecedor.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fornecedoresProduto">
+                        </td>
+
+                        <td>
+                            <img src="../img/fluxo.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fluxoProduto">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="primeira-coluna">Meu primeiro produto</td>
+                        <td>1</td>
+                        <td>15</td>
+                        <td>1</td>
+                        <td>60</td>
+                        <td>9,50</td>
+                        <td>29,90</td>
+
+                        <td>
+                            <a href="./criarProduto.html">
+                                <img src="../img/lapis.svg" alt="" class="icon-xs">
+                            </a>
+                        </td>
+
+                        <!-- botao de abertura do modal de fornecedores do produto -->
+                        <td>
+                            <img src="../img/modulo-fornecedor.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fornecedoresProduto">
+                        </td>
+
+                        <td>
+                            <img src="../img/fluxo.svg" alt="" class="icon-xs" data-bs-toggle="modal" data-bs-target="#fluxoProduto">
+                        </td>
+                    </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 </tbody>
             </table>
 

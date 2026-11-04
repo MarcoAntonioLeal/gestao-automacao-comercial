@@ -40,7 +40,6 @@ Armazenar os dados das configurações operacionais da empresa proprietária do 
 
 ## Observações Técnicas
 
-* Utilizar um componente do tipo Select no frontend para controlar as modalidades de operação.
 * Dependendo do ambiente de instalação, poderá ser necessária configuração de firewall, antivírus ou políticas de rede para permitir o envio de e-mails.
 * O protocolo de segurança padrão será TLS.
 * A senha de aplicativo deverá ser obtida pelo proprietário do sistema junto ao provedor de e-mail utilizado.

@@ -1,6 +1,4 @@
-main {
-    font-size: medium;
-}
+main {font-size: medium;}
 
 /*====Menu====*/
 #sec-menu {
@@ -22,58 +20,46 @@ main {
     }
 }
 
-.legenda {
+/*.legenda {
     display: flex;
     gap: 2.5rem;
 
-    & li {
-        list-style-type: square;
-    }
-}
+    & li {list-style-type: square;}
+}*/
 
 /*====Tabela de produtos====*/
 .sec-table {
     max-height: 80vh;
+    width: 100%;
     overflow-y: auto;
-    border: 0.5px solid var(--cor-03);
+    border-top: 1px solid var(--cor-04);
     background-color: var(--cor-04);
 }
 
-thead {
-    position: sticky;
-    top: 0;
-}
-
-tbody img {
-    cursor: pointer;
-}
-
 table {
+    min-width: 100%;
+    width: max-content !important;
     border-collapse: separate;
-    border-spacing: 0; /*esse seletor só incide nas tabelas dos modais*/
-    vertical-align: middle;
-    color: inherit !important;
+    border-spacing: 0;
+
+    & thead {
+        position: sticky;
+        top: 0;
+    }
+
+    & tbody img {cursor: pointer;}
 }
 
-tr, td, th {
-    border-color: var(--cor-04);
-    color: inherit !important;
-}
-
-#width-descricao {width: 35.2%}
-#width-codigo {width: 10%;}
-#width-estoque {width: 10%;}
-#width-vend-hoje {width: 10%;}
-#width-dias-vendes {width: 10%;}
-#width-custo {width: 10%;}
-#width-valor {width: 10%;}
-#width-editar {width: 1.6%;}
-#width-fornecedores {width: 1.6%;}
-#width-fluxo {width: 1.6%;}
-
-td:not(.primeira-coluna), th:not(.primeira-coluna) {
-    text-align: center;
-}
+#width-descricao {width: 10rem; }
+#width-codigo {width: 10rem;}
+#width-estoque {width: 10rem;}
+#width-vend-hoje {width: 10rem;}
+#width-dias-vendes {width: 10rem;}
+#width-custo {width: 10rem;}
+#width-valor {width: 10rem;}
+#width-editar {width: 1.6rem;}
+#width-fornecedores {width: 1.6rem;}
+#width-fluxo {width: 1.6rem;}
 
 /*====Modal de filtro de pesquisa====*/
 .modal-body-pesquisar {

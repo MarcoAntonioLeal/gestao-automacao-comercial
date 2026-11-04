@@ -30,9 +30,36 @@ input, select {
 }
 
 label {font-weight: normal;}
-h5, h6 {font-weight: bold;}
-h6 {text-decoration: underline;}
 
+h5 {
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+h6 {font-weight: bold;}
+
+.form-check {margin-bottom: 1rem;}
+
+#email {min-width: 35%;}
+#porta {width: 5rem;}
+#path_impressora, path_logo {min-width: 20%;}
+
+#divProtocolo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 1rem;
+
+    & .form-check {
+        display: inherit;
+        align-items: inherit;
+        gap: inherit;
+        margin: 0;
+
+        & input {margin: 0;}
+    }
+}
 
 
 @media (max-width: 767.8px) {

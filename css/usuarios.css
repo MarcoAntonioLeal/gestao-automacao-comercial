@@ -62,7 +62,7 @@ input {
 }
 
 #senhaUser, #btnEyeSenha {height: 37.2px;}
-
+#senhaUser::-ms-reveal {display: none;}
 
 /*====Tabela====*/
 .sec-table {

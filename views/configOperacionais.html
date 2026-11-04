@@ -48,7 +48,7 @@
 
                     <section>
                         <h5>Configurações de Vendas:</h5>
-                        <h6>Tipo de Venda</h6>
+                        <h6>Tipo de Venda:</h6>
                         
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="tipoVenda" id="VendaOrcamento" checked>
@@ -76,7 +76,7 @@
 
                         <br>
 
-                        <h6>Controle de Caixa</h6>
+                        <h6>Controle de Caixa:</h6>
                         <div class="form-check form-switch">
                             <input class="form-check-input" type="checkbox" role="switch" id="switchCheckChecked" checked>
 
@@ -91,7 +91,7 @@
                         
                         <div>
                             <label for="email:">E-mail:</label>
-                            <input type="text" name="email" id="email" autocomplete="off">
+                            <input type="email" name="email" id="email" autocomplete="off" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Digite um e-mail válido">
                         </div>
                 
                         <div>
@@ -101,11 +101,12 @@
 
                         <div>
                             <label for="porta">Porta:</label>
-                            <input type="text" name="porta" id="porta" autocomplete="off" value="587">
+                            <input type="text" name="porta" id="porta" autocomplete="off" value="587" pattern="[0-9]" title="Digite somente números">
                         </div>
 
-                        <div>
+                        <div id="divProtocolo">
                             <label for="">Protocolo:</label>
+
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="protocolo" id="prot1" checked>
                                 <label class="form-check-label" for="prot1">
