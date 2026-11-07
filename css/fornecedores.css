@@ -1,0 +1,14 @@
+/*====Modal de fornecedores do produto====*/
+.modal-body-fluxo{
+    max-height: 65vh;
+    padding-top: 0;
+    overflow-y: auto;
+}
+
+.accordion-body {
+    background-color: var(--cor-04);
+
+    & .table {
+        font-size: 1.05rem;
+    }
+}

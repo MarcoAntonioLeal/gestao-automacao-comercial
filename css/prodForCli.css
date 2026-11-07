@@ -20,6 +20,12 @@ main {font-size: medium;}
     }
 }
 
+#sec-duvida {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 5px;
+}
+
 /*.legenda {
     display: flex;
     gap: 2.5rem;
@@ -33,7 +39,6 @@ main {font-size: medium;}
     width: 100%;
     overflow-y: auto;
     border-top: 1px solid var(--cor-04);
-    background-color: var(--cor-04);
 }
 
 table {
@@ -50,15 +55,14 @@ table {
     & tbody img {cursor: pointer;}
 }
 
-#width-descricao {width: 10rem; }
-#width-codigo {width: 10rem;}
-#width-estoque {width: 10rem;}
-#width-vend-hoje {width: 10rem;}
-#width-dias-vendes {width: 10rem;}
-#width-custo {width: 10rem;}
-#width-valor {width: 10rem;}
+#width-descricao {width: 35rem; }
+#width-codigo {width: 6rem;}
+#width-estoque {width: 6rem;}
+#width-vend-hoje {width: 6rem;}
+#width-dias-vendes {width: 6rem;}
+#width-custo {width: 6rem;}
+#width-valor {width: 6rem;}
 #width-editar {width: 1.6rem;}
-#width-fornecedores {width: 1.6rem;}
 #width-fluxo {width: 1.6rem;}
 
 /*====Modal de filtro de pesquisa====*/
@@ -109,22 +113,6 @@ select {
     height: 2rem;
     margin-bottom: 1rem;
     color: inherit;
-}
-
-
-/*====Modal de fornecedores do produto====*/
-.modal-body-fornecedores, .modal-body-fluxo{
-    max-height: 65vh;
-    padding-top: 0;
-    overflow-y: auto;
-}
-
-.accordion-body {
-    background-color: var(--cor-04);
-
-    & .table {
-        font-size: 1.05rem;
-    }
 }
 
 /*====Modal de fluxo de produtos====*/
