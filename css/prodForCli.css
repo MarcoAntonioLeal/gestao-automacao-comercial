@@ -23,15 +23,22 @@ main {font-size: medium;}
 #sec-duvida {
     display: flex;
     justify-content: end;
-    margin-bottom: 5px;
+    margin: 0 .8rem 5px 0;
+
+    & img {cursor: help;}
 }
 
-/*.legenda {
-    display: flex;
-    gap: 2.5rem;
+.custom-tooltip {
+    --bs-tooltip-bg: var(--cor-04);
+    --bs-tooltip-color: var(--cor-03);
+    --bs-tooltip-opacity: 1;
+}
 
-    & li {list-style-type: square;}
-}*/
+h6 {
+    margin-bottom: 1rem;
+    text-decoration: underline;
+}
+
 
 /*====Tabela de produtos====*/
 .sec-table {
@@ -118,4 +125,6 @@ select {
 /*====Modal de fluxo de produtos====*/
 .modal-body-fluxo {
     background-color: var(--cor-04);
+
+    & th, td {color: var(--cor-03) !important;}
 }

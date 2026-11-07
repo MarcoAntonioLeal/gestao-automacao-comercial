@@ -1,3 +1,6 @@
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
 //para limpar os campos de select do modal
 const campoPesquisarProd = document.querySelector('#campoPesquisarProduto')
 const modalBuscaGrupo = document.querySelector('#buscaGrupo')
