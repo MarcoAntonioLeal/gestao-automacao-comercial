@@ -31,7 +31,6 @@ main {font-size: medium;}
 .custom-tooltip {
     --bs-tooltip-bg: var(--cor-04);
     --bs-tooltip-color: var(--cor-03);
-    --bs-tooltip-opacity: 1;
 }
 
 h6 {
