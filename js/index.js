@@ -1,3 +1,20 @@
+const btnEyeSenha = document.querySelector('#btnEyeSenha')
+const imgEyeSenha = document.querySelector('#imgEyeSenha')
+const valor = document.querySelector('#valor')
+
+btnEyeSenha.addEventListener('click', () => {
+    if(imgEyeSenha.dataset.eye == 'open') {
+        imgEyeSenha.src = '../img/eye-close.svg'
+        imgEyeSenha.dataset.eye = 'close'
+        valor.textContent = '----'
+
+    } else if (imgEyeSenha.dataset.eye == 'close') {
+        imgEyeSenha.src = '../img/eye-open.svg'
+        imgEyeSenha.dataset.eye = 'open'
+        valor.textContent = 'R$ 000.000,00'
+    }
+})
+
 /* Media Querie */
 
 //Para o botão de backup

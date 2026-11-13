@@ -73,8 +73,17 @@ nav {
 }
 
 #vl-vendas {
+    display: flex;
+    flex-direction: column;
+
     align-self: flex-end;
+
     color: var(--cor-05);
+
+    & button {
+        align-self: flex-end;
+        border: 2px solid var(--cor-04);
+    }
 }
 
 
@@ -201,6 +210,12 @@ nav {
     #sec-valor-venda {
         justify-content: center;
         gap: 1rem;
+    }
+
+    #vl-vendas {
+        flex-direction: row-reverse;
+        gap: 1rem;
+        margin-bottom: 1rem;
     }
 }
 
