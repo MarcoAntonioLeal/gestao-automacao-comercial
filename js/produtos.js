@@ -48,19 +48,21 @@ const liPagInicial = document.querySelector('#liPagInicial')
 
 const liLinha1 = document.querySelector('#liLinha1')
 const liLinha2 = document.querySelector('#liLinha2')
-const liLinha3 = document.querySelector('#liLinha3')
 const liLinha4 = document.querySelector('#liLinha4')
 
 const btnNovo = document.querySelector('#btnNovo')
 const imgNovo = document.querySelector('#imgNovo')
 
 const imgPesquisarProd = document.querySelector('#imgPesquisarProd')
+const textPesquisar = document.querySelector('#textPesquisar')
 
 const btnPDF = document.querySelector('#btnPDF')
 const imgPDF = document.querySelector('#imgPDF')
+const textPDF = document.querySelector('#textPDF')
 
 const btnManual = document.querySelector('#btnManual')
 const imgManual = document.querySelector('#imgManual')
+const textManual = document.querySelector('#textManual')
 
 const pagInicial = document.querySelector('#pagInicial')
 const imgPagInicial = document.querySelector('#imgPagInicial')
@@ -72,7 +74,7 @@ const linha3 = document.querySelector('#linha3')
 const linha4 = document.querySelector('#linha4')
 
 function responsividadeMenu() {
-    const queryHtml = matchMedia("(max-width: 500px)")
+    const queryHtml = matchMedia("(max-width: 750px)")
 
     if (queryHtml.matches) {
 
@@ -94,14 +96,18 @@ function responsividadeMenu() {
         btnManual.classList.add('btn')
         pagInicial.classList.add('btn')
 
+        textPesquisar.textContent = 'Filtro'
+        textPDF.textContent = 'PDF'
+        textManual.textContent = 'Manual'
         textPagInicial.textContent = 'Inicial'
+
+        linha3.style.display = 'none'
         
         liBtnNovo.append(btnNovo)
         liLinha1.append(linha1)
         liBtnPesquisar.append(btnPesquisarProduto)
         liLinha2.append(linha2)
         liBtnPDF.append(btnPDF)
-        liLinha3.append(linha3)
         liBtnManual.append(btnManual)
         liLinha4.append(linha4)
         liPagInicial.append(pagInicial)
@@ -126,7 +132,12 @@ function responsividadeMenu() {
         btnManual.classList.remove('btn')
         pagInicial.classList.remove('btn')
         
+        textPesquisar.textContent = 'Pesquisar'
+        textPDF.textContent = 'Baixar PDF'
+        textManual.textContent = 'Ent. Manual'
         textPagInicial.textContent = 'Pg. Inicial'
+
+        linha3.style.display = 'block'
 
         secMenu.append(
             btnNovo, 
