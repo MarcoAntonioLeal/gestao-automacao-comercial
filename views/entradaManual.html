@@ -44,28 +44,75 @@
 
             <legend>Entrada Manual</legend>
 
-            <div>
-                <label for="">Operação:</label>
-                <select name="" id="">
-                    <option value="">Entrada</option>
-                    <option value="">Saída</option>
-                </select>
-            </div>
+            <form action="#" method="#">
+                <section class="sec-dados-prod">
+                    <div>
+                        <label for="">Operação:</label>
+                        <select name="operacao" id="operacao">
+                            <option value="ENTRADA">Entrada</option>
+                            <option value="SAIDA">Saída</option>
+                        </select>
+                    </div>
+                
+                    <div>
+                        <label for="codigo" class="ajusteLabel">Código:</label>
+                        <input type="text" name="codigo" id="codigo" autocomplete="off" required>
+                    </div>
+                </section>
 
-            <div>
-                <label for="">Código</label>
-                <input type="text" name="" id="">
-            </div>
+                <br>
 
-            <div>
-                <label for="">Código</label>
-                <input type="text" name="" id="">
-            </div>
+                <section>
+                    <div>
+                        <label for="produto">Produto:</label>
+                        <input type="text" name="produto" id="produto" class="disabled" readonly>
+                    </div>
+                </section>
 
-            <div>
-                <label for="">Código</label>
-                <input type="text" name="" id="">
-            </div>
+                <hr>
+
+                <section class="sec-dados-prod">
+                    <div>
+                        <label for="custoAtual">Custo Atual:</label>
+                        <input type="text" name="custoAtual" id="custoAtual" class="disabled" readonly>
+                    </div>
+
+                    <div>
+                        <label for="precoAtual" class="ajusteLabel">Preço Atual:</label>
+                        <input type="text" name="precoAtual" id="precoAtual" class="disabled" readonly>
+                    </div>
+
+                    <div>
+                        <label for="estAtual" class="ajusteLabel">Est. Atual:</label>
+                        <input type="text" name="estAtual" id="estAtual" class="disabled" readonly>
+                    </div>
+                </section>
+
+                <br>
+
+                <section class="sec-dados-prod">
+                    <div>
+                        <label for="novoCusto">Novo Custo:</label>
+                        <input type="text" name="novoCusto" id="novoCusto" autocomplete="off">
+                    </div>
+
+                    <div>
+                        <label for="novoPreco" class="ajusteLabel">Novo Preço:</label>
+                        <input type="text" name="novoPreco" id="novoPreco" autocomplete="off">
+                    </div>
+
+                    <div>
+                        <label for="novoEst" class="ajusteLabel">Novo Est.:</label>
+                        <input type="text" name="novoEst" id="novoEst" autocomplete="off">
+                    </div>
+                </section>
+
+                <br>
+
+                <button type="submit" class="btn" id="btnConfirmar">
+                    Confirmar
+                </button>
+            </form>
         </section>
         
         <section class="table-responsive sec-table ">

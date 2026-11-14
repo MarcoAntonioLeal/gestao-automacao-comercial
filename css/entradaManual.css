@@ -10,6 +10,42 @@ main {font-size: medium;}
     & img {margin: auto;}
 }
 
+
+/*====Entrada ou saida dos produtos====*/
+.sec-cadastro {justify-content: initial;}
+
+.sec-dados-prod {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+input, select {
+    outline: none;
+    padding: 5px;
+    color: inherit;
+    text-transform: uppercase;
+}
+
+.ajusteLabel {margin-left: 1rem;}
+#produto {min-width: 40%;}
+
+#codigo, 
+#custoAtual, 
+#precoAtual, 
+#novoCusto, 
+#novoPreco,
+#estAtual,
+#novoEst {width: 5rem;}
+
+#btnConfirmar {
+    margin-bottom: 1rem;
+    padding: .7rem;
+    border: 1px solid var(--cor-12);
+    color: var(--cor-00);
+    background-color: var(--cor-13);
+}
+
+
 /*====Tabela de produtos, clientes e fornecedores====*/
 .sec-table {
     max-height: 80vh;
