@@ -1,14 +1,29 @@
+/*====Botão Toggler====*/
+.navbar-toggler {
+    display: none;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: auto;
+    background-color: var(--cor-04);
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 0;
+    list-style-type: none;
+}
+
+
 #width-descricao {
     display: flex;
     justify-content: space-between;
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: 150rem;
 
     & div {margin: auto;}
-
     & img {cursor: help;}
-
 }
 
 #width-codigo {width: 6rem;}
@@ -19,3 +34,116 @@
 #width-valor {width: 6rem;}
 #width-editar {width: 1.6rem;}
 #width-fluxo {width: 1.6rem;}
+
+
+/*====Modal de filtro de pesquisa====*/
+.modal-body-pesquisar {
+    display: flex;
+    justify-content: space-around;
+
+    & hr {
+        width: 2px;
+        height: 17rem;
+        border-color: var(--cor-04);
+        opacity: 100%;
+        background-color: var(--cor-04);
+    }
+
+    & input {margin-bottom: 1rem;}
+    & label {font-weight: normal;}
+}
+
+.modal-filtro-de-busca {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-busca-grupo-fornecedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    & button {
+        width: 2rem;
+        height: 2rem;
+        margin-top: -4px;
+        border: 1px solid var(--cor-08);
+        background-color: var(--cor-07);
+        transition-duration: .3s;
+
+        &:hover {
+            background-color: var(--cor-08);
+            color: var(--cor-00);
+            transition-duration: .3s;
+        }
+    }
+}
+
+select {
+    width: 12rem;
+    height: 2rem;
+    margin-bottom: 1rem;
+    color: inherit;
+}
+
+/*====Modal de fluxo de produtos====*/
+.modal-body-fluxo {
+    max-height: 65vh;
+    padding-top: 0;
+    overflow-y: auto;
+    background-color: var(--cor-04);
+
+    & th, td {color: var(--cor-03) !important;}
+}
+
+
+@media (max-width: 995px) {
+    .modal-body-pesquisar {
+        flex-direction: column;
+
+        & hr {
+            width: 100%;
+            height: 2px;
+        }
+    }
+}
+
+/*botão toogle*/
+@media (max-width: 500px) {
+    .busca-elemento {
+        margin-top: 1.5rem;
+    }
+
+    #meuMenu:has(.show), #btn-toggler {
+        display: block;
+    }
+
+    .linha-vertical {height: 5rem;}
+
+    li > button, li > a {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+
+        height: 4.8rem;
+        width: 4.8rem;
+
+        border: 1px solid var(--cor-12) !important;
+        box-shadow: 3px 3px 3px var(--cor-shadow);
+        font-size: 1.02rem;
+        color: inherit;
+        transition-duration: .5s !important;
+
+        &:hover {
+            background-color: var(--cor-04) !important;
+            box-shadow: 3px 3px 3px var(--cor-shadow-hover);
+            transition-duration: .5s;
+        }  
+
+        & hr {
+            width: 100%;
+            margin: auto;
+        }
+    }
+}

@@ -54,67 +54,6 @@ table {
 }
 
 
-/*====Modal de filtro de pesquisa====*/
-.modal-body-pesquisar {
-    display: flex;
-    justify-content: space-around;
-
-    & hr {
-        width: 2px;
-        height: 17rem;
-        border-color: var(--cor-04);
-        opacity: 100%;
-        background-color: var(--cor-04);
-    }
-
-    & input {margin-bottom: 1rem;}
-    & label {font-weight: normal;}
-}
-
-.modal-filtro-de-busca {
-    display: flex;
-    flex-direction: column;
-}
-
-.modal-busca-grupo-fornecedor {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-
-    & button {
-        width: 2rem;
-        height: 2rem;
-        margin-top: -4px;
-        border: 1px solid var(--cor-08);
-        background-color: var(--cor-07);
-        transition-duration: .3s;
-
-        &:hover {
-            background-color: var(--cor-08);
-            color: var(--cor-00);
-            transition-duration: .3s;
-        }
-    }
-}
-
-select {
-    width: 12rem;
-    height: 2rem;
-    margin-bottom: 1rem;
-    color: inherit;
-}
-
-/*====Modal de fluxo de produtos====*/
-.modal-body-fluxo {
-    max-height: 65vh;
-    padding-top: 0;
-    overflow-y: auto;
-    background-color: var(--cor-04);
-
-    & th, td {color: var(--cor-03) !important;}
-}
-
-
 @media (max-width: 1203.5px) {
     header {
         justify-content: center;
@@ -126,11 +65,5 @@ select {
         margin: auto;
     }
 
-    .busca-elemento {
-        margin-bottom: 1.5rem;
-    }
-}
-
-@media (max-width: 995px) {
-    /*para o modal de pesquisar*/
+    .busca-elemento {margin-bottom: 1.5rem;}
 }

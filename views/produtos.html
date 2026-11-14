@@ -19,10 +19,36 @@
         </div>
     </header>
     <main class="container-fluid">
+
+        <button class="navbar-toggler shadow-none navbar"
+        type="button"
+        id="btn-toggler"
+        data-bs-toggle="collapse"
+        data-bs-target="#meuMenu"
+        aria-controls="meuMenu"
+        aria-expanded="false"
+        aria-label="Abrir menu">
+
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse" id="meuMenu">
+            <ul>
+                <li id="liBtnNovo"></li>
+                <li id="liLinha1"></li>
+                <li id="liBtnPesquisar"></li>
+                <li id="liLinha2"></li>
+                <li id="liBtnPDF"></li>
+                <li id="liLinha3"></li>
+                <li id="liBtnManual"></li>
+                <li id="liLinha4"></li>
+                <li id="liPagInicial"></li>
+            </ul>
+        </div>
         
         <section id="sec-menu">
-            <a href="./criarProduto.html" class="borda">
-                <img src="../img/novo-produto.svg" alt="" class="icon-l">
+            <a href="./criarProduto.html" class="borda" id="btnNovo">
+                <img src="../img/novo-produto.svg" alt="" class="icon-l" id="imgNovo">
 
                 <div>
                     <hr>
@@ -30,11 +56,11 @@
                 </div>
             </a>
 
-            <hr class="linha-vertical">
+            <hr class="linha-vertical" id="linha1">
             
             <!--botão modal pesquisar-->
             <button type="button" class="borda" id="btnPesquisarProduto" data-bs-toggle="modal" data-bs-target="#staticPesquisar">
-                <img src="../img/pesquisar.svg" alt="" class="icon-l">
+                <img src="../img/pesquisar.svg" alt="" class="icon-l" id="imgPesquisarProd">
 
                 <div>
                     <hr>
@@ -170,10 +196,10 @@
                 </div>
             </div>
 
-            <hr class="linha-vertical">
+            <hr class="linha-vertical" id="linha2">
 
-            <a href="#" class="borda">
-                <img src="../img/baixar-pdf.svg" alt="" class="icon-l">
+            <a href="#" class="borda" id="btnPDF">
+                <img src="../img/baixar-pdf.svg" alt="" class="icon-l" id="imgPDF">
 
                 <div>
                     <hr>
@@ -181,10 +207,10 @@
                 </div>
             </a>
 
-            <hr class="linha-vertical">
+            <hr class="linha-vertical" id="linha3">
 
-            <a href="#" class="borda">
-                <img src="../img/entrada-produto.svg" alt="" class="icon-l">
+            <a href="#" class="borda" id="btnManual">
+                <img src="../img/entrada-produto.svg" alt="" class="icon-l" id="imgManual">
 
                 <div>
                     <hr>
@@ -192,14 +218,16 @@
                 </div>
             </a>
 
-            <hr class="linha-vertical">
+            <hr class="linha-vertical" id="linha4">
 
-            <a href="./index.html" class="borda">
-                <img src="../img/pag-inicial.svg" alt="" class="icon-l">
+            <a href="./index.html" class="borda" id="pagInicial">
+                <img src="../img/pag-inicial.svg" alt="" class="icon-l" id="imgPagInicial">
 
                 <div>
                     <hr>
-                    Pg. Inicial
+                    <div id="textPagInicial">
+                        Pg. Inicial
+                    </div>
                 </div>
             </a>
 
