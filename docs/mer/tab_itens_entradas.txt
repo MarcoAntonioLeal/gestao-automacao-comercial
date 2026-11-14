@@ -18,13 +18,13 @@ CREATE TABLE itens_entradas (
 	custo INTEGER CHECK(custo >= 0),
 
 	FOREIGN KEY(produto_id)
-    	REFERENCES produtos(id),
+    REFERENCES produtos(id),
 
 	FOREIGN KEY(unidade_venda_id)
-    	REFERENCES unidades_venda(id),
+    REFERENCES unidades_venda(id),
 
 	FOREIGN KEY(nota_entrada_id)
-    	REFERENCES notas_entradas(id),
+    REFERENCES notas_entradas(id),
 
 	FOREIGN KEY(criado_por)
 	REFERENCES usuarios(id)

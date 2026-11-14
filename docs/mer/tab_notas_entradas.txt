@@ -12,7 +12,7 @@ CREATE TABLE notas_entradas (
 	criado_por INTEGER NOT NULL,
 
 	FOREIGN KEY(fornecedor_id)
-    	REFERENCES fornecedores(id),
+    REFERENCES fornecedores(id),
 
 	FOREIGN KEY(criado_por)
 	REFERENCES usuarios(id)
