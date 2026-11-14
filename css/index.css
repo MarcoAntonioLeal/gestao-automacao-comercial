@@ -67,16 +67,11 @@ nav {
     }
 }
 
-.btn-group {
-    width: 5rem;
-    margin-top: 1rem;
-}
+.btn-group {width: 5rem;}
 
 #vl-vendas {
     display: flex;
     flex-direction: column;
-
-    align-self: flex-end;
 
     color: var(--cor-05);
 

@@ -6,7 +6,7 @@ btnEyeSenha.addEventListener('click', () => {
     if(imgEyeSenha.dataset.eye == 'open') {
         imgEyeSenha.src = '../img/eye-close.svg'
         imgEyeSenha.dataset.eye = 'close'
-        valor.textContent = '----'
+        valor.textContent = '---------'
 
     } else if (imgEyeSenha.dataset.eye == 'close') {
         imgEyeSenha.src = '../img/eye-open.svg'
