@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Entrada Manual</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/entradaManual.css">
+</head>
+<body>
+    <header>
+        <div class="style-padrao borda">
+            /*usuario*/
+        </div>
+    </header>
+    <main class="container-fluid">
+        <section id="sec-menu">
+            <a href="./produtos.html" class="borda">
+                <img src="../img/voltar.svg" alt="" class="icon-l">
+
+                <div>
+                    <hr>
+                    Voltar
+                </div>
+            </a>
+
+            <hr class="linha-vertical">
+
+            <a href="./index.html" class="borda">
+                <img src="../img/pag-inicial.svg" alt="" class="icon-l">
+
+                <div>
+                    <hr>
+                    Pg. Inicial
+                </div>
+            </a>
+        </section>
+
+        <section class="container sec-cadastro borda style-padrao">
+
+            <legend>Entrada Manual</legend>
+
+            <div>
+                <label for="">Operação:</label>
+                <select name="" id="">
+                    <option value="">Entrada</option>
+                    <option value="">Saída</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="">Código</label>
+                <input type="text" name="" id="">
+            </div>
+
+            <div>
+                <label for="">Código</label>
+                <input type="text" name="" id="">
+            </div>
+
+            <div>
+                <label for="">Código</label>
+                <input type="text" name="" id="">
+            </div>
+        </section>
+        
+        <section class="table-responsive sec-table ">
+            <table class="table table-striped table-bordered">
+
+                <thead>
+                    <tr>
+                        <th id="width-descricao">Descrição</th>
+                        <th id="width-codigo">Código</th>
+                        <th id="width-estoque">Estoque</th>
+                        <th id="width-vend-hoje">Vend. Hoje</th>
+                        <th id="width-dias-vendes">Dias s/ Vender</th>
+                        <th id="width-custo">Custo</th>
+                        <th id="width-valor">Valor</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <!--linha de molde-->
+                    <tr>
+                        <td>BLUSA DE LINHO AZUL TAMANHO M</td>
+                        <td>1</td>
+                        <td>15</td>
+                        <td>1</td>
+                        <td>60</td>
+                        <td>9,50</td>
+                        <td>29,90</td>
+                    </tr>
+                    <!--linha de molde-->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    
+    <footer>
+        <img src="../img/logo.svg" alt="" class="icon-m me-2"> 
+        <span class="fs-4 text-logo">Say-System</span>
+    </footer>
+</body>
+</html>

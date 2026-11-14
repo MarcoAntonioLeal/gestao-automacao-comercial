@@ -1,0 +1,46 @@
+main {font-size: medium;}
+
+/*====Menu====*/
+#sec-menu {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0 2rem;
+
+    & img {margin: auto;}
+}
+
+/*====Tabela de produtos, clientes e fornecedores====*/
+.sec-table {
+    max-height: 80vh;
+    width: 100%;
+    overflow-y: auto;
+    border-top: 1px solid var(--cor-04);
+}
+
+table {
+    min-width: 100%;
+    width: max-content !important;
+    border-collapse: separate;
+    border-spacing: 0;
+
+    & thead {
+        position: sticky;
+        top: 0;
+    }
+
+    & tbody img {cursor: pointer;}
+}
+
+
+@media (max-width: 1203.5px) {
+    header {
+        justify-content: center;
+        margin-bottom: 1.5rem;
+    }
+
+    #sec-menu {
+        justify-content: center;
+        margin: auto;
+    }
+}
