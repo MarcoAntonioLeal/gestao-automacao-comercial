@@ -19,6 +19,17 @@
     </header>
     <main class="container-fluid">
         <section id="sec-menu">
+            <button type="button" class="borda">
+                <img src="../img/salvar.svg" alt="" class="icon-l">
+
+                <div>
+                    <hr>
+                    Salvar
+                </div>
+            </button>
+
+            <hr class="linha-vertical">
+
             <a href="./produtos.html" class="borda">
                 <img src="../img/voltar.svg" alt="" class="icon-l">
 
@@ -42,9 +53,22 @@
 
         <section class="container sec-cadastro borda style-padrao">
 
-            <legend>Entrada Manual</legend>
+            <legend>
+                Entrada Manual
 
-            <form action="#" method="#">
+                <button class="navbar-toggler shadow-none"
+                type="button"
+                id="btn-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#formCadastro"
+                aria-controls="formCadastro"
+                aria-expanded="false"
+                aria-label="Abrir formulario">
+                    <img src="../img/btn-toggle.svg" alt="" class="icon-s">
+                </button>
+            </legend>
+
+            <form action="#" method="#" id="formCadastro" class="collapse">
                 <section class="sec-dados-prod">
                     <div>
                         <label for="">Operação:</label>
@@ -90,7 +114,7 @@
 
                 <br>
 
-                <section class="sec-dados-prod">
+                <section class="sec-dados-prod mb-3">
                     <div>
                         <label for="novoCusto">Novo Custo:</label>
                         <input type="text" name="novoCusto" id="novoCusto" autocomplete="off">
@@ -102,16 +126,10 @@
                     </div>
 
                     <div>
-                        <label for="novoEst" class="ajusteLabel">Novo Est.:</label>
+                        <label for="novoEst" class="ajusteLabel">Quantidade:</label>
                         <input type="text" name="novoEst" id="novoEst" autocomplete="off">
                     </div>
                 </section>
-
-                <br>
-
-                <button type="submit" class="btn" id="btnConfirmar">
-                    Confirmar
-                </button>
             </form>
         </section>
         
@@ -120,26 +138,28 @@
 
                 <thead>
                     <tr>
-                        <th id="width-descricao">Descrição</th>
-                        <th id="width-codigo">Código</th>
-                        <th id="width-estoque">Estoque</th>
-                        <th id="width-vend-hoje">Vend. Hoje</th>
-                        <th id="width-dias-vendes">Dias s/ Vender</th>
-                        <th id="width-custo">Custo</th>
-                        <th id="width-valor">Valor</th>
+                        <th>Data</th>
+                        <th>Usuário</th>
+                        <th>Operação</th>
+                        <th>Código</th>
+                        <th>Produto</th>
+                        <th>Quant. Mov.</th>
+                        <th>Custo</th>
+                        <th>Preço</th>
                     </tr>
                 </thead>
 
                 <tbody>
                     <!--linha de molde-->
                     <tr>
-                        <td>BLUSA DE LINHO AZUL TAMANHO M</td>
-                        <td>1</td>
-                        <td>15</td>
-                        <td>1</td>
-                        <td>60</td>
-                        <td>9,50</td>
-                        <td>29,90</td>
+                        <td>14/11/2026</td>
+                        <td>Marco</td>
+                        <td>ENTRADA</td>
+                        <td>001</td>
+                        <td>PASTA ESCOLAR TIPO A</td>
+                        <td>3</td>
+                        <td>2,75</td>
+                        <td>6,90</td>
                     </tr>
                     <!--linha de molde-->
                 </tbody>
@@ -151,5 +171,9 @@
         <img src="../img/logo.svg" alt="" class="icon-m me-2"> 
         <span class="fs-4 text-logo">Say-System</span>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <script src="../js/entradaManual.js"></script>
 </body>
 </html>
