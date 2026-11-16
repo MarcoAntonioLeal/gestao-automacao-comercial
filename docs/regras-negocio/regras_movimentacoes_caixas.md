@@ -10,7 +10,7 @@ Armazenar o histórico das movimentações realizadas nos caixas da empresa.
 
 ## Chaves Estrangeiras
 
-* A chave estrangeira usuario_movimentacao_id referencia o usuário responsável pela movimentação registrada.
+* A chave estrangeira usuario_mov_id referencia o usuário responsável pela movimentação registrada.
 * A chave estrangeira turno_caixa_id referencia o registro do caixa ao qual a movimentação está vinculada.
 * A chave estrangeira cliente_id referencia o cliente vinculado à movimentação, quando houver.
 * A chave estrangeira pedido_id referencia o pedido vinculado à movimentação, quando houver.

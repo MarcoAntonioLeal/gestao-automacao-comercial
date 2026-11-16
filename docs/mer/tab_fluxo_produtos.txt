@@ -1,0 +1,26 @@
+CREATE TABLE fluxo_produtos (
+	id INTEGER PRIMARY KEY,
+   	codigo TEXT UNIQUE NOT NULL,
+	criado_por INTEGER NOT NULL,
+	data_criacao TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	produto_id INTEGER NOT NULL,
+	status TEXT NOT NULL CHECK(status IN ('ENTRADA', 'SAIDA')),
+	operacao TEXT CHECK(operacao IN ('MANUAL')),
+	entrada_nota_id INTEGER,
+	saida_venda_id INTEGER,
+	est_anterior REAL NOT NULL,
+	quantidade_mov REAL NOT NULL,
+	est_atual REAL NOT NULL,
+	
+	FOREIGN KEY(saida_venda_id)
+	REFERENCES pedidos(num_pedido),
+
+	FOREIGN KEY(entrada_nota_id)
+	REFERENCES notas_entradas(id),
+
+	FOREIGN KEY(criado_por)
+	REFERENCES usuarios(id),
+
+	FOREIGN KEY(produto_id)
+    REFERENCES produtos(id)
+)

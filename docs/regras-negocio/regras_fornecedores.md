@@ -61,4 +61,3 @@ Cadastro e gerenciamento dos fornecedores do sistema.
 * Todos os campos deverão receber tratamento de remoção de espaços em branco antes e depois dos dados (trim).
 * Todos os campos deverão receber tratamento para armazenamento em letras maiúsculas (uppercase).
 * Os limites definidos nos CHECK(length()) deverão permanecer sincronizados com os limites configurados nos campos do frontend.
-

@@ -31,6 +31,6 @@ Gerenciamento das formas de recebimento das vendas do sistema.
 * A tabela possui duas formas de identificação: o ID para as regras internas do banco de dados e o código para as regras de negócio do sistema.
 * A coluna codigo será gerada no formato R0001, com incremento sequencial de uma unidade (R0002, R0003, R0004 e assim por diante).
 * Campos de formas de recebimento não utilizados permanecem NULL.
-* Os valores das colunas valor_liquido, valor_dinheiro, valor_pix, valor_cartao_debito e valor_cartao_credito serão armazenados no banco de dados como INTEGER, utilizando a estratégia de multiplicação por 100 para evitar problemas de precisão em operações monetárias.
+* Os valores das colunas valor_liquido, valor_dinheiro, valor_pix, valor_car_deb e valor_car_cred serão armazenados no banco de dados como INTEGER, utilizando a estratégia de multiplicação por 100 para evitar problemas de precisão em operações monetárias.
 * Todos os campos deverão receber tratamento de remoção de espaços em branco antes e depois dos dados (trim).
 * Todos os campos deverão receber tratamento para armazenamento em letras maiúsculas (uppercase).
