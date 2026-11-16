@@ -8,10 +8,9 @@ main {
 
 /*====Menu====*/
 .sec-cadastro {
-    justify-content: stretch;
+    justify-content: initial;
     min-height: 70vh;
 }
-
 
 #sec-menu {
     display: flex;
