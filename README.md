@@ -3,7 +3,7 @@
 # 🦋 Say System 
 🚧 Projeto em desenvolvimento - Versão 1.0
 
-<img width="1918" height="880" alt="image" src="https://github.com/user-attachments/assets/6a173c14-9a92-40d4-9856-6863aa4d6d25" />
+<img width="1902" height="853" alt="image" src="https://github.com/user-attachments/assets/d5f5966a-fd3e-4198-9aa3-d621e0f241a3" />
 
 ---
 
@@ -140,26 +140,34 @@ Dessa forma o usuário poderá instalar e utilizar o sistema de gestão diretame
 
 O projeto está sendo desenvolvido inicialmente pelo front-end, área na qual possuo maior experiência. Após a conclusão das interfaces e fluxos de navegação, serão implementados o back-end utilizando Node.js, Express e arquitetura MVC, seguido da integração com SQLite e posteriormente da adaptação para aplicação desktop através do Electron.
 
-## 🚀 Versão 1.0 - Interface e Módulos de Cadastro
+## 🚀 Versão 1.0 - Interface e Módulos Iniciais
 
+- [X] Login
 - [X] Tela Inicial
-- [ ] Cadastro de Produtos
-- [ ] Cadastro de Clientes
-- [ ] Cadastro de Fornecedores
-- [ ] Entrada por Nota
+- [X] Backup
+- [X] Usuários
+- [X] Configuração Geral
+- [X] Configuração Operacional
+
+## 🚀 Versão 2.0 - Interface e Módulos de Cadastro
+
+- [ ] Módulo de Produtos
+- [ ] Módulo de Clientes
+- [ ] Módulo de Fornecedores
+- [ ] Módulo de Entrada por Nota
 
 ---
 
-## 🚀 Versão 2.0 - Interface e Módulos de Venda
+## 🚀 Versão 3.0 - Interface e Módulos de Venda
 
-- [ ] Caixa de Pedidos
-- [ ] Caixa
-- [ ] PDV
+- [ ] Módulo de Caixa de Pedidos
+- [ ] Módulo de Caixa
+- [ ] Módulo de PDV
 - [ ] Navegação completa entre módulos
 
 ---
 
-## 🚀 Versão 3.0 - Back-end
+## 🚀 Versão 4.0 - Back-end
 
 - [ ] Configuração Express
 - [ ] Estrutura MVC
@@ -169,7 +177,7 @@ O projeto está sendo desenvolvido inicialmente pelo front-end, área na qual po
 
 ---
 
-## 🚀 Versão 4.0 - Banco de Dados
+## 🚀 Versão 5.0 - Banco de Dados
 
 - [x] Modelagem SQLite
 - [x] Tabelas
@@ -178,7 +186,7 @@ O projeto está sendo desenvolvido inicialmente pelo front-end, área na qual po
 
 ---
 
-## 🚀 Versão 5.0 - Aplicação Desktop
+## 🚀 Versão 6.0 - Aplicação Desktop
 
 - [ ] Integração Electron
 - [ ] Empacotamento
@@ -186,7 +194,7 @@ O projeto está sendo desenvolvido inicialmente pelo front-end, área na qual po
 
 ---
 
-## 🚀 Versão 6.0 - Testes e Lançamento
+## 🚀 Versão 7.0 - Testes e Lançamento
 
 - [ ] Testes gerais
 - [ ] Correção de bugs
