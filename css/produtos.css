@@ -41,6 +41,8 @@ ul {
 .modal-body-pesquisar {
     display: flex;
     justify-content: space-around;
+    white-space: nowrap;
+    overflow: auto;
 
     & hr {
         width: 2px;
