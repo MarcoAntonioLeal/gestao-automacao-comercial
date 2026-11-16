@@ -18,9 +18,32 @@
         </div>
     </header>
     <main class="container-fluid">
+        
+        <button class="navbar-toggler shadow-none navbar"
+        type="button"
+        id="btn-toggler-sec-menu"
+        data-bs-toggle="collapse"
+        data-bs-target="#meuMenu"
+        aria-controls="meuMenu"
+        aria-expanded="false"
+        aria-label="Abrir menu">
+
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse" id="meuMenu">
+            <ul>
+                <li id="liBtnSalvar"></li>
+                <li id="liLinha1"></li>
+                <li id="liBtnVoltar"></li>
+                <li id="liLinha2"></li>
+                <li id="liPagInicial"></li>
+            </ul>
+        </div>
+
         <section id="sec-menu">
-            <button type="button" class="borda">
-                <img src="../img/salvar.svg" alt="" class="icon-l">
+            <button type="button" class="borda" id="btnSalvar">
+                <img src="../img/salvar.svg" alt="" class="icon-l" id="imgSalvar">
 
                 <div>
                     <hr>
@@ -28,10 +51,10 @@
                 </div>
             </button>
 
-            <hr class="linha-vertical">
+            <hr class="linha-vertical" id="linha1">
 
-            <a href="./produtos.html" class="borda">
-                <img src="../img/voltar.svg" alt="" class="icon-l">
+            <a href="./produtos.html" class="borda" id="btnVoltar">
+                <img src="../img/voltar.svg" alt="" class="icon-l" id="imgVoltar">
 
                 <div>
                     <hr>
@@ -39,14 +62,16 @@
                 </div>
             </a>
 
-            <hr class="linha-vertical">
+            <hr class="linha-vertical" id="linha2">
 
-            <a href="./index.html" class="borda">
-                <img src="../img/pag-inicial.svg" alt="" class="icon-l">
+            <a href="./index.html" class="borda" id="pagInicial">
+                <img src="../img/pag-inicial.svg" alt="" class="icon-l" id="imgPagInicial">
 
                 <div>
                     <hr>
-                    Pg. Inicial
+                    <div id="textPagInicial">
+                        Pg. Inicial
+                    </div>
                 </div>
             </a>
         </section>
@@ -58,7 +83,7 @@
 
                 <button class="navbar-toggler shadow-none"
                 type="button"
-                id="btn-toggler"
+                id="btn-toggler-sec-cadastro"
                 data-bs-toggle="collapse"
                 data-bs-target="#formCadastro"
                 aria-controls="formCadastro"
@@ -138,15 +163,15 @@
 
                 <thead>
                     <tr>
-                        <th>Selecionar</th>
-                        <th>Data</th>
-                        <th>Usuário</th>
-                        <th>Operação</th>
-                        <th>Código</th>
-                        <th>Produto</th>
-                        <th>Quant. Mov.</th>
-                        <th>Custo</th>
-                        <th>Preço</th>
+                        <th id="width-selecionar">Selecionar</th>
+                        <th id="width-data">Data</th>
+                        <th id="width-usuario">Usuário</th>
+                        <th id="width-operacao">Operação</th>
+                        <th id="width-codigo">Código</th>
+                        <th id="width-prod">Produto</th>
+                        <th id="width-qtd-mov">Quant. Mov.</th>
+                        <th id="width-custo">Custo</th>
+                        <th id="width-preco">Preço</th>
                     </tr>
                 </thead>
 
@@ -178,6 +203,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
-    <script src="../js/entradaManual.js"></script>
+   <script src="../js/entradaManual.js"></script>
 </body>
 </html>

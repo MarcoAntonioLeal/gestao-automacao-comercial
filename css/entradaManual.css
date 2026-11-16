@@ -10,6 +10,25 @@ main {font-size: medium;}
     & img {margin: auto;}
 }
 
+/*====Botão Toggler====*/
+#btn-toggler-sec-menu {
+    display: none;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: auto;
+    background-color: var(--cor-04);
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 0;
+    list-style-type: none;
+}
+
 
 /*====Entrada ou saida dos produtos====*/
 .sec-cadastro {
@@ -17,11 +36,17 @@ main {font-size: medium;}
     min-height: initial;
 }
 
-#btn-toggler {
-    padding: .2rem;
+#btn-toggler-sec-cadastro {
+    width: 4rem;
     margin-left: .5rem;
     border-radius: 5px;
     background-color: var(--cor-04);
+    transition-duration: .3s;
+
+    &:hover {
+        background-color: var(--cor-09);
+        transition-duration: .3s;
+    }
 }
 
 .sec-dados-prod {
@@ -68,15 +93,62 @@ table {
     }
 }
 
+#width-selecionar {width: 7rem;}
+#width-data {width: 7rem;}
+#width-usuario {width: 8rem;}
+#width-operacao {width: 7rem;}
+#width-codigo {width: 7rem;}
+#width-prod {width: 30rem;}
+#width-qtd-mov {width: 8rem;}
+#width-custo {width: 7rem;}
+#width-preco {width: 7rem;}
 
-@media (max-width: 1203.5px) {
+
+@media (max-width: 768px) {
     header {
         justify-content: center;
         margin-bottom: 1.5rem;
     }
 
-    #sec-menu {
+    #sec-menu, .sec-cadastro {
         justify-content: center;
         margin: auto;
+        margin-bottom: 2rem;
+    }
+}
+
+/*botão toogle*/
+@media (max-width: 500px) {
+    #meuMenu:has(.show), #btn-toggler-sec-menu {
+        display: block;
+    }
+
+    .linha-vertical {height: 5rem;}
+
+    li > button, li > a {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+
+        height: 4.8rem;
+        width: 4.8rem;
+
+        border: 1px solid var(--cor-12) !important;
+        box-shadow: 3px 3px 3px var(--cor-shadow);
+        font-size: 1.02rem;
+        color: inherit;
+        transition-duration: .5s !important;
+
+        &:hover {
+            background-color: var(--cor-04) !important;
+            box-shadow: 3px 3px 3px var(--cor-shadow-hover);
+            transition-duration: .5s;
+        }  
+
+        & hr {
+            width: 100%;
+            margin: auto;
+        }
     }
 }
