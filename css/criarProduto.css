@@ -20,11 +20,7 @@ main {
 
 input, select {
     height: 100%;
-    outline: none;
-    padding: 4px;
     margin-bottom: 1rem;
-    color: inherit;
-    text-transform: uppercase;
 }
 
 .codigo-e-status {

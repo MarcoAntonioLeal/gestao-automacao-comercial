@@ -20,6 +20,7 @@
     --cor-11: #000000;
     --cor-12: #071A3D;
     --cor-13: #0A2F70;
+    --cor-14: #4F4F4F;
     --cor-shadow: #191c1d34;
     --cor-shadow-hover: #191c1d88;
     --radius: 5px
@@ -154,6 +155,15 @@ main {flex: 1 0 auto;}
 label {
     font-weight: bold;
     font-size: 1.1rem;
+}
+
+input, select {
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: inherit;
+    text-transform: uppercase;
+    border: 1px solid var(--cor-14);
 }
 
 /*====Tabela====*/

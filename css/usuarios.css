@@ -21,13 +21,6 @@ main {
     & img {margin: auto;}
 }
 
-input {
-    outline: none;
-    padding: 5px !important;
-    color: inherit;
-    text-transform: uppercase;
-}
-
 .sec-novo-user {
     display: flex;
     align-items: center;

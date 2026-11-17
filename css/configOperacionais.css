@@ -22,11 +22,7 @@ main {
 
 input, select {
     height: 100%;
-    outline: none;
-    padding: 4px;
     margin-bottom: 1rem;
-    color: inherit;
-    text-transform: uppercase;
 }
 
 label {font-weight: normal;}
@@ -72,5 +68,4 @@ h6 {font-weight: bold;}
         justify-content: center;
         margin: auto;
     }
- 
 }

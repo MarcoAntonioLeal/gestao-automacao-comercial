@@ -47,10 +47,7 @@ form {
     flex-direction: column;
 }
 
-input{
-    outline: none;
-    width: 10rem;
-}
+input{width: 10rem;}
 
 button {
     width: 8rem;
