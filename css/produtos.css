@@ -65,10 +65,14 @@ ul {
     flex-direction: column;
     justify-content: space-evenly;
 
+    & .busca-grupo-fornecedor {
+        display: flex;
+        gap: .5rem;
+    }
+
     & button {
         width: 2rem;
         height: 2rem;
-        margin-top: -8px;
         border: 1px solid var(--cor-08);
         background-color: var(--cor-07);
         transition-duration: .3s;
