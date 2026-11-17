@@ -1,5 +1,6 @@
 main {font-size: medium;}
 
+
 /*====Menu====*/
 #sec-menu {
     display: flex;
@@ -9,6 +10,7 @@ main {font-size: medium;}
 
     & img {margin: auto;}
 }
+
 
 /*====Botão Toggler====*/
 #btn-toggler-sec-menu {
@@ -43,9 +45,9 @@ ul {
     background-color: var(--cor-04);
     transition-duration: .3s;
 
-    &:hover {
-        background-color: var(--cor-09);
-        transition-duration: .3s;
+    &.btn-toggler-show {
+        background-color: var(--cor-09) !important;
+        transition-duration: .3s !important;
     }
 }
 
@@ -54,15 +56,8 @@ ul {
     flex-wrap: wrap;
 }
 
-input, select {
-    outline: none;
-    padding: 5px;
-    color: inherit;
-    text-transform: uppercase;
-}
-
 .ajusteLabel {margin-left: 1rem;}
-#produto {min-width: 40%;}
+#produto {min-width: 60%;}
 
 #codigo, 
 #custoAtual, 
@@ -70,7 +65,7 @@ input, select {
 #novoCusto, 
 #novoPreco,
 #estAtual,
-#novoEst {width: 5rem;}
+#novoEst {width: 7rem;}
 
 
 /*====Tabela de produtos, clientes e fornecedores====*/
@@ -104,7 +99,7 @@ table {
 #width-preco {width: 7rem;}
 
 
-@media (max-width: 768px) {
+@media (max-width: 840px) {
     header {
         justify-content: center;
         margin-bottom: 1.5rem;
@@ -115,6 +110,12 @@ table {
         margin: auto;
         margin-bottom: 2rem;
     }
+}
+
+@media (max-width: 768px) {
+    .sec-dados-prod {flex-direction: column;}
+    .ajusteLabel {margin-left: initial;}
+    select, input:not(#produto, #codigo) {margin-bottom: .5rem;}
 }
 
 /*botão toogle*/

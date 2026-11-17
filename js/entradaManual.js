@@ -1,3 +1,9 @@
+const btnTogglerSecCadastro = document.querySelector('#btn-toggler-sec-cadastro')
+
+btnTogglerSecCadastro.addEventListener('click', () => {
+    btnTogglerSecCadastro.classList.toggle('btn-toggler-show')
+})
+
 /* Media Querie */
 //Para os botões do menu
 const secMenu = document.querySelector('#sec-menu')
