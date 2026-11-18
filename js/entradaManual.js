@@ -1,9 +1,3 @@
-const btnTogglerSecCadastro = document.querySelector('#btn-toggler-sec-cadastro')
-
-btnTogglerSecCadastro.addEventListener('click', () => {
-    btnTogglerSecCadastro.classList.toggle('btn-toggler-show')
-})
-
 /* Media Querie */
 //Para os botões do menu
 const secMenu = document.querySelector('#sec-menu')
@@ -72,3 +66,31 @@ function responsividadeMenu() {
 }
 responsividadeMenu()
 addEventListener("resize", responsividadeMenu)
+
+const btnTogglerSecCadastro = document.querySelector('#btn-toggler-sec-cadastro')
+
+btnTogglerSecCadastro.addEventListener('click', () => {
+    btnTogglerSecCadastro.classList.toggle('btn-toggler-show')
+})
+
+//Validações dos campos de números
+const validationNumber = document.querySelectorAll('.validation-number')
+
+validationNumber.forEach(element => {
+    element.addEventListener('input', ev => {
+        ev.target.value = ev.target.value.replace(/\D/g, '')
+    })
+})
+
+//Envio das informações
+const form = document.querySelector('form')
+
+document.addEventListener('click', element => {
+
+    const btnSalvar = element.target.closest('.btn-salvar')
+    if(!btnSalvar) return
+    
+    if(form.reportValidity()) {
+        form.submit()
+    }
+})

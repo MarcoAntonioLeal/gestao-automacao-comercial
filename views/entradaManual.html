@@ -42,7 +42,7 @@
         </div>
 
         <section id="sec-menu">
-            <button type="button" class="borda" id="btnSalvar">
+            <button type="button" class="borda btn-salvar" id="btnSalvar">
                 <img src="../img/salvar.svg" alt="" class="icon-l" id="imgSalvar">
 
                 <div>
@@ -105,7 +105,7 @@
 
                     <div>
                         <label for="codigo" class="ajusteLabel">Código:</label>
-                        <input type="text" name="codigo" id="codigo" autocomplete="off" required>
+                        <input type="text" name="codigo" id="codigo" class="validation-number" autocomplete="off" required>
                     </div>
                 </section>
 
@@ -142,17 +142,17 @@
                 <section class="sec-dados-prod mb-3">
                     <div>
                         <label for="novoCusto">Novo Custo:</label>
-                        <input type="text" name="novoCusto" id="novoCusto" autocomplete="off">
+                        <input type="text" name="novoCusto" id="novoCusto" class="validation-number" autocomplete="off">
                     </div>
 
                     <div>
                         <label for="novoPreco" class="ajusteLabel">Novo Preço:</label>
-                        <input type="text" name="novoPreco" id="novoPreco" autocomplete="off">
+                        <input type="text" name="novoPreco" id="novoPreco" class="validation-number" autocomplete="off">
                     </div>
 
                     <div>
                         <label for="novoEst" class="ajusteLabel">Quantidade:</label>
-                        <input type="text" name="novoEst" id="novoEst" autocomplete="off">
+                        <input type="text" name="novoEst" id="novoEst" class="validation-number" autocomplete="off" required>
                     </div>
                 </section>
             </form>
