@@ -94,3 +94,13 @@ document.addEventListener('click', element => {
         form.submit()
     }
 })
+
+//Para manter o formulário sempre aberto
+document.addEventListener("DOMContentLoaded", () => {
+
+    const collapse = bootstrap.Collapse.getOrCreateInstance(form, {
+        toggle: false
+    })
+
+    collapse.show()
+})

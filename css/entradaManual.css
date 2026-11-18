@@ -42,11 +42,11 @@ ul {
     width: 4rem;
     margin-left: .5rem;
     border-radius: 5px;
-    background-color: var(--cor-04);
+    background-color: var(--cor-09);
     transition-duration: .3s;
 
     &.btn-toggler-show {
-        background-color: var(--cor-09) !important;
+        background-color: var(--cor-04) !important;
         transition-duration: .3s !important;
     }
 }
