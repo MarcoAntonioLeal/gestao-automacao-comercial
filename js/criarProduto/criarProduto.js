@@ -83,12 +83,6 @@ inputNumerosPontoVirgula.forEach(element => {
 })
 
 
-
-
-
-
-
-
 // -- validação do preco e margem de lucro -- //
 document.addEventListener('input', event => {
 

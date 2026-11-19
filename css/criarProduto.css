@@ -8,14 +8,32 @@ main {
 /*====Menu====*/
 #sec-menu {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     gap: 1.5rem;
     width: 80%;
 
-    & img {
-        margin: auto;
-    }
+    & img {margin: auto;}
+}
+
+/*====Botão Toggler====*/
+.navbar-toggler {
+    display: none;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: auto;
+    background-color: var(--cor-04);
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    margin-bottom: -5px;    
+    padding: 0;
+    list-style-type: none;
 }
 
 input, select {
@@ -154,4 +172,63 @@ td {
 /*====Fornecedores====*/
 .fornecedores > select {
     width: 15rem;
+}
+
+
+@media (max-width: 1203.5px) {
+    header {
+        justify-content: center;
+        margin-bottom: 1.5rem;
+    }
+
+    #sec-menu {
+        justify-content: center;
+        margin: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    #sec-menu > button, #sec-menu > a {
+        height: 4.8rem;
+        width: 4.8rem;
+
+        & img {width: 2.6rem;}
+    }
+}
+
+/*botão toogle*/
+@media (max-width: 770px) {
+
+    #meuMenu:has(.show), #btn-toggler {
+        display: block;
+    }
+
+    .linha-vertical {height: 5rem;}
+
+    li > button, li > a {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+
+        height: 4.8rem;
+        width: 4.8rem;
+
+        border: 1px solid var(--cor-12) !important;
+        box-shadow: 3px 3px 3px var(--cor-shadow);
+        font-size: 1.02rem;
+        color: inherit;
+        transition-duration: .5s !important;
+
+        &:hover {
+            background-color: var(--cor-04) !important;
+            box-shadow: 3px 3px 3px var(--cor-shadow-hover);
+            transition-duration: .5s;
+        }  
+
+        & hr {
+            width: 100%;
+            margin: auto;
+        }
+    }
 }
