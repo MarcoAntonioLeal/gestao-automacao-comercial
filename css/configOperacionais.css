@@ -58,6 +58,7 @@ h6 {font-weight: bold;}
 }
 
 
+/*==Responsividade==*/
 @media (max-width: 767.8px) {
     header {
         justify-content: center;

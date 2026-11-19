@@ -54,6 +54,7 @@ table {
 }
 
 
+/*==Responsividade==*/
 @media (max-width: 1203.5px) {
     header {
         justify-content: center;

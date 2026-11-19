@@ -95,6 +95,7 @@ code {color: var(--cor-01);}
 }
 
 
+/*==Responsividade==*/
 @media (max-width: 768px) {
     h5 {text-align: center;}
 }

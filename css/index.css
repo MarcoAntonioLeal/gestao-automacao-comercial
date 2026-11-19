@@ -1,15 +1,14 @@
 body {font-weight: bold; overflow-x: scroll;}    
 main {transition-duration: .7s;}
 
-   /*====Barra de Navegacao====*/
+
+/*====Barra de Navegacao====*/
 nav {
     background-color: var(--cor-13);
     font-weight: bold;
 }
 
-.navbar-toggler {
-    background-color: var(--cor-04);
-}
+.navbar-toggler {background-color: var(--cor-04);}
 
 .backup {
     border: 1.5px solid var(--cor-13);
@@ -38,7 +37,7 @@ nav {
 }
 
 
-    /*====Hora Main na responsividade====*/
+/*====Hora Main na responsividade====*/
 .listHoraMain {
     margin-top: 1.5rem;
     padding: .5rem;
@@ -47,7 +46,7 @@ nav {
 }
 
 
-    /*====Valor de Vendas====*/
+/*====Valor de Vendas====*/
 #sec-valor-venda {
     display: flex;
     justify-content: space-between;
@@ -82,7 +81,7 @@ nav {
 }
 
 
-    /*====Modulos====*/
+/*====Modulos====*/
 .sec-cards {
     font-size: x-large;
     margin-bottom: 3rem;
@@ -136,11 +135,10 @@ nav {
 
 
 /*====offcanvas====*/
-.offcanvas {
-    background-color: var(--cor-04);
-}
+.offcanvas {background-color: var(--cor-04);}
 
 
+/*==Responsividade==*/
 @media (max-width: 990px) {
     main {
         display: flex;

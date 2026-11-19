@@ -99,6 +99,7 @@ table {
 #width-preco {width: 7rem;}
 
 
+/*==Responsividade==*/
 @media (max-width: 840px) {
     header {
         justify-content: center;
