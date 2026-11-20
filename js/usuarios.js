@@ -67,7 +67,7 @@ function responsividadeMenu() {
 responsividadeMenu()
 addEventListener("resize", responsividadeMenu)
 
-//seção novo uauário
+//seção novo usuário
 const novoUser = document.querySelector('#novoUser')
 novoUser.addEventListener('input', () => {
     novoUser.value = novoUser.value.replace(/[^a-zA-Z\u00C0-\u00FF\s]/g, '')
