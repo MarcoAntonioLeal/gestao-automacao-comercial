@@ -12,7 +12,7 @@
 
 // -- menu -- //
 const todosOsInputs = document.querySelectorAll('input, textarea, select')
-const inputDescricaoProduto = document.querySelector('#descricao')
+const inputDescProd = document.querySelector('#descricao')
 const statusAtivo = document.querySelector('#ativo-inativo')
 const estoque = document.querySelector('#estoque')
 const custo = document.querySelector('#custo')
@@ -23,7 +23,6 @@ const CampoUnidadeVenda = document.querySelector('#unidadeVenda')
 
 //menu ao abrir o modulo
 const btnExcluir = document.querySelector('.btn-excluir')
-btnExcluir.classList.add('disabled')
 
 document.addEventListener('click', event => {
     
@@ -34,7 +33,6 @@ document.addEventListener('click', event => {
     
     //novo
     if(btnMenuData === 'novo') {
-        btnExcluir.classList.add('disabled')
         todosOsInputs.forEach(element => element.value = '')
 
         CampoUnidadeVenda.value = 'un'
@@ -42,7 +40,7 @@ document.addEventListener('click', event => {
         estoque.value = 0
         custo.value = 0
 
-        inputDescricaoProduto.focus()
+        inputDescProd.focus()
     
     //salvar
     } else if (btnMenuData === 'salvar') {

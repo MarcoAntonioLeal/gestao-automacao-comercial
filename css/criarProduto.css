@@ -36,6 +36,14 @@ ul {
     list-style-type: none;
 }
 
+
+/*==Formulario para criar produto==*/
+.sec-cadastro {
+    
+}
+
+.ajusteLabel {margin-left: 1rem;}
+
 input, select {
     height: 100%;
     margin-bottom: 1rem;
@@ -49,7 +57,6 @@ input, select {
     & #codigo {
         width: 5rem;
         font-weight: bolder;
-        color: var(--cor-11);
     }
 }
 
@@ -61,11 +68,12 @@ input, select {
     
     & #ativo-inativo{
         width: 3rem;
-        height: 1.5rem;
+        height: 1.3rem;
+        margin: 0;
     }
 }
 
-input#descricao {width: 30rem;}
+input#descricao {min-width: 60%;}
 
 .preco-e-custo > input, select {
     width: 5rem;
@@ -94,7 +102,25 @@ textarea {
     color: inherit;
 }
 
-/*====Modal para criar novo grupo====*/
+
+/*====Fornecedores====*/
+.fornecedores > select {
+    width: 15rem;
+}
+
+
+/*====Modal====*/
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & button {width: 6rem;}
+}
+
+
+/*==CSS abaixo referente a grupo e unidade de venda==*/
+/*====Modal para grupo e unidade de venda====*/
 .sec-modal-menu {
     display: flex;
     gap: 1.3rem;
@@ -169,12 +195,8 @@ td {
     &.nome-td{width: 85%;}
 }
 
-/*====Fornecedores====*/
-.fornecedores > select {
-    width: 15rem;
-}
 
-
+/*==Responsividade==*/
 @media (max-width: 1203.5px) {
     header {
         justify-content: center;
