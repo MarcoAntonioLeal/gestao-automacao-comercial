@@ -74,13 +74,41 @@ btnTogglerSecCadastro.addEventListener('click', () => {
 })
 
 //Validações dos campos de números
-const validationNumber = document.querySelectorAll('.validation-number')
+const codigo = document.querySelector('#codigo')
+codigo.addEventListener('input', element => {
+    element.target.value = element.target.value.replace(/\D/g, '')
+})
 
-validationNumber.forEach(element => {
-    element.addEventListener('input', ev => {
-        ev.target.value = ev.target.value.replace(/\D/g, '')
+const novoEstoque = document.querySelector('#novoEst')
+novoEstoque.addEventListener('input', element => {
+    element.target.value = element.target.value
+        .replace(/[^0-9,.]/g, '') // apenas numeros
+        .replace(/\./g, ',') // troca ponto por virgula
+        .replace(/,(?=.*[,])/g, '') // uma virgula somente
+        .replace(/^(,)/, '') // ñ virgula no início
+        .replace(/(,\d{3})\d+/g, '$1') // três casas decimais
+
+        if (element.target.value.length == 7 && element.target.value.endsWith(',')) {
+            element.target.value = element.target.value.slice(0, -1)
+        }
+})
+
+const custoPreco = document.querySelectorAll('.custoPreco')
+custoPreco.forEach(ev => {
+    ev.addEventListener('input', element => {
+        element.target.value = element.target.value
+        .replace(/[^0-9,.]/g, '') // apenas numeros
+        .replace(/\./g, ',') // troca ponto por virgula
+        .replace(/,(?=.*[,])/g, '') // uma virgula somente
+        .replace(/^(,)/, '') // ñ virgula no início
+        .replace(/(,\d{2})\d+/g, '$1') // duas casas decimais
+
+        if (element.target.value.length == 7 && element.target.value.endsWith(',')) {
+            element.target.value = element.target.value.slice(0, -1)
+        }
     })
 })
+
 
 //Envio das informações
 const form = document.querySelector('form')

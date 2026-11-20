@@ -105,7 +105,7 @@
 
                     <div>
                         <label for="codigo" class="ajusteLabel">Código:</label>
-                        <input type="text" name="codigo" id="codigo" class="validation-number" autocomplete="off" required>
+                        <input type="text" name="codigo" id="codigo" autocomplete="off" maxlength="5" pattern="[0-9]{5}" title="Coloque todo o código do produto" required>
                     </div>
                 </section>
 
@@ -142,17 +142,17 @@
                 <section class="sec-dados-prod mb-3">
                     <div>
                         <label for="novoCusto">Novo Custo:</label>
-                        <input type="text" name="novoCusto" id="novoCusto" class="validation-number" autocomplete="off">
+                        <input type="text" name="novoCusto" id="novoCusto" class="custoPreco" autocomplete="off" maxlength="7">
                     </div>
 
                     <div>
                         <label for="novoPreco" class="ajusteLabel">Novo Preço:</label>
-                        <input type="text" name="novoPreco" id="novoPreco" class="validation-number" autocomplete="off">
+                        <input type="text" name="novoPreco" id="novoPreco" class="custoPreco" autocomplete="off" maxlength="7">
                     </div>
 
                     <div>
                         <label for="novoEst" class="ajusteLabel">Quantidade:</label>
-                        <input type="text" name="novoEst" id="novoEst" class="validation-number" autocomplete="off" required>
+                        <input type="text" name="novoEst" id="novoEst" autocomplete="off" maxlength="7" required>
                     </div>
                 </section>
             </form>
