@@ -62,7 +62,7 @@ a {
     filter: brightness(.7);
     box-shadow: none !important;
     opacity: 60%;
-    border: 1px solid var(--cor-11);
+    color: var(--cor-11);
 }
 
 .display-none {display: none;}
