@@ -152,7 +152,7 @@
 
                     <div>
                         <label for="novoEst" class="ajusteLabel">Quantidade:</label>
-                        <input type="text" name="novoEst" id="novoEst" autocomplete="off" maxlength="7" required>
+                        <input type="text" name="novoEst" id="novoEst" autocomplete="off" maxlength="7"  pattern="^(?!,$).*" title="Não é permitido enviar apenas uma vírgula" required>
                     </div>
                 </section>
             </form>
